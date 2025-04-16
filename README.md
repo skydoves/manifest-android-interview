@@ -22,14 +22,14 @@ I hope this book helps you gain new perspectives, sharpen your problem-solving s
 - [Read on Leanpub](https://leanpub.com/manifest-android-interview)
 - [Read on Gumroad](https://skydoves.gumroad.com/l/manifest-android-interview)
 
-<a href="https://github.com/doveletter">
-<img src="https://github.com/user-attachments/assets/3ecd2a7b-9713-40cd-8817-fa568271cefa" width="13%" align="right"/>
-</a>
-
 ## ⏳ Timeline & Milestone
 
 - [Reached 100 copies sold on April 16](https://x.com/github_skydoves/status/1912303268543492248) 🎉
 - Published the first edition on April 15  
+
+<a href="https://github.com/doveletter">
+<img src="https://github.com/user-attachments/assets/3ecd2a7b-9713-40cd-8817-fa568271cefa" width="13%" align="right"/>
+</a>
 
 ## 🕊️ Dove Letter
 
