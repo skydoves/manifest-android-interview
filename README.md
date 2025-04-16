@@ -26,6 +26,11 @@ I hope this book helps you gain new perspectives, sharpen your problem-solving s
 <img src="https://github.com/user-attachments/assets/3ecd2a7b-9713-40cd-8817-fa568271cefa" width="13%" align="right"/>
 </a>
 
+## ⏳ Timeline & Milestone
+
+- Reached 100 copies sold on April 16 🎉
+- Published the first edition on April 15  
+
 ## 🕊️ Dove Letter
 
 If you're eager to dive deeper into Kotlin and Android, explore [Dove Letter](https://github.com/doveletter), a private subscription repository where you can learn, discuss, and share knowledge. To get more details about this unique opportunity, check out the [Learn Kotlin and Android With Dove Letter](https://medium.com/@skydoves/learn-kotlin-and-android-with-dove-letter-26265da11903) article.
