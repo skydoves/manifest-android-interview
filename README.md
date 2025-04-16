@@ -28,7 +28,7 @@ I hope this book helps you gain new perspectives, sharpen your problem-solving s
 
 ## ⏳ Timeline & Milestone
 
-- Reached 100 copies sold on April 16 🎉
+- [Reached 100 copies sold on April 16](https://x.com/github_skydoves/status/1912303268543492248) 🎉
 - Published the first edition on April 15  
 
 ## 🕊️ Dove Letter
