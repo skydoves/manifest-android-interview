@@ -22,6 +22,8 @@ I hope this book helps you gain new perspectives, sharpen your problem-solving s
 - [Read on Leanpub](https://leanpub.com/manifest-android-interview)
 - [Read on Gumroad](https://skydoves.gumroad.com/l/manifest-android-interview)
 
+If you'd like to learn more about the book before diving in, such as fun facts, who it's for, what it covers, and what it doesn’t, you can check out [Manifest Android Interview: The Ultimate Guide to Cracking Android Technical Interviews](https://skydoves.medium.com/manifest-android-interview-the-ultimate-guide-to-cracking-android-technical-interviews-364138d62029) blog post.
+
 ## ⏳ Timeline & Milestone
 
 - 2025.04.24 Published [v1.1](https://github.com/skydoves/manifest-android-interview/releases/tag/v1.1) small updates
