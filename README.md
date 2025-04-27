@@ -26,11 +26,12 @@ If you'd like to learn more about the book before diving in, such as fun facts, 
 
 ## ⏳ Timeline & Milestone
 
-- 2025.04.24 Published [v1.1](https://github.com/skydoves/manifest-android-interview/releases/tag/v1.1) small updates
-- 2025.04.20 Reached 200 copies sold 🎉
-- 2025.04.19 [Ranked #1 on Leanpub](https://x.com/github_skydoves/status/1913399330272338214) 🥳
-- 2025.04.16 [Reached 100 copies sold](https://x.com/github_skydoves/status/1912303268543492248) 🎉
-- 2025.04.15 Published the first edition
+- 2025.04.27 - Published [v1.2](https://github.com/skydoves/manifest-android-interview/releases/tag/v1.2)
+- 2025.04.24 - Published [v1.1](https://github.com/skydoves/manifest-android-interview/releases/tag/v1.1) small updates
+- 2025.04.20 - Reached 200 copies sold 🎉
+- 2025.04.19 - [Ranked #1 on Leanpub](https://x.com/github_skydoves/status/1913399330272338214) 🥳
+- 2025.04.16 - [Reached 100 copies sold](https://x.com/github_skydoves/status/1912303268543492248) 🎉
+- 2025.04.15 - Published the first edition
 
 <a href="https://github.com/doveletter">
 <img src="https://github.com/user-attachments/assets/3ecd2a7b-9713-40cd-8817-fa568271cefa" width="13%" align="right"/>
