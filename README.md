@@ -26,6 +26,7 @@ If you'd like to learn more about the book before diving in, such as fun facts, 
 
 ## ⏳ Timeline & Milestone
 
+- 2025.05.01 - [Stream](https://getstream.io/video/sdk/android/?utm_source=website&utm_medium=referral&utm_content=&utm_campaign=Jaewoong) has joined as a major sponsor 💖
 - 2025.04.30 - Reached 300 copies sold 🎉
 - 2025.04.27 - Published [v1.2](https://github.com/skydoves/manifest-android-interview/releases/tag/v1.2)
 - 2025.04.24 - Published [v1.1](https://github.com/skydoves/manifest-android-interview/releases/tag/v1.1) small updates
@@ -33,6 +34,14 @@ If you'd like to learn more about the book before diving in, such as fun facts, 
 - 2025.04.19 - [Ranked #1 on Leanpub](https://x.com/github_skydoves/status/1913399330272338214) 🥳
 - 2025.04.16 - [Reached 100 copies sold](https://x.com/github_skydoves/status/1912303268543492248) 🎉
 - 2025.04.15 - Published the first edition
+
+## 💖 Sponsors
+
+![stream-logo](https://github.com/user-attachments/assets/8d94d4e8-f63b-4888-a50b-6f5498425855)
+
+### [Stream](https://getstream.io/video/sdk/android/?utm_source=website&utm_medium=referral&utm_content=&utm_campaign=Jaewoong)
+
+Stream helps developers build engaging apps that scale to millions with Chat, Video, Audio, Feeds, and Moderation APIs and SDKs powered by a global edge network and enterprise-grade infrastructure.
 
 <a href="https://github.com/doveletter">
 <img src="https://github.com/user-attachments/assets/3ecd2a7b-9713-40cd-8817-fa568271cefa" width="13%" align="right"/>
