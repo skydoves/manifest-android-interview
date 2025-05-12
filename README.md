@@ -26,6 +26,7 @@ If you'd like to learn more about the book before diving in, such as fun facts, 
 
 ## ⏳ Timeline & Milestone
 
+- 2025.05.13 - Reached 400 copies sold 🎉
 - 2025.05.01 - [Stream](https://getstream.io/video/sdk/android/?utm_source=website&utm_medium=referral&utm_content=&utm_campaign=Jaewoong) has joined as a major sponsor 💖
 - 2025.04.30 - Reached 300 copies sold 🎉
 - 2025.04.27 - Published [v1.2](https://github.com/skydoves/manifest-android-interview/releases/tag/v1.2)
