@@ -24,6 +24,10 @@ I hope this book helps you gain new perspectives, sharpen your problem-solving s
 
 If you'd like to learn more about the book before diving in, such as fun facts, who it's for, what it covers, and what it doesn’t, you can check out [Manifest Android Interview: The Ultimate Guide to Cracking Android Technical Interviews](https://skydoves.medium.com/manifest-android-interview-the-ultimate-guide-to-cracking-android-technical-interviews-364138d62029) blog post.
 
+## Testimonial
+
+![Testimonial](https://github.com/user-attachments/assets/67fe2809-2c7b-454a-8702-769f971ece5a)
+
 ## ⏳ Timeline & Milestone
 
 - 2025.05.13 - Reached 400 copies sold 🎉
