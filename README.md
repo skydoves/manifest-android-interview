@@ -50,6 +50,10 @@ If you'd like to learn more about the book before diving in, such as fun facts, 
 
 Stream helps developers build engaging apps that scale to millions with Chat, Video, Audio, Feeds, and Moderation APIs and SDKs powered by a global edge network and enterprise-grade infrastructure.
 
+<img src="https://github.com/user-attachments/assets/614122a5-f1f1-436e-a77e-82803072728b" width="23%" />
+
+### [Kotlin Weekly](https://kotlinweekly.net/)
+
 <a href="https://github.com/doveletter">
 <img src="https://github.com/user-attachments/assets/3ecd2a7b-9713-40cd-8817-fa568271cefa" width="13%" align="right"/>
 </a>
