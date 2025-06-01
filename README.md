@@ -30,6 +30,7 @@ If you'd like to learn more about the book before diving in, such as fun facts, 
 
 ## ⏳ Timeline & Milestone
 
+- 2025.06.01 - [Kotlin Weekly](https://kotlinweekly.net/) has joined as a newsletter sponsor 💖
 - 2025.05.28 - Reached 500 copies sold 🎉
 - 2025.05.13 - Reached 400 copies sold 🎉
 - 2025.05.01 - [Stream](https://getstream.io/video/sdk/android/?utm_source=website&utm_medium=referral&utm_content=&utm_campaign=Jaewoong) has joined as a major sponsor 💖
