@@ -30,6 +30,7 @@ If you'd like to learn more about the book before diving in, such as fun facts, 
 
 ## ⏳ Timeline & Milestone
 
+- 2025.06.02 - Published [v1.4](https://github.com/skydoves/manifest-android-interview/releases/tag/v1.4)
 - 2025.06.01 - [Kotlin Weekly](https://kotlinweekly.net/) has joined as a newsletter sponsor 💖
 - 2025.05.28 - Reached 500 copies sold 🎉
 - 2025.05.13 - Reached 400 copies sold 🎉
