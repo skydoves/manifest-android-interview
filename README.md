@@ -19,8 +19,11 @@ I hope this book helps you gain new perspectives, sharpen your problem-solving s
 ## 📚 Where to Read
 
 - [Manifest Android Interview](https://www.android.skydoves.me/)
-- [Read on Leanpub](https://leanpub.com/manifest-android-interview)
 - [Read on Gumroad](https://skydoves.gumroad.com/l/manifest-android-interview)
+- [Read on Leanpub](https://leanpub.com/manifest-android-interview)
+- [Kindle on Amazon](https://www.amazon.com/dp/B0FBS6FT6P)
+- [Hardcover on Amazon](https://www.amazon.com/dp/B0FBWCRNHZ)
+- [Paperback on Amazon](https://www.amazon.com/dp/B0FBWCP743)
 
 If you'd like to learn more about the book before diving in, such as fun facts, who it's for, what it covers, and what it doesn’t, you can check out [Manifest Android Interview: The Ultimate Guide to Cracking Android Technical Interviews](https://skydoves.medium.com/manifest-android-interview-the-ultimate-guide-to-cracking-android-technical-interviews-364138d62029) blog post.
 
