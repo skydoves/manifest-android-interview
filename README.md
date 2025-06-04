@@ -21,9 +21,7 @@ I hope this book helps you gain new perspectives, sharpen your problem-solving s
 - [Manifest Android Interview](https://www.android.skydoves.me/)
 - [Read on Gumroad](https://skydoves.gumroad.com/l/manifest-android-interview)
 - [Read on Leanpub](https://leanpub.com/manifest-android-interview)
-- [Kindle on Amazon](https://www.amazon.com/dp/B0FBS6FT6P)
-- [Hardcover on Amazon](https://www.amazon.com/dp/B0FBWCRNHZ)
-- [Paperback on Amazon](https://www.amazon.com/dp/B0FBWCP743)
+- [Kindle on Amazon](https://www.amazon.com/dp/B0FBS6FT6P), [Hardcover on Amazon](https://www.amazon.com/dp/B0FBWCRNHZ), [Paperback on Amazon](https://www.amazon.com/dp/B0FBWCP743)
 
 If you'd like to learn more about the book before diving in, such as fun facts, who it's for, what it covers, and what it doesn’t, you can check out [Manifest Android Interview: The Ultimate Guide to Cracking Android Technical Interviews](https://skydoves.medium.com/manifest-android-interview-the-ultimate-guide-to-cracking-android-technical-interviews-364138d62029) blog post.
 
@@ -33,6 +31,7 @@ If you'd like to learn more about the book before diving in, such as fun facts, 
 
 ## ⏳ Timeline & Milestone
 
+- 2025.06.05 - Published on Amazon ([Kindle](https://www.amazon.com/dp/B0FBS6FT6P), [Hardcover](https://www.amazon.com/dp/B0FBWCRNHZ), [Paperback](https://www.amazon.com/dp/B0FBWCP743))
 - 2025.06.02 - Published [v1.4](https://github.com/skydoves/manifest-android-interview/releases/tag/v1.4)
 - 2025.06.01 - [Kotlin Weekly](https://kotlinweekly.net/) has joined as a newsletter sponsor 💖
 - 2025.05.28 - Reached 500 copies sold 🎉
