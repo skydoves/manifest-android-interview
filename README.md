@@ -31,6 +31,7 @@ If you'd like to learn more about the book before diving in, such as fun facts, 
 
 ## ⏳ Timeline & Milestone
 
+- 2025.06.12 - Published [German edition](https://www.android.skydoves.me/de) 🇩🇪
 - 2025.06.10 - Published [Spanish edition](https://www.android.skydoves.me/es) 🇪🇸
 - 2025.06.05 - Published on Amazon ([Kindle](https://www.amazon.com/dp/B0FBS6FT6P), [Hardcover](https://www.amazon.com/dp/B0FBWCRNHZ), [Paperback](https://www.amazon.com/dp/B0FBWCP743))
 - 2025.06.02 - Published [v1.4](https://github.com/skydoves/manifest-android-interview/releases/tag/v1.4)
