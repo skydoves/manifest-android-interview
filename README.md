@@ -63,11 +63,23 @@ Stream helps developers build engaging apps that scale to millions with Chat, Vi
 
 ### [Kotlin Weekly](https://kotlinweekly.net/)
 
+## 📘 Hardcover
+
+Prefer reading a physical book? You can grab a copy on Amazon!
+
+[Hardcover edition](https://www.amazon.com/dp/B0FBWCRNHZ) | [Paperback edition](https://www.amazon.com/dp/B0FBWCP743)
+
+<img src="https://github.com/user-attachments/assets/7c64e8c2-3aba-40d1-83ef-b14e2527ac57" width="52%" />
+
+<img src="https://github.com/user-attachments/assets/8945c417-5ce0-4c5f-8f00-61dd575c5e6c" width="52%" />
+
+<img src="https://github.com/user-attachments/assets/bb6b097e-6d0d-42c4-ac33-df3d731f7b52" width="52%" />
+
+## 🕊️ Dove Letter
+
 <a href="https://github.com/doveletter">
 <img src="https://github.com/user-attachments/assets/3ecd2a7b-9713-40cd-8817-fa568271cefa" width="13%" align="right"/>
 </a>
-
-## 🕊️ Dove Letter
 
 If you're eager to dive deeper into Kotlin and Android, explore [Dove Letter](https://github.com/doveletter), a private subscription repository where you can learn, discuss, and share knowledge. To get more details about this unique opportunity, check out the [Learn Kotlin and Android With Dove Letter](https://medium.com/@skydoves/learn-kotlin-and-android-with-dove-letter-26265da11903) article.
 
