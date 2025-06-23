@@ -31,6 +31,9 @@ If you'd like to learn more about the book before diving in, such as fun facts, 
 
 ## ⏳ Timeline & Milestone
 
+- 2025.06.23 - Published [v1.5](https://github.com/skydoves/manifest-android-interview/releases/tag/v1.5)
+- 2025.06.22 - Reached 900 copies sold 🎉
+- 2025.06.18 - Published [Korean edition](https://leanpub.com/manifest-android-interview-kr) 🇰🇷
 - 2025.06.17 - Reached 700 copies sold 🎉
 - 2025.06.12 - Published [German edition](https://www.android.skydoves.me/de) 🇩🇪
 - 2025.06.10 - Published [Spanish edition](https://www.android.skydoves.me/es) 🇪🇸
