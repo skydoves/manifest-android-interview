@@ -31,6 +31,7 @@ If you'd like to learn more about the book before diving in, such as fun facts, 
 
 ## ⏳ Timeline & Milestone
 
+- 2025.06.24 - Published [India Paparback edition](https://www.shroffpublishers.com/books/9789368088103/) 🇮🇳
 - 2025.06.23 - Published [v1.5](https://github.com/skydoves/manifest-android-interview/releases/tag/v1.5)
 - 2025.06.22 - Reached 900 copies sold 🎉
 - 2025.06.18 - Published [Korean edition](https://leanpub.com/manifest-android-interview-kr) 🇰🇷
