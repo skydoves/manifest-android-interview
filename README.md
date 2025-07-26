@@ -31,6 +31,7 @@ If you'd like to learn more about the book before diving in, such as fun facts, 
 
 ## ⏳ Timeline & Milestone
 
+- 2025.07.26 - Reached 1,300 copies sold 🎉
 - 2025.07.26 - Published [Ukraine edition](https://leanpub.com/manifest-android-interview-uk) 🇺🇦
 - 2025.07.22 - Published [Indonesian edition](https://leanpub.com/manifest-android-interview-id) 🇮🇩
 - 2025.07.12 - Published [Chinese edition](https://leanpub.com/manifest-android-interview-zh-Hans) 🇨🇳
