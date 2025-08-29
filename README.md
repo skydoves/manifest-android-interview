@@ -1,18 +1,18 @@
 <h1 align="center">Manifest Android Interview</h1></br>
 
-<a href="https://www.android.skydoves.me/">
-<img src="https://github.com/user-attachments/assets/e014ce01-3461-40af-bb2a-eb44f3f55f36" align="left" width = "42%" />
+<p align="center">
+<a href="https://www.android.skydoves.me/" align="center" >
+<img src="https://github.com/user-attachments/assets/e014ce01-3461-40af-bb2a-eb44f3f55f36" width = "42%" align="center" />
 </a>
+</p>
 
-**[Manifest Android Interview](https://www.android.skydoves.me/)** is a comprehensive guide designed to enhance your Android development expertise through **108 interview questions with detailed answers, 162 additional practical questions, and 50+ "Pro Tips for Mastery" sections**. The interview questions primarily focus on Android development—including the Framework, UI, Jetpack Libraries, and Business Logic—as well as Jetpack Compose, covering Fundamentals, Runtime, and UI.
+**Your Personal Mentor for the Android Journey.**
 
-Each question provides in-depth explanations, guiding you through a structured learning path for Android and Jetpack Compose while reinforcing your understanding of key concepts. At the end of every question, you’ll find **practical questions** designed to simulate real interview scenarios, allowing you to refine your problem-solving skills and prepare effectively for technical discussions.
+**[Manifest Android Interview](https://www.android.skydoves.me/)** embarks on a guided expedition through the world of Android development with a resource designed to mentor you at every stage of your career. This comprehensive collection features 108 core questions with rich, explanatory answers that build a solid foundation across the Android Framework and Jetpack Compose. Each discussion is followed by a set of practical, hands-on challenges to hone your skills for real-world scenarios.
 
-This book includes relevant resources and additional references for those seeking further study beyond its content. Efforts have been made to provide footnotes for key terms as much as possible that may be unfamiliar or complex, ensuring that beginners can easily grasp challenging concepts while deepening their understanding.
+For developers seeking to transition from mid-level to senior, the "Pro Tips for Mastery" sections offer a significant advantage. These 50+ deep dives illuminate the internal workings of the Android ecosystem, fostering the analytical mindset that distinguishes experts. The material is structured to be accessible, with helpful footnotes clarifying complex terminology, ensuring no developer is left behind.
 
-The **"Pro Tips for Mastery"** section dives deeper into advanced topics, uncovering internal API structures and offering expert insights to keep senior developers engaged. For mid-level developers, this section serves as a valuable resource for strengthening Android expertise and fostering a more analytical approach to technical challenges.
-
-I hope this book helps you gain new perspectives, sharpen your problem-solving skills, and build a comprehensive understanding of Android development & ecosystems. Whether you're preparing for your next big interview or simply pushing yourself to master Android development, I encourage you to think beyond implementation—understand the why, experiment with different approaches, and continue learning with curiosity and passion.
+This book is crafted to be your trusted companion, whether you are preparing for a career-defining interview or seeking to deepen your everyday expertise. It champions a philosophy of continuous growth, urging you to approach every challenge with curiosity and a relentless desire to understand the core principles of your craft.
 
 — **[Jaewoong Eum (skydoves)](https://github.com/skydoves/)**
 
