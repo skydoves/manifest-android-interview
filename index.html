@@ -1,37 +1,250 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: https://ogp.me/ns#">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manifest Android Interview - The Ultimate Guide to Cracking Android Technical Interviews</title>
+    <title>Manifest Android Interview - The Ultimate Guide to Cracking Android Technical Interviews | 108 Questions & Jetpack Compose Deep Dive</title>
 
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="A comprehensive 465-page Android development guide featuring 108 interview questions with detailed solutions, 162 practical exercises, and 50+ pro tips covering Android Framework, Jetpack Compose, and more.">
-    <meta name="keywords" content="Android, Jetpack Compose, Android Interview, Android Development, Kotlin, Google Developer Expert, skydoves, Jaewoong Eum">
+    <!-- Primary SEO Meta Tags -->
+    <meta name="description" content="Master Android development with Manifest Android Interview - a comprehensive 465-page guide featuring 108 interview questions, 162 practical exercises, and 50+ pro tips. Deep dive into Android Framework, Jetpack Compose internals, UI architecture, and more. Written by Jaewoong Eum (skydoves), Google Developer Expert.">
+    <meta name="keywords" content="Android Interview Questions, Jetpack Compose Tutorial, Android Development Book, Kotlin Android, Android Framework, Android Technical Interview, Mobile Development, Android Architecture, ViewModel, LiveData, Coroutines, Android GDE, skydoves, Jaewoong Eum, Android Interview Preparation, Compose UI, Android Job Interview, Senior Android Developer, Android Engineer Interview">
     <meta name="author" content="Jaewoong Eum (skydoves)">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
     <link rel="canonical" href="https://www.android.skydoves.me/">
 
-    <!-- Open Graph -->
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="book">
-    <meta property="og:title" content="Manifest Android Interview - Android & Compose Deep Dive">
-    <meta property="og:description" content="The ultimate guide to cracking Android technical interviews with 108 questions, 162 exercises, and 50+ pro tips.">
+    <meta property="og:site_name" content="Manifest Android Interview">
+    <meta property="og:title" content="Manifest Android Interview - The Ultimate Android & Jetpack Compose Interview Guide">
+    <meta property="og:description" content="Master Android interviews with 108 questions, 162 exercises, and 50+ pro tips. Deep dive into Android Framework, Jetpack Compose, UI architecture, and more. By Google Developer Expert Jaewoong Eum.">
     <meta property="og:url" content="https://www.android.skydoves.me/">
+    <meta property="og:image" content="https://www.android.skydoves.me/resources/3f154ad5849843ca5e9e49f1d8357fa5.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Manifest Android Interview Book Cover">
+    <meta property="og:locale" content="en_US">
+    <meta property="book:author" content="Jaewoong Eum">
+    <meta property="book:isbn" content="B0FBWCP743">
+    <meta property="book:release_date" content="2025-04-15">
+    <meta property="book:tag" content="Android">
+    <meta property="book:tag" content="Jetpack Compose">
+    <meta property="book:tag" content="Interview">
+    <meta property="book:tag" content="Kotlin">
 
-    <!-- Schema.org Book Markup -->
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@github_skydoves">
+    <meta name="twitter:creator" content="@github_skydoves">
+    <meta name="twitter:title" content="Manifest Android Interview - The Ultimate Android & Jetpack Compose Interview Guide">
+    <meta name="twitter:description" content="Master Android interviews with 108 questions, 162 exercises, and 50+ pro tips. Deep dive into Android Framework, Jetpack Compose, and more.">
+    <meta name="twitter:image" content="https://www.android.skydoves.me/resources/3f154ad5849843ca5e9e49f1d8357fa5.jpg">
+    <meta name="twitter:image:alt" content="Manifest Android Interview Book Cover">
+
+    <!-- Additional SEO -->
+    <meta name="theme-color" content="#4285f4">
+    <meta name="apple-mobile-web-app-title" content="Manifest Android Interview">
+    <meta name="application-name" content="Manifest Android Interview">
+    <meta name="rating" content="General">
+    <meta name="distribution" content="Global">
+    <meta name="revisit-after" content="7 days">
+    <meta http-equiv="content-language" content="en">
+
+    <!-- Schema.org Book Markup (Enhanced) -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Book",
+        "@id": "https://www.android.skydoves.me/#book",
         "name": "Manifest Android Interview",
+        "alternateName": "The Ultimate Guide to Cracking Android Technical Interviews",
         "author": {
             "@type": "Person",
             "name": "Jaewoong Eum",
-            "url": "https://github.com/skydoves"
+            "alternateName": "skydoves",
+            "url": "https://github.com/skydoves",
+            "sameAs": [
+                "https://twitter.com/github_skydoves",
+                "https://github.com/skydoves",
+                "https://www.linkedin.com/in/skydoves"
+            ],
+            "jobTitle": "Senior Developer Advocate & Engineer",
+            "worksFor": {
+                "@type": "Organization",
+                "name": "RevenueCat"
+            }
         },
-        "description": "The ultimate guide to cracking Android technical interviews",
+        "description": "A comprehensive 465-page Android development guide featuring 108 interview questions with detailed solutions, 162 practical exercises, and 50+ pro tips covering Android Framework, Jetpack Compose internals, UI architecture, and more.",
         "numberOfPages": 465,
         "bookFormat": ["EBook", "Paperback", "Hardcover"],
-        "url": "https://www.android.skydoves.me/"
+        "inLanguage": ["en", "ko", "ja", "zh", "de", "es", "id", "uk"],
+        "url": "https://www.android.skydoves.me/",
+        "image": "https://www.android.skydoves.me/resources/3f154ad5849843ca5e9e49f1d8357fa5.jpg",
+        "datePublished": "2025-04-15",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Leanpub"
+        },
+        "offers": [
+            {
+                "@type": "Offer",
+                "url": "https://leanpub.com/manifest-android-interview",
+                "priceCurrency": "USD",
+                "availability": "https://schema.org/InStock",
+                "seller": {
+                    "@type": "Organization",
+                    "name": "Leanpub"
+                }
+            },
+            {
+                "@type": "Offer",
+                "url": "https://www.amazon.com/dp/B0FBWCP743",
+                "priceCurrency": "USD",
+                "availability": "https://schema.org/InStock",
+                "seller": {
+                    "@type": "Organization",
+                    "name": "Amazon"
+                }
+            },
+            {
+                "@type": "Offer",
+                "url": "https://skydoves.gumroad.com/l/manifest-android-interview",
+                "priceCurrency": "USD",
+                "availability": "https://schema.org/InStock",
+                "seller": {
+                    "@type": "Organization",
+                    "name": "Gumroad"
+                }
+            }
+        ],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "bestRating": "5",
+            "ratingCount": "50"
+        },
+        "genre": ["Technology", "Programming", "Mobile Development", "Android Development"],
+        "about": [
+            {"@type": "Thing", "name": "Android Development"},
+            {"@type": "Thing", "name": "Jetpack Compose"},
+            {"@type": "Thing", "name": "Technical Interviews"},
+            {"@type": "Thing", "name": "Kotlin Programming"},
+            {"@type": "Thing", "name": "Mobile App Development"}
+        ],
+        "keywords": "Android, Jetpack Compose, Interview Questions, Android Development, Kotlin, Mobile Development, Android Framework, ViewModel, LiveData, Coroutines"
+    }
+    </script>
+
+    <!-- Schema.org WebPage Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": "https://www.android.skydoves.me/#webpage",
+        "url": "https://www.android.skydoves.me/",
+        "name": "Manifest Android Interview - The Ultimate Guide to Cracking Android Technical Interviews",
+        "description": "Master Android development with 108 interview questions, 162 practical exercises, and 50+ pro tips covering Android Framework and Jetpack Compose.",
+        "isPartOf": {
+            "@type": "WebSite",
+            "@id": "https://www.android.skydoves.me/#website",
+            "url": "https://www.android.skydoves.me/",
+            "name": "Manifest Android Interview",
+            "publisher": {
+                "@type": "Person",
+                "name": "Jaewoong Eum"
+            }
+        },
+        "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://www.android.skydoves.me/resources/3f154ad5849843ca5e9e49f1d8357fa5.jpg"
+        },
+        "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://www.android.skydoves.me/"
+                }
+            ]
+        }
+    }
+    </script>
+
+    <!-- Schema.org FAQPage Markup for AI/GPT -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is Manifest Android Interview?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Manifest Android Interview is a comprehensive 465-page Android development book featuring 108 interview questions with detailed solutions, 162 practical exercises, and 50+ pro tips. It covers Android Framework, Jetpack Compose internals, UI architecture, Jetpack libraries, and business logic patterns."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Who wrote Manifest Android Interview?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The book is written by Jaewoong Eum (known as skydoves), a Google Developer Expert for Android and Firebase, and Senior Developer Advocate & Engineer at RevenueCat. He has created over 80 open-source libraries with more than 15 million annual downloads."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What topics does Manifest Android Interview cover?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The book covers Android Framework fundamentals, Android UI Views, Jetpack libraries (ViewModel, LiveData, Navigation, Hilt, Paging), Business Logic patterns, Jetpack Compose fundamentals, Compose Runtime, and Compose UI. It includes 108 interview questions across these categories."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Where can I buy Manifest Android Interview?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Manifest Android Interview is available on Leanpub (PDF & EPUB), Amazon (Kindle, Paperback, Hardcover), and Gumroad (PDF & EPUB). It's also available in 8 languages: English, Korean, Japanese, Chinese, German, Spanish, Indonesian, and Ukrainian."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is Manifest Android Interview good for interview preparation?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, the book is specifically designed for Android interview preparation. It features 108 interview questions with step-by-step explanations, 162 follow-up practical questions to simulate real interview scenarios, and 50+ Pro Tips for Mastery covering advanced topics that interviewers often ask about."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Schema.org Person Markup for Author -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "@id": "https://www.android.skydoves.me/#author",
+        "name": "Jaewoong Eum",
+        "alternateName": "skydoves",
+        "url": "https://github.com/skydoves",
+        "image": "https://www.android.skydoves.me/resources/6289a6fde71f156d0646dd316703f411.jpg",
+        "sameAs": [
+            "https://twitter.com/github_skydoves",
+            "https://github.com/skydoves",
+            "https://www.linkedin.com/in/skydoves",
+            "https://medium.com/@skydoves"
+        ],
+        "jobTitle": "Senior Developer Advocate & Engineer",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "RevenueCat"
+        },
+        "description": "Google Developer Expert for Android and Firebase. Creator of 80+ open-source libraries with 15M+ annual downloads. Founder of Dove Letter.",
+        "knowsAbout": ["Android Development", "Jetpack Compose", "Kotlin", "Open Source", "Mobile Development"]
     }
     </script>
 
@@ -80,7 +293,7 @@
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 0 24px;
         }
@@ -102,7 +315,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 0 24px;
         }
@@ -115,7 +328,7 @@
 
         .nav-links {
             display: flex;
-            gap: 32px;
+            gap: 20px;
             list-style: none;
             align-items: center;
         }
@@ -329,6 +542,26 @@
             border-color: var(--text-light);
         }
 
+        .btn-amazon {
+            background: #232F3E;
+            color: #FF9900;
+            border: none;
+        }
+
+        .btn-amazon:hover {
+            background: #1a242f;
+        }
+
+        .btn-gumroad {
+            background: #FF90E8;
+            color: #111;
+            border: none;
+        }
+
+        .btn-gumroad:hover {
+            background: #ff6bde;
+        }
+
         .hero-book {
             display: flex;
             justify-content: center;
@@ -503,12 +736,13 @@
 
         /* Testimonials */
         .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
+            columns: 2;
+            column-gap: 24px;
         }
 
         .testimonial-card {
+            break-inside: avoid;
+            margin-bottom: 24px;
             background: var(--white);
             padding: 32px;
             border-radius: 12px;
@@ -789,6 +1023,58 @@
             background: #f8f9fa;
         }
 
+        /* Table of Contents */
+        .toc-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .toc-section {
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 24px;
+        }
+
+        .toc-heading {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--primary-blue);
+        }
+
+        .toc-category {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 20px 0 12px;
+        }
+
+        .toc-list {
+            list-style: none;
+        }
+
+        .toc-list li {
+            font-size: 14px;
+            color: var(--text-secondary);
+            padding: 6px 0;
+            line-height: 1.5;
+        }
+
+        .toc-list li.toc-sub {
+            padding-left: 16px;
+            font-size: 13px;
+            color: var(--text-light);
+        }
+
+        .toc-questions li {
+            font-size: 13px;
+            padding: 4px 0;
+        }
+
         /* Timeline */
         .timeline {
             max-width: 700px;
@@ -911,8 +1197,11 @@
             }
             .author-credentials li { justify-content: center; }
             .author-links { justify-content: center; }
-            .features-grid, .chapters-grid, .testimonials-grid {
+            .features-grid, .chapters-grid {
                 grid-template-columns: 1fr;
+            }
+            .testimonials-grid {
+                columns: 1;
             }
             .book-preview-grid {
                 columns: 2;
@@ -924,6 +1213,7 @@
                 grid-template-columns: repeat(3, 1fr);
             }
             .sponsors-grid { grid-template-columns: 1fr; }
+            .toc-container { grid-template-columns: 1fr; }
         }
 
         @media (max-width: 768px) {
@@ -955,6 +1245,9 @@
                 <li><a href="#features">Features</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#sponsors">Sponsors</a></li>
+                <li><a href="#contents">Contents</a></li>
+                <li><a href="#timeline">Timeline</a></li>
                 <li class="nav-language">
                     <button class="language-btn">
                         <span>🌐</span> Language <span>▾</span>
@@ -1015,8 +1308,8 @@
 
                 <div class="hero-buttons">
                     <a href="https://leanpub.com/manifest-android-interview" class="btn btn-primary" target="_blank">Get on Leanpub</a>
-                    <a href="https://www.amazon.com/dp/B0FBWCP743" class="btn btn-secondary" target="_blank">Get on Amazon</a>
-                    <a href="https://skydoves.gumroad.com/l/manifest-android-interview" class="btn btn-secondary" target="_blank">Get on Gumroad</a>
+                    <a href="https://www.amazon.com/dp/B0FBWCP743" class="btn btn-amazon" target="_blank">Get on Amazon</a>
+                    <a href="https://skydoves.gumroad.com/l/manifest-android-interview" class="btn btn-gumroad" target="_blank">Get on Gumroad</a>
                 </div>
             </div>
         </div>
@@ -1118,7 +1411,7 @@
             <div class="section-header">
                 <div class="section-label">Content Structure</div>
                 <h2 class="section-title">Interview Questions</h2>
-                <p class="section-subtitle">Comprehensive coverage of Android Framework and Jetpack Compose</p>
+                <p class="section-subtitle" style="max-width: none;">Comprehensive coverage of Android Framework and Jetpack Compose</p>
             </div>
 
             <div class="chapters-grid">
@@ -1177,17 +1470,16 @@
             <div class="section-header">
                 <div class="section-label">Testimonials</div>
                 <h2 class="section-title">What Developers Are Saying</h2>
-                <p class="section-subtitle">Trusted by engineers from Google, Bumble, Block, HubSpot, and more</p>
             </div>
 
             <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <p class="testimonial-text">"An essential guide for Android developers tackling theory-heavy technical interviews. Manifest Android Interview seamlessly blends deep technical insights, practical examples, and thoughtful Pro Tips sections. Whether you're brushing up on the fundamentals or diving into advanced topics like Jetpack Compose internals, this book has something for everyone."</p>
+                    <p class="testimonial-text">"Manifest Android Interview stands as an essential guide for Android developers tackling theory-heavy technical interviews. It seamlessly blends deep technical insights, practical examples, and thoughtful 'Pro Tips for Mastery' sections. The knowledge in this book makes it an invaluable resource for confidently navigating and succeeding in Android interviews."</p>
                     <div class="testimonial-author">
                         <img src="resources/2d34b37a89f2116e5f0d42107c983a77.jpg" alt="Manuel Vivo" class="testimonial-avatar">
                         <div class="testimonial-info">
                             <h4>Manuel Vivo</h4>
-                            <p>Staff Mobile Architect @ Bumble Inc</p>
+                            <p>Staff Android Engineer @ Bumble</p>
                             <p>Ex Android DevRel @ Google</p>
                             <a href="https://bsky.app/profile/manuelvicnt.bsky.social" target="_blank">@manuelvicnt</a>
                         </div>
@@ -1195,7 +1487,7 @@
                 </div>
 
                 <div class="testimonial-card">
-                    <p class="testimonial-text">"An extensive, detailed, and well-structured resource that covers everything from the basics to the nitty-gritty of the Compose runtime. Especially helpful for interview prep, as it doesn't just tell you the 'what' but also the 'why' and 'how'. This is the kind of resource I wish I had when I was starting out in Android development."</p>
+                    <p class="testimonial-text">"Jaewoong (known to many of us in the Android community as skydoves), and his new book 'Manifest Android Interview,' are a must-have for anyone getting ready for an interview, or just wanting to brush up on their Android skills. It's an extensive, detailed, and well-structured resource that contains everything from the basics to the nitty-gritty of the Compose runtime and UI. Being biased, I was especially focused on the Jetpack Compose part and found it to be super helpful, particularly for interview prep. It consistently answers the tough and practical 'whys' and 'hows' to help you learn and improve your problem-solving, in a way that is very similar to content in real interviews. Whether you're new to Compose or getting ready for an interview, this book will certainly boost your Android knowledge and interview confidence."</p>
                     <div class="testimonial-author">
                         <img src="resources/9aaf4e824a4d41904316773948dd7a95.jpg" alt="Simona Milanovic" class="testimonial-avatar">
                         <div class="testimonial-info">
@@ -1207,7 +1499,7 @@
                 </div>
 
                 <div class="testimonial-card">
-                    <p class="testimonial-text">"Thoughtfully crafted questions and insightful tips. Combined with clear code samples, Manifest Android Interview reinforces core concepts and explores all aspects of building Android software. Whether you're preparing for interviews or looking to deepen your understanding, this comprehensive guide is a must-have."</p>
+                    <p class="testimonial-text">"Guided by thoughtfully crafted questions, insightful tips, and clear code samples, Manifest Android Interview helps you not only reinforce core Android concepts (e.g. manifest file, lifecycle, intent, service, content providers, broadcast receivers, deep links) but also explore every aspect of building software for Android, from ViewModel to the View system to Jetpack Compose and all in between. No matter your level of expertise, this book offers something for everyone. If you're preparing for your dream role or simply expanding your expertise in the platform we all love, this resource will be an invaluable companion on your journey."</p>
                     <div class="testimonial-author">
                         <img src="resources/247c116c64aee308552f7d3aa16a6e06.jpg" alt="Alejandra Stamato" class="testimonial-avatar">
                         <div class="testimonial-info">
@@ -1220,7 +1512,7 @@
                 </div>
 
                 <div class="testimonial-card">
-                    <p class="testimonial-text">"The perfect resource for brushing up on fundamentals, preparing for interviews, and revisiting best practices. The clear structure and searchable format make it easy to find exactly what you need when you need it. I highly recommend this book to any Android developer serious about their craft."</p>
+                    <p class="testimonial-text">"Manifest Android Interview is perfect for brushing up on fundamentals, preparing for interviews, and revisiting best practices. Its clear structure, searchable format, and thoughtful questions make it a go-to resource for both learning and revisiting core Android concepts."</p>
                     <div class="testimonial-author">
                         <img src="resources/f4f524c1a6f0b9b4617abe471287bf0e.jpg" alt="Matt McKenna" class="testimonial-avatar">
                         <div class="testimonial-info">
@@ -1292,7 +1584,7 @@
                     <p>PDF & EPUB</p>
                 </a>
                 <a href="https://skydoves.gumroad.com/l/manifest-android-interview" class="purchase-card" target="_blank">
-                    <div class="purchase-icon">🛒</div>
+                    <div class="purchase-icon">📒</div>
                     <h4>Gumroad</h4>
                     <p>PDF & EPUB</p>
                 </a>
@@ -1338,7 +1630,7 @@
     </section>
 
     <!-- Sponsors -->
-    <section class="section section-gray">
+    <section class="section section-gray" id="sponsors">
         <div class="container">
             <div class="section-header">
                 <div class="section-label">Sponsors</div>
@@ -1358,8 +1650,182 @@
         </div>
     </section>
 
+    <!-- Table of Contents -->
+    <section class="section" id="contents">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Contents</div>
+                <h2 class="section-title">Table of Contents</h2>
+            </div>
+
+            <div class="toc-container">
+                <div class="toc-section">
+                    <h3 class="toc-heading">Preface</h3>
+                    <ul class="toc-list">
+                        <li>Testimonial</li>
+                        <li class="toc-sub">Manuel Vivo (Staff Android Engineer at Bumble, Ex Android DevRel at Google)</li>
+                        <li class="toc-sub">Matt McKenna (Senior Android Engineer at Block, Android GDE)</li>
+                        <li class="toc-sub">Alejandra Stamato (Lead Android Engineer at HubSpot, Ex Android DevRel at Google)</li>
+                        <li class="toc-sub">Simona Milanovic (Senior Android Developer Relations Engineer)</li>
+                        <li>About This Book</li>
+                        <li class="toc-sub">To. Interviewees</li>
+                        <li class="toc-sub">To. Interviewers</li>
+                        <li>Sponsors</li>
+                        <li class="toc-sub">Stream</li>
+                        <li>Issue Reports & Discussion</li>
+                    </ul>
+                </div>
+
+                <div class="toc-section">
+                    <h3 class="toc-heading">0. Android Interview Questions</h3>
+
+                    <h4 class="toc-category">Category 0: The Android Framework</h4>
+                    <ul class="toc-list toc-questions">
+                        <li>Q) 0. What is Android?</li>
+                        <li>Q) 1. What is Intent?</li>
+                        <li>Q) 2. What is the purpose of Pending Intent?</li>
+                        <li>Q) 3. What are the differences between Serializable and Parcelable</li>
+                        <li>Q) 4. What is Context and what types of Context exist?</li>
+                        <li>Q) 5. What is Application class?</li>
+                        <li>Q) 6. What is the purpose of the AndroidManifest file?</li>
+                        <li>Q) 7. Describe the Activity lifecycle</li>
+                        <li>Q) 8. Describe the Fragment lifecycle</li>
+                        <li>Q) 9. What is Service?</li>
+                        <li>Q) 10. What is BroadcastReceiver?</li>
+                        <li>Q) 11. What is the purpose of a ContentProvider, and how does it facilitate secure data sharing between applications?</li>
+                        <li>Q) 12. How to handle configuration changes?</li>
+                        <li>Q) 13. How Android handles memory management, and how do you avoid memory leaks?</li>
+                        <li>Q) 14. What are the main causes of ANR errors, and how can you prevent them from occurring?</li>
+                        <li>Q) 15. How do you handle deep links?</li>
+                        <li>Q) 16. What are tasks and back stack?</li>
+                        <li>Q) 17. What's the purpose of Bundle?</li>
+                        <li>Q) 18. How do you pass data between Activities or Fragments</li>
+                        <li>Q) 19. What happens to an Activity during configuration changes?</li>
+                        <li>Q) 20. What is ActivityManager?</li>
+                        <li>Q) 21. What are the advantages of using SparseArray</li>
+                        <li>Q) 22. How do you handle runtime permissions?</li>
+                        <li>Q) 23. What are the roles of Looper, Handler, and HandlerThread?</li>
+                        <li>Q) 24. How do you trace exceptions?</li>
+                        <li>Q) 25. What are build variants and flavors?</li>
+                        <li>Q) 26. How do you ensure accessibility?</li>
+                        <li>Q) 27. What is the Android file system?</li>
+                        <li>Q) 28. What are Android Runtime (ART), Dalvik, and Dex Compiler?</li>
+                        <li>Q) 29. What are the differences between the APK file and the AAB file?</li>
+                        <li>Q) 30. What is R8 optimization?</li>
+                        <li>Q) 31. How do you reduce application sizes?</li>
+                        <li>Q) 32. What is a process in Android applications, and how does the Android operating system manage it?</li>
+                    </ul>
+
+                    <h4 class="toc-category">Category 1: Android UI - Views</h4>
+                    <ul class="toc-list toc-questions">
+                        <li>Q) 33. Describe the View lifecycle</li>
+                        <li>Q) 34. What's the difference between View and ViewGroup?</li>
+                        <li>Q) 35. Have you ever used ViewStub and how do you optimize UI performance using it?</li>
+                        <li>Q) 36. How to implement custom views?</li>
+                        <li>Q) 37. What is Canvas and how to utilize it?</li>
+                        <li>Q) 38. What is the invalidation in the View system?</li>
+                        <li>Q) 39. What is ConstraintLayout?</li>
+                        <li>Q) 40. When should you use SurfaceView instead of TextureView?</li>
+                        <li>Q) 41. How does RecyclerView work internally?</li>
+                        <li>Q) 42. What's the difference between Dp and Sp?</li>
+                        <li>Q) 43. What is the use of a nine-patch image?</li>
+                        <li>Q) 44. What is a Drawable, and how is it used in UI development?</li>
+                        <li>Q) 45. What is Bitmap on Android, and how would you handle large Bitmaps efficiently?</li>
+                        <li>Q) 46. How do you implement animations?</li>
+                        <li>Q) 47. What is the Window?</li>
+                        <li>Q) 48. How do you render a web page?</li>
+                    </ul>
+
+                    <h4 class="toc-category">Category 2: Jetpack Library</h4>
+                    <ul class="toc-list toc-questions">
+                        <li>Q) 49. What is the AppCompat library?</li>
+                        <li>Q) 50. What is the Material Design Components (MDC)?</li>
+                        <li>Q) 51. What is the advantages of using ViewBinding?</li>
+                        <li>Q) 52. How DataBinding works?</li>
+                        <li>Q) 53. What is LiveData?</li>
+                        <li>Q) 54. What is Jetpack ViewModel?</li>
+                        <li>Q) 55. What is the Jetpack Navigation Library?</li>
+                        <li>Q) 56: What are Dagger 2 and Hilt?</li>
+                        <li>Q) 57. What is the Jetpack Paging library?</li>
+                        <li>Q) 58. What is Baseline Profile?</li>
+                    </ul>
+
+                    <h4 class="toc-category">Category 3: Business Logic</h4>
+                    <ul class="toc-list toc-questions">
+                        <li>Q) 59. How would you manage long-running background tasks?</li>
+                        <li>Q) 60. How do you serialize Json format to object</li>
+                        <li>Q) 61. How do you handle network requests to fetch data, and which libraries or techniques do you use for efficiency and reliability?</li>
+                        <li>Q) 62. Why is a paging system essential for loading large datasets, and how can it be implemented with RecyclerView?</li>
+                        <li>Q) 63. How do you fetch and render images from the network?</li>
+                        <li>Q) 64. How do you store and persist data locally?</li>
+                        <li>Q) 65. How do you handle offline-first features?</li>
+                        <li>Q) 66. Where do you launch tasks for loading the initial data? LaunchedEffect vs. ViewModel.init()</li>
+                    </ul>
+                </div>
+
+                <div class="toc-section">
+                    <h3 class="toc-heading">1. Jetpack Compose Interview Questions</h3>
+
+                    <h4 class="toc-category">Category 0: Compose Fundamentals</h4>
+                    <ul class="toc-list toc-questions">
+                        <li>Q) 0. What is the structure of Jetpack Compose?</li>
+                        <li>Q) 1. What are the Compose phases?</li>
+                        <li>Q) 2. Why is Jetpack Compose a declarative UI framework?</li>
+                        <li>Q) 3. What is recomposition, and when does it occur? Also, how does it related to the app performance?</li>
+                        <li>Q) 4. How the composable function works internally?</li>
+                        <li>Q) 5. What is stability in Jetpack Compose, and how does it relate to performance?</li>
+                        <li>Q) 6. Have you ever had experience optimizing Compose performance by improving stabilities?</li>
+                        <li>Q) 7. What is composition and how to create it?</li>
+                        <li>Q) 8. What strategies are available for migrating the XML-based project to Jetpack Compose?</li>
+                        <li>Q) 9. Why should you always test Compose performance in release mode?</li>
+                        <li>Q) 10. What Kotlin idioms frequrently used in Jetpack Compose?</li>
+                    </ul>
+
+                    <h4 class="toc-category">Category 1: Compose Runtime</h4>
+                    <ul class="toc-list toc-questions">
+                        <li>Q) 11. What is State and which APIs are used to manage it?</li>
+                        <li>Q) 12. What are the advantages you can take from the state hoisting?</li>
+                        <li>Q) 13. What are the differences between remember and rememberSaveable?</li>
+                        <li>Q) 14. How do you safely create a coroutine scope within composable functions?</li>
+                        <li>Q) 15. How do you handle side effects inside composable functions?</li>
+                        <li>Q) 16. What is the purpose of rememberUpdatedState, and how does it work?</li>
+                        <li>Q) 17. What is the purpose of produceState, and how does it work?</li>
+                        <li>Q) 18. What is snapshotFlow and how does it work?</li>
+                        <li>Q) 19. What is the purpose of derivedStateOf, and how does it help optimize recomposition?</li>
+                        <li>Q) 20. What's the lifecycle of composable functions or Composition?</li>
+                        <li>Q) 21. What is SaveableStateHolder?</li>
+                        <li>Q) 22. What's the purpose of the snapshot system?</li>
+                        <li>Q) 23. What are the mutableStateListOf and mutableStateMapOf?</li>
+                        <li>Q) 24. How can you safely collect Kotlin's Flow in composable functions while preventing memory leaks?</li>
+                        <li>Q) 25. What's the role of the CompositionLocals?</li>
+                    </ul>
+
+                    <h4 class="toc-category">Category 2: Compose UI</h4>
+                    <ul class="toc-list toc-questions">
+                        <li>Q) 26. What's Modifier?</li>
+                        <li>Q) 27. What is Layout?</li>
+                        <li>Q) 28. What is Box?</li>
+                        <li>Q) 29. What are the differences between Arrangement and Alignment?</li>
+                        <li>Q) 30. What is Painter?</li>
+                        <li>Q) 31. How do you load images from the network?</li>
+                        <li>Q) 32. How can you efficiently render hundreds of items as a list in while avoiding UI jank?</li>
+                        <li>Q) 33. How do you implement pagination with lazy lists?</li>
+                        <li>Q) 34. What is Canvas?</li>
+                        <li>Q) 35. Have you ever utilized graphicsLayer Modifier?</li>
+                        <li>Q) 36. How do you implement visual animations in Jetpack Compose?</li>
+                        <li>Q) 37. How do you navigate between screens?</li>
+                        <li>Q) 38. How preview works and how do you handle them?</li>
+                        <li>Q) 39. How do you write unit tests for Compose UI components or screens?</li>
+                        <li>Q) 40. What is screenshot testing, and how does it help ensure UI consistency during development?</li>
+                        <li>Q) 41. How do you ensure accessibility in Jetpack Compose?</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Timeline -->
-    <section class="section section-gray">
+    <section class="section section-gray" id="timeline">
         <div class="container">
             <div class="section-header">
                 <div class="section-label">Journey</div>
