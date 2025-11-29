@@ -1,0 +1,1504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manifest Android Interview - The Ultimate Guide to Cracking Android Technical Interviews</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="A comprehensive 465-page Android development guide featuring 108 interview questions with detailed solutions, 162 practical exercises, and 50+ pro tips covering Android Framework, Jetpack Compose, and more.">
+    <meta name="keywords" content="Android, Jetpack Compose, Android Interview, Android Development, Kotlin, Google Developer Expert, skydoves, Jaewoong Eum">
+    <meta name="author" content="Jaewoong Eum (skydoves)">
+    <link rel="canonical" href="https://www.android.skydoves.me/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="book">
+    <meta property="og:title" content="Manifest Android Interview - Android & Compose Deep Dive">
+    <meta property="og:description" content="The ultimate guide to cracking Android technical interviews with 108 questions, 162 exercises, and 50+ pro tips.">
+    <meta property="og:url" content="https://www.android.skydoves.me/">
+
+    <!-- Schema.org Book Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Book",
+        "name": "Manifest Android Interview",
+        "author": {
+            "@type": "Person",
+            "name": "Jaewoong Eum",
+            "url": "https://github.com/skydoves"
+        },
+        "description": "The ultimate guide to cracking Android technical interviews",
+        "numberOfPages": 465,
+        "bookFormat": ["EBook", "Paperback", "Hardcover"],
+        "url": "https://www.android.skydoves.me/"
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-blue: #4285f4;
+            --primary-dark: #1a73e8;
+            --text-primary: #202124;
+            --text-secondary: #5f6368;
+            --text-light: #80868b;
+            --bg-light: #f8f9fa;
+            --bg-dark: #202124;
+            --border-color: #dadce0;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--white);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            padding: 12px 0;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .nav-logo {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-blue);
+        }
+
+        .nav-cta {
+            background: var(--primary-blue);
+            color: var(--white) !important;
+            padding: 10px 20px;
+            border-radius: 24px;
+            font-weight: 600 !important;
+        }
+
+        .nav-cta:hover {
+            background: var(--primary-dark);
+        }
+
+        /* Language Dropdown */
+        .nav-language {
+            position: relative;
+        }
+
+        .language-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            background: transparent;
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .language-btn:hover {
+            border-color: var(--primary-blue);
+            color: var(--primary-blue);
+        }
+
+        .language-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            margin-top: 8px;
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+            min-width: 180px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.2s;
+            z-index: 1001;
+        }
+
+        .nav-language:hover .language-dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .language-dropdown a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 16px;
+            font-size: 14px;
+            color: var(--text-primary);
+            transition: background 0.2s;
+        }
+
+        .language-dropdown a:first-child {
+            border-radius: 12px 12px 0 0;
+        }
+
+        .language-dropdown a:last-child {
+            border-radius: 0 0 12px 12px;
+        }
+
+        .language-dropdown a:hover {
+            background: var(--bg-light);
+            color: var(--primary-blue);
+        }
+
+        .language-dropdown a:not(:last-child) {
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 120px 0 30px;
+            background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+        }
+
+        .hero-top {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 50px;
+            align-items: start;
+            margin-bottom: 30px;
+        }
+
+        .hero-bottom {
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #e8f0fe;
+            color: var(--primary-blue);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .hero-title {
+            font-size: 48px;
+            font-weight: 800;
+            line-height: 1.15;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            line-height: 1.7;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 50px;
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 40px;
+            font-weight: 800;
+            color: var(--primary-blue);
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.2s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--primary-blue);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            background: var(--bg-light);
+            border-color: var(--text-light);
+        }
+
+        .hero-book {
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-book img {
+            max-width: 320px;
+            border-radius: 8px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 35px 0;
+        }
+
+        .section-gray {
+            background: var(--bg-light);
+        }
+
+        .section-dark {
+            background: var(--bg-dark);
+            color: var(--white);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--primary-blue);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .section-dark .section-label {
+            color: #8ab4f8;
+        }
+
+        .section-title {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+        }
+
+        .section-dark .section-title {
+            color: var(--white);
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .section-dark .section-subtitle {
+            color: #9aa0a6;
+        }
+
+        /* Author Section */
+        .author-content {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 48px;
+            align-items: start;
+        }
+
+        .author-image-wrapper {
+            text-align: center;
+        }
+
+        .author-image {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 16px;
+            border: 4px solid var(--white);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+        }
+
+        .author-gde {
+            max-width: 180px;
+            margin: 0 auto;
+        }
+
+        .author-bio {
+            font-size: 16px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .author-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .author-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: var(--bg-dark);
+            color: var(--white);
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .author-link:hover {
+            background: #3c4043;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 32px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .feature-icon {
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+
+        .feature-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        .feature-card p {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Book Preview Grid - Masonry/Staggered */
+        .book-preview-grid {
+            columns: 3;
+            column-gap: 24px;
+        }
+
+        .book-preview-item {
+            break-inside: avoid;
+            margin-bottom: 24px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .book-preview-item img {
+            width: 100%;
+            display: block;
+        }
+
+        /* Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 32px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .testimonial-text {
+            font-size: 15px;
+            color: var(--text-primary);
+            line-height: 1.8;
+            margin-bottom: 24px;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .testimonial-avatar {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .testimonial-avatar-placeholder {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: var(--primary-blue);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .testimonial-info h4 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .testimonial-info p {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .testimonial-info a {
+            color: var(--primary-blue);
+            font-size: 14px;
+        }
+
+        /* Community Reviews - Masonry/Staggered Grid */
+        .reviews-grid {
+            columns: 3;
+            column-gap: 20px;
+        }
+
+        .review-card {
+            break-inside: avoid;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .review-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .review-card img {
+            width: 100%;
+            display: block;
+        }
+
+        /* Chapters */
+        .chapters-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .chapter-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .chapter-header {
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 24px;
+        }
+
+        .chapter-header h3 {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.9;
+            margin-bottom: 8px;
+        }
+
+        .chapter-header h4 {
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .chapter-body {
+            padding: 24px;
+        }
+
+        .chapter-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 15px;
+            color: var(--text-secondary);
+        }
+
+        .chapter-item:last-child {
+            border-bottom: none;
+        }
+
+        .chapter-badge {
+            background: #e8f0fe;
+            color: var(--primary-blue);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        /* Purchase Section */
+        .purchase-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+        }
+
+        .purchase-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 28px 20px;
+            text-align: center;
+            transition: all 0.2s;
+            color: var(--white);
+        }
+
+        .purchase-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-4px);
+        }
+
+        .purchase-icon {
+            font-size: 36px;
+            margin-bottom: 12px;
+        }
+
+        .purchase-card h4 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .purchase-card p {
+            font-size: 13px;
+            opacity: 0.7;
+        }
+
+        /* Languages */
+        .language-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .language-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: var(--white);
+            border: 2px solid var(--border-color);
+            border-radius: 30px;
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-primary);
+            transition: all 0.2s;
+        }
+
+        .language-badge:hover {
+            border-color: var(--primary-blue);
+            color: var(--primary-blue);
+        }
+
+        /* Sponsors */
+        .sponsors-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .sponsor-card {
+            display: block;
+            background: var(--white);
+            padding: 32px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .sponsor-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .sponsor-logo {
+            height: 40px;
+            margin-bottom: 16px;
+        }
+
+        .sponsor-card p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Community CTA */
+        .community-cta {
+            background: var(--primary-blue);
+            border-radius: 16px;
+            padding: 60px;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .community-cta h2 {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+
+        .community-cta p {
+            font-size: 17px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 28px;
+        }
+
+        .discord-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--white);
+            color: #5865F2;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .discord-btn:hover {
+            background: #f8f9fa;
+        }
+
+        /* Timeline */
+        .timeline {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 24px;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .timeline-date {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+
+        .timeline-content {
+            font-size: 15px;
+            color: var(--text-secondary);
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 40px;
+            color: white;
+            cursor: pointer;
+            transition: opacity 0.2s;
+            background: none;
+            border: none;
+            line-height: 1;
+        }
+
+        .lightbox-close:hover {
+            opacity: 0.7;
+        }
+
+        /* Expandable images */
+        .expandable-img {
+            cursor: zoom-in;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .expandable-img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--bg-dark);
+            color: #9aa0a6;
+            padding: 48px 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 32px;
+            justify-content: center;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #9aa0a6;
+            font-size: 14px;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        .footer p {
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-top {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .hero-book { order: -1; }
+            .author-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .author-credentials li { justify-content: center; }
+            .author-links { justify-content: center; }
+            .features-grid, .chapters-grid, .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            .book-preview-grid {
+                columns: 2;
+            }
+            .reviews-grid {
+                columns: 2;
+            }
+            .purchase-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .sponsors-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero-title { font-size: 32px; }
+            .hero-stats { gap: 24px; }
+            .stat-number { font-size: 32px; }
+            .section-title { font-size: 28px; }
+            .book-preview-grid {
+                columns: 1;
+            }
+            .reviews-grid {
+                columns: 1;
+            }
+            .purchase-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .community-cta { padding: 40px 24px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="/" class="nav-logo">Manifest Android Interview</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li class="nav-language">
+                    <button class="language-btn">
+                        <span>🌐</span> Language <span>▾</span>
+                    </button>
+                    <div class="language-dropdown">
+                        <a href="https://leanpub.com/manifest-android-interview" target="_blank">🇺🇸 English</a>
+                        <a href="https://leanpub.com/manifest-android-interview-kr" target="_blank">🇰🇷 Korean</a>
+                        <a href="https://leanpub.com/manifest-android-interview-ja" target="_blank">🇯🇵 Japanese</a>
+                        <a href="https://leanpub.com/manifest-android-interview-zh-Hans" target="_blank">🇨🇳 Chinese</a>
+                        <a href="https://leanpub.com/manifest-android-interview-de" target="_blank">🇩🇪 German</a>
+                        <a href="https://leanpub.com/manifest-android-interview-es" target="_blank">🇪🇸 Spanish</a>
+                        <a href="https://leanpub.com/manifest-android-interview-id" target="_blank">🇮🇩 Indonesian</a>
+                        <a href="https://leanpub.com/manifest-android-interview-uk" target="_blank">🇺🇦 Ukrainian</a>
+                    </div>
+                </li>
+                <li><a href="#purchase" class="nav-cta">Get the Book</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-top">
+                <div class="hero-text">
+                    <div class="hero-badge">
+                        <span>🏆</span> #1 Best Seller on Leanpub
+                    </div>
+                    <h1 class="hero-title">Manifest Android Interview</h1>
+                    <p class="hero-subtitle">This book deep dives into Android & Compose and is a comprehensive development book designed for engineers who want to strengthen and refresh their Android & Compose fundamentals, explore internals, and excel in technical interviews.</p>
+                    <p class="hero-subtitle">You'll find end-to-end coverage across the Android Framework, UI architecture, Jetpack libraries, and business logic. The book includes a deep dive into Jetpack Compose from fundamentals to runtime behavior, internal mechanics, and modern UI patterns.</p>
+                    <p class="hero-subtitle">Whether you're preparing for an Android interview, mastering Jetpack Compose internals, or seeking a deep dive into Android development, this book is a complete roadmap to advancing your career.</p>
+                </div>
+                <div class="hero-book">
+                    <img src="resources/3f154ad5849843ca5e9e49f1d8357fa5.jpg" alt="Manifest Android Interview Book Cover" class="expandable-img">
+                </div>
+            </div>
+
+            <div class="hero-bottom">
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">465</div>
+                        <div class="stat-label">Pages</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">108</div>
+                        <div class="stat-label">Interview Questions</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">162</div>
+                        <div class="stat-label">Practical Exercises</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Pro Tips</div>
+                    </div>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="https://leanpub.com/manifest-android-interview" class="btn btn-primary" target="_blank">Get on Leanpub</a>
+                    <a href="https://www.amazon.com/dp/B0FBWCP743" class="btn btn-secondary" target="_blank">Get on Amazon</a>
+                    <a href="https://skydoves.gumroad.com/l/manifest-android-interview" class="btn btn-secondary" target="_blank">Get on Gumroad</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About the Author -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">About the Author</div>
+                <h2 class="section-title">Jaewoong Eum (skydoves)</h2>
+                <p class="section-subtitle" style="max-width: none;">Senior Developer Advocate & Engineer at RevenueCat</p>
+            </div>
+
+            <div class="author-content">
+                <div class="author-image-wrapper">
+                    <img src="resources/6289a6fde71f156d0646dd316703f411.jpg" alt="Jaewoong Eum" class="author-image">
+                </div>
+                <div class="author-info">
+                    <p class="author-bio">This is Jaewoong Eum (known as skydoves), a Google Developer Expert (GDE) for Android, Kotlin, and Firebase. I've created over 80 open-source libraries and projects, which collectively achieve more than 15 million downloads annually by developers worldwide. I'm also the founder of <a href="https://github.com/doveletter" target="_blank" style="color: var(--primary-blue); text-decoration: underline;">Dove Letter</a>, a subscription-based repository focused on sharing, learning, and discussing topics across Android and Kotlin development.</p>
+
+                    <p class="author-bio">With a mission to make the world a better place and create a positive impact through technical solutions, open-source contributions, and technical content, I believe this book marks an exciting new chapter in this journey. I want to express my deepest gratitude to the developer communities, friends, and family who have supported me along the way. Writing this book is not just a milestone; it's the first step toward empowering others in the Android ecosystem.</p>
+
+                    <p class="author-bio">Learning is a continuous path, and every challenge overcome brings you closer to mastering your craft. Whether you're preparing for your next technical interview or striving to level up as a developer, I encourage you to go beyond implementation. Understand the why, explore different patterns and trade-offs, and keep learning with curiosity and passion.</p>
+
+                    <p class="author-bio">As always, happy coding, and best of luck on your Android journey!</p>
+
+                    <div class="author-links">
+                        <a href="https://github.com/skydoves" class="author-link" target="_blank">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section section-gray" id="features">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">What's Inside</div>
+                <h2 class="section-title">Everything You Need to Succeed</h2>
+                <p class="section-subtitle">Master Android development and ace your technical interviews with comprehensive coverage</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📖</div>
+                    <h3>Interview Questions with Detailed Explanation</h3>
+                    <p>Each question includes step-by-step explanations clarifying both the "what" and "why" of concepts, helping you build deep understanding beyond surface-level knowledge. You won't just memorize answers, you'll understand the reasoning behind them.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💡</div>
+                    <h3>Pro Tips for Mastery</h3>
+                    <p>50+ advanced "Pro Tips" sections that go beyond basic interview prep. These sections reveal internal API implementations, share insights from real-world experience, and explain how things actually work beneath the surface, giving you the edge in technical discussions.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Practical Questions</h3>
+                    <p>162 follow-up "Practical Questions" designed to simulate real interview scenarios. These questions encourage independent exploration and critical thinking, helping you prepare for the unpredictable nature of technical interviews.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>Additional Resources and References</h3>
+                    <p>Each topic includes curated references for further learning, plain-language footnotes explaining complex internals, and links to official documentation and community resources, making advanced concepts accessible to developers at all levels.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Preview -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Book Preview</div>
+                <h2 class="section-title">See What's Inside</h2>
+                <p class="section-subtitle">High-quality content with clear explanations and practical examples</p>
+            </div>
+
+            <div class="book-preview-grid">
+                <div class="book-preview-item">
+                    <img src="resources/499dc1770b955d36922dd5558570fb5c.jpg" alt="Book Content Preview - Interview Question" class="expandable-img">
+                </div>
+                <div class="book-preview-item">
+                    <img src="resources/cd4840989174e289766554391f16d2f9.jpg" alt="Book Content Preview - Compose Explanation" class="expandable-img">
+                </div>
+                <div class="book-preview-item">
+                    <img src="resources/181c8fc23386f7a1afb600d27af766d2.jpg" alt="Book Content Preview - Pro Tips" class="expandable-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interview Questions Structure -->
+    <section class="section section-gray">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Content Structure</div>
+                <h2 class="section-title">Interview Questions</h2>
+                <p class="section-subtitle">Comprehensive coverage of Android Framework and Jetpack Compose</p>
+            </div>
+
+            <div class="chapters-grid">
+                <div class="chapter-card">
+                    <div class="chapter-header">
+                        <h3>Chapter 0</h3>
+                        <h4>Android Interview Questions</h4>
+                    </div>
+                    <div class="chapter-body">
+                        <div class="chapter-item">
+                            <span class="chapter-badge">Category 0</span>
+                            <span>The Android Framework</span>
+                        </div>
+                        <div class="chapter-item">
+                            <span class="chapter-badge">Category 1</span>
+                            <span>Android UI</span>
+                        </div>
+                        <div class="chapter-item">
+                            <span class="chapter-badge">Category 2</span>
+                            <span>Jetpack Library</span>
+                        </div>
+                        <div class="chapter-item">
+                            <span class="chapter-badge">Category 3</span>
+                            <span>Business Logic</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chapter-card">
+                    <div class="chapter-header">
+                        <h3>Chapter 1</h3>
+                        <h4>Jetpack Compose Interview Questions</h4>
+                    </div>
+                    <div class="chapter-body">
+                        <div class="chapter-item">
+                            <span class="chapter-badge">Category 0</span>
+                            <span>Compose Fundamentals</span>
+                        </div>
+                        <div class="chapter-item">
+                            <span class="chapter-badge">Category 1</span>
+                            <span>Compose Runtime</span>
+                        </div>
+                        <div class="chapter-item">
+                            <span class="chapter-badge">Category 2</span>
+                            <span>Compose UI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Testimonials</div>
+                <h2 class="section-title">What Developers Are Saying</h2>
+                <p class="section-subtitle">Trusted by engineers from Google, Bumble, Block, HubSpot, and more</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"An essential guide for Android developers tackling theory-heavy technical interviews. Manifest Android Interview seamlessly blends deep technical insights, practical examples, and thoughtful Pro Tips sections. Whether you're brushing up on the fundamentals or diving into advanced topics like Jetpack Compose internals, this book has something for everyone."</p>
+                    <div class="testimonial-author">
+                        <img src="resources/2d34b37a89f2116e5f0d42107c983a77.jpg" alt="Manuel Vivo" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4>Manuel Vivo</h4>
+                            <p>Staff Mobile Architect @ Bumble Inc</p>
+                            <p>Ex Android DevRel @ Google</p>
+                            <a href="https://bsky.app/profile/manuelvicnt.bsky.social" target="_blank">@manuelvicnt</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"An extensive, detailed, and well-structured resource that covers everything from the basics to the nitty-gritty of the Compose runtime. Especially helpful for interview prep, as it doesn't just tell you the 'what' but also the 'why' and 'how'. This is the kind of resource I wish I had when I was starting out in Android development."</p>
+                    <div class="testimonial-author">
+                        <img src="resources/9aaf4e824a4d41904316773948dd7a95.jpg" alt="Simona Milanovic" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4>Simona Milanovic</h4>
+                            <p>Senior Android Developer Relations Engineer</p>
+                            <a href="https://bsky.app/profile/anomiss.bsky.social" target="_blank">@anomiss</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Thoughtfully crafted questions and insightful tips. Combined with clear code samples, Manifest Android Interview reinforces core concepts and explores all aspects of building Android software. Whether you're preparing for interviews or looking to deepen your understanding, this comprehensive guide is a must-have."</p>
+                    <div class="testimonial-author">
+                        <img src="resources/247c116c64aee308552f7d3aa16a6e06.jpg" alt="Alejandra Stamato" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4>Alejandra Stamato</h4>
+                            <p>Lead Android Engineer @ HubSpot</p>
+                            <p>Ex Android DevRel @ Google</p>
+                            <a href="https://bsky.app/profile/AleStamato.bsky.social" target="_blank">@AleStamato</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The perfect resource for brushing up on fundamentals, preparing for interviews, and revisiting best practices. The clear structure and searchable format make it easy to find exactly what you need when you need it. I highly recommend this book to any Android developer serious about their craft."</p>
+                    <div class="testimonial-author">
+                        <img src="resources/f4f524c1a6f0b9b4617abe471287bf0e.jpg" alt="Matt McKenna" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4>Matt McKenna</h4>
+                            <p>Senior Android Engineer @ Block</p>
+                            <p>Android GDE</p>
+                            <a href="https://bsky.app/profile/mattmckenna.me" target="_blank">@mattmckenna</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Reviews -->
+    <section class="section section-gray" id="reviews">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Community Feedback</div>
+                <h2 class="section-title">Shoutouts & Community Reviews</h2>
+                <p class="section-subtitle">See what the Android community is saying about the book</p>
+            </div>
+
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <img src="resources/3cad78a776128ac67375b9dc52029372.jpg" alt="Jorge Castillo Tweet" class="expandable-img">
+                </div>
+                <div class="review-card">
+                    <img src="resources/d79b606faeb3834e502095323180df44.jpg" alt="Manuel Vivo Post" class="expandable-img">
+                </div>
+                <div class="review-card">
+                    <img src="resources/6c0b26d2013ede07a0aad47cab94c637.jpg" alt="Amazon #1 New Release" class="expandable-img">
+                </div>
+                <div class="review-card">
+                    <img src="resources/5208a53751c3b9a41be6d853a1e1a1fe.jpg" alt="Amazon Review" class="expandable-img">
+                </div>
+                <div class="review-card">
+                    <img src="resources/f8addc9cb571c5215bc38bf254a30cb8.jpg" alt="Amazon Review 2" class="expandable-img">
+                </div>
+                <div class="review-card">
+                    <img src="resources/a74ee2442a4e5c14d7887a968bac431e.jpg" alt="Leanpub Review" class="expandable-img">
+                </div>
+                <div class="review-card">
+                    <img src="resources/cf7c48a8e3d1ab428d365bd8cc089181.jpg" alt="LinkedIn Post" class="expandable-img">
+                </div>
+                <div class="review-card">
+                    <img src="resources/424ea969870e03de072d21977de4fae1.jpg" alt="Twitter Feedback" class="expandable-img">
+                </div>
+                <div class="review-card">
+                    <img src="resources/255ca7c44ae73a7a5a742d641f3da53e.jpg" alt="Discord Feedback" class="expandable-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Purchase Section -->
+    <section class="section section-dark" id="purchase">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Get the Book</div>
+                <h2 class="section-title">Available Everywhere</h2>
+                <p class="section-subtitle">Choose your preferred format and platform</p>
+            </div>
+
+            <div class="purchase-grid">
+                <a href="https://leanpub.com/manifest-android-interview" class="purchase-card" target="_blank">
+                    <div class="purchase-icon">📘</div>
+                    <h4>Leanpub</h4>
+                    <p>PDF & EPUB</p>
+                </a>
+                <a href="https://skydoves.gumroad.com/l/manifest-android-interview" class="purchase-card" target="_blank">
+                    <div class="purchase-icon">🛒</div>
+                    <h4>Gumroad</h4>
+                    <p>PDF & EPUB</p>
+                </a>
+                <a href="https://www.amazon.com/dp/B0FBS6FT6P" class="purchase-card" target="_blank">
+                    <div class="purchase-icon">📱</div>
+                    <h4>Kindle</h4>
+                    <p>Amazon</p>
+                </a>
+                <a href="https://www.amazon.com/dp/B0FBWCP743" class="purchase-card" target="_blank">
+                    <div class="purchase-icon">📕</div>
+                    <h4>Paperback</h4>
+                    <p>Amazon</p>
+                </a>
+                <a href="https://www.amazon.com/dp/B0FBWCRNHZ" class="purchase-card" target="_blank">
+                    <div class="purchase-icon">📗</div>
+                    <h4>Hardcover</h4>
+                    <p>Amazon</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Language Editions -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Global Reach</div>
+                <h2 class="section-title">Available in Multiple Languages</h2>
+                <p class="section-subtitle">Translated editions for the global Android developer community</p>
+            </div>
+
+            <div class="language-grid">
+                <a href="https://leanpub.com/manifest-android-interview" class="language-badge">🇺🇸 English</a>
+                <a href="https://leanpub.com/manifest-android-interview-kr" class="language-badge">🇰🇷 Korean</a>
+                <a href="https://leanpub.com/manifest-android-interview-ja" class="language-badge">🇯🇵 Japanese</a>
+                <a href="https://leanpub.com/manifest-android-interview-zh-Hans" class="language-badge">🇨🇳 Chinese</a>
+                <a href="https://leanpub.com/manifest-android-interview-de" class="language-badge">🇩🇪 German</a>
+                <a href="https://leanpub.com/manifest-android-interview-es" class="language-badge">🇪🇸 Spanish</a>
+                <a href="https://leanpub.com/manifest-android-interview-id" class="language-badge">🇮🇩 Indonesian</a>
+                <a href="https://leanpub.com/manifest-android-interview-uk" class="language-badge">🇺🇦 Ukrainian</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsors -->
+    <section class="section section-gray">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Sponsors</div>
+                <h2 class="section-title">Proudly Supported By</h2>
+            </div>
+
+            <div class="sponsors-grid">
+                <a href="https://getstream.io/video/sdk/android/?utm_source=website&utm_medium=referral&utm_content=&utm_campaign=Jaewoong" class="sponsor-card" target="_blank">
+                    <img src="resources/6c789cadddd135975e32f5ab3c02aa1b.jpg" alt="Stream" class="sponsor-logo">
+                    <p>Build real-time Chat, Video, Audio, Feeds, and Moderation with powerful APIs and SDKs powered by a global edge network and enterprise-grade infrastructure.</p>
+                </a>
+                <a href="https://kotlinweekly.net/" class="sponsor-card" target="_blank">
+                    <h3 style="font-size: 24px; color: #7f52ff; margin-bottom: 16px; font-weight: 700;">Kotlin Weekly</h3>
+                    <p>A weekly newsletter with the best articles, libraries, videos, and news about Kotlin delivered straight to your inbox every week.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="section section-gray">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Journey</div>
+                <h2 class="section-title">Timeline & Milestones</h2>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2025.10.31</div>
+                    <div class="timeline-content">2,200 copies sold</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025.10.13</div>
+                    <div class="timeline-content">1,800 copies sold</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025.09.11</div>
+                    <div class="timeline-content">Japanese edition published</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025.08.12</div>
+                    <div class="timeline-content">1,500 copies sold</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025.07.26</div>
+                    <div class="timeline-content">1,300 copies sold; Ukrainian edition published</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025.07.22</div>
+                    <div class="timeline-content">Indonesian edition published</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025.07.12</div>
+                    <div class="timeline-content">Chinese edition published</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025.07.02</div>
+                    <div class="timeline-content">v1.6 released</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025.06.28</div>
+                    <div class="timeline-content">1,000 copies sold</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025.06.24</div>
+                    <div class="timeline-content">India Paperback edition (Shroff Publishers) published</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025.06.18</div>
+                    <div class="timeline-content">Korean edition published</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025.06.12</div>
+                    <div class="timeline-content">German edition published</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025.06.10</div>
+                    <div class="timeline-content">Spanish edition published</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025.06.05</div>
+                    <div class="timeline-content">Amazon editions (Kindle, Hardcover, Paperback) published</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025.06.01</div>
+                    <div class="timeline-content">Kotlin Weekly joined as newsletter sponsor</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025.05.01</div>
+                    <div class="timeline-content">Stream joined as major sponsor</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025.04.19</div>
+                    <div class="timeline-content">Ranked #1 on Leanpub</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025.04.15</div>
+                    <div class="timeline-content">First edition published</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="https://github.com/skydoves" target="_blank">GitHub</a>
+                <a href="https://github.com/skydoves/manifest-android-interview" target="_blank">Book Repository</a>
+                <a href="https://leanpub.com/manifest-android-interview" target="_blank">Leanpub</a>
+                <a href="https://skydoves.gumroad.com/l/manifest-android-interview" target="_blank">Gumroad</a>
+                <a href="https://www.amazon.com/dp/B0FBWCP743" target="_blank">Amazon</a>
+            </div>
+            <p>© 2025 Jaewoong Eum (skydoves). All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <img src="" alt="Expanded image" id="lightbox-img">
+    </div>
+
+    <script>
+        // Lightbox functionality
+        function openLightbox(imgSrc) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = imgSrc;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close lightbox on background click
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeLightbox();
+            }
+        });
+
+        // Close lightbox on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+
+        // Add click handlers to all expandable images
+        document.querySelectorAll('.expandable-img').forEach(img => {
+            img.addEventListener('click', function() {
+                openLightbox(this.src);
+            });
+        });
+    </script>
+</body>
+</html>
