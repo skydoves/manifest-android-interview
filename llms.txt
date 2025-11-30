@@ -1,0 +1,99 @@
+# Manifest Android Interview
+
+> A comprehensive 465-page Android development guide featuring 108 interview questions with detailed solutions, 162 practical exercises, and 50+ pro tips.
+
+## About This Book
+
+Manifest Android Interview is the ultimate guide for Android developers preparing for technical interviews. Written by Jaewoong Eum (skydoves), a Google Developer Expert for Android and Firebase, this book covers:
+
+- **108 Android & Jetpack Compose interview questions** with detailed solutions
+- **162 hands-on exercise questions** for practice
+- **50+ Pro Tips for Mastery** covering advanced patterns and internals
+
+## Topics Covered
+
+### Android Framework (33 Questions)
+- Activity & Fragment lifecycle
+- Intent, PendingIntent, BroadcastReceiver
+- Service, ContentProvider
+- Context types, Application class
+- Memory management, ANR prevention
+- Deep links, Tasks & Back stack
+- Runtime permissions
+- Looper, Handler, HandlerThread
+- Build variants, R8 optimization
+- ART, Dalvik, APK vs AAB
+
+### Android UI - Views (16 Questions)
+- View lifecycle, Custom views
+- Canvas, invalidation
+- RecyclerView internals
+- SurfaceView vs TextureView
+- Animations, Window
+- Bitmap handling
+
+### Jetpack Library (10 Questions)
+- ViewModel, LiveData
+- DataBinding, ViewBinding
+- Navigation, Hilt/Dagger
+- Paging, Baseline Profile
+
+### Business Logic (8 Questions)
+- Background tasks, WorkManager
+- Network requests, JSON serialization
+- Image loading, Local storage
+- Offline-first patterns
+
+### Jetpack Compose Fundamentals (11 Questions)
+- Compose structure and phases
+- Recomposition, Stability
+- Composable function internals
+- XML to Compose migration
+
+### Compose Runtime (15 Questions)
+- State management (remember, rememberSaveable)
+- Side effects (LaunchedEffect, DisposableEffect)
+- derivedStateOf, snapshotFlow
+- CompositionLocal
+- Snapshot system
+
+### Compose UI (16 Questions)
+- Modifier, Layout, Box
+- Lazy lists, Pagination
+- Canvas, graphicsLayer
+- Navigation, Animations
+- Testing, Accessibility
+
+## Author
+
+**Jaewoong Eum (skydoves)**
+- Senior Developer Advocate & Engineer at RevenueCat
+- Google Developer Expert for Android and Firebase
+- Creator of 80+ open-source libraries (15M+ annual downloads)
+- Founder of Dove Letter
+
+## Where to Buy
+
+- Leanpub: https://leanpub.com/manifest-android-interview
+- Amazon: https://www.amazon.com/dp/B0FBWCP743
+- Gumroad: https://skydoves.gumroad.com/l/manifest-android-interview
+
+## Available Languages
+
+English, Korean, Japanese, Chinese, German, Spanish, Indonesian, Ukrainian
+
+## Links
+
+- Website: https://www.android.skydoves.me/
+- GitHub: https://github.com/skydoves
+- Dove Letter: https://github.com/doveletter
+
+## Testimonials
+
+"Manifest Android Interview stands as an essential guide for Android developers tackling theory-heavy technical interviews." - Manuel Vivo, Staff Android Engineer @ Bumble
+
+"A must-have for anyone getting ready for an interview, or just wanting to brush up on their Android skills." - Simona Milanovic, Senior Android Developer Relations Engineer
+
+"No matter your level of expertise, this book offers something for everyone." - Alejandra Stamato, Lead Android Engineer @ HubSpot
+
+"Perfect for brushing up on fundamentals, preparing for interviews, and revisiting best practices." - Matt McKenna, Senior Android Engineer @ Block
