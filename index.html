@@ -263,6 +263,22 @@
             --bg-dark: #202124;
             --border-color: #dadce0;
             --white: #ffffff;
+            --card-bg: #ffffff;
+            --hero-gradient: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+        }
+
+        [data-theme="dark"] {
+            --primary-blue: #8ab4f8;
+            --primary-dark: #4285f4;
+            --text-primary: #e8eaed;
+            --text-secondary: #9aa0a6;
+            --text-light: #80868b;
+            --bg-light: #303134;
+            --bg-dark: #202124;
+            --border-color: #5f6368;
+            --white: #202124;
+            --card-bg: #303134;
+            --hero-gradient: linear-gradient(180deg, #171717 0%, #202124 100%);
         }
 
         * {
@@ -280,6 +296,7 @@
             line-height: 1.6;
             color: var(--text-primary);
             background: var(--white);
+            transition: background 0.3s, color 0.3s;
         }
 
         a {
@@ -309,6 +326,11 @@
             border-bottom: 1px solid var(--border-color);
             z-index: 1000;
             padding: 12px 0;
+            transition: background 0.3s;
+        }
+
+        [data-theme="dark"] .navbar {
+            background: rgba(32, 33, 36, 0.98);
         }
 
         .nav-content {
@@ -386,7 +408,7 @@
             top: 100%;
             right: 0;
             margin-top: 8px;
-            background: var(--white);
+            background: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 12px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
@@ -431,10 +453,53 @@
             border-bottom: 1px solid var(--border-color);
         }
 
+        /* Dark Mode Toggle */
+        .theme-toggle {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+
+        .theme-toggle-switch {
+            position: relative;
+            width: 44px;
+            height: 24px;
+            background: var(--border-color);
+            border-radius: 12px;
+            transition: background 0.3s;
+        }
+
+        .theme-toggle-switch::after {
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 20px;
+            height: 20px;
+            background: var(--card-bg);
+            border-radius: 50%;
+            transition: transform 0.3s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+        }
+
+        [data-theme="dark"] .theme-toggle-switch {
+            background: var(--primary-blue);
+        }
+
+        [data-theme="dark"] .theme-toggle-switch::after {
+            transform: translateX(20px);
+            background: #202124;
+        }
+
+        .theme-toggle-icon {
+            font-size: 16px;
+        }
+
         /* Hero Section */
         .hero {
             padding: 120px 0 30px;
-            background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+            background: var(--hero-gradient);
         }
 
         .hero-top {
@@ -532,7 +597,7 @@
         }
 
         .btn-secondary {
-            background: var(--white);
+            background: var(--card-bg);
             color: var(--text-primary);
             border: 1px solid var(--border-color);
         }
@@ -691,7 +756,7 @@
         }
 
         .feature-card {
-            background: var(--white);
+            background: var(--card-bg);
             padding: 32px;
             border-radius: 12px;
             border: 1px solid var(--border-color);
@@ -743,7 +808,7 @@
         .testimonial-card {
             break-inside: avoid;
             margin-bottom: 24px;
-            background: var(--white);
+            background: var(--card-bg);
             padding: 32px;
             border-radius: 12px;
             border: 1px solid var(--border-color);
@@ -832,7 +897,7 @@
         }
 
         .chapter-card {
-            background: var(--white);
+            background: var(--card-bg);
             border-radius: 12px;
             overflow: hidden;
             border: 1px solid var(--border-color);
@@ -936,7 +1001,7 @@
             align-items: center;
             gap: 8px;
             padding: 12px 24px;
-            background: var(--white);
+            background: var(--card-bg);
             border: 2px solid var(--border-color);
             border-radius: 30px;
             font-size: 15px;
@@ -961,7 +1026,7 @@
 
         .sponsor-card {
             display: block;
-            background: var(--white);
+            background: var(--card-bg);
             padding: 32px;
             border-radius: 12px;
             text-align: center;
@@ -1011,7 +1076,7 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            background: var(--white);
+            background: var(--card-bg);
             color: #5865F2;
             padding: 14px 28px;
             border-radius: 8px;
@@ -1031,7 +1096,7 @@
         }
 
         .toc-section {
-            background: var(--white);
+            background: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 12px;
             padding: 24px;
@@ -1261,6 +1326,13 @@
                         <a href="https://leanpub.com/manifest-android-interview-es" target="_blank">🇪🇸 Spanish</a>
                         <a href="https://leanpub.com/manifest-android-interview-id" target="_blank">🇮🇩 Indonesian</a>
                         <a href="https://leanpub.com/manifest-android-interview-uk" target="_blank">🇺🇦 Ukrainian</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="theme-toggle" onclick="toggleTheme()">
+                        <span class="theme-toggle-icon">☀️</span>
+                        <div class="theme-toggle-switch"></div>
+                        <span class="theme-toggle-icon">🌙</span>
                     </div>
                 </li>
                 <li><a href="#purchase" class="nav-cta">Get the Book</a></li>
@@ -1965,6 +2037,25 @@
                 openLightbox(this.src);
             });
         });
+
+        // Dark mode toggle
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        }
+
+        // Load saved theme on page load (light mode is default)
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+
+            if (savedTheme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
     </script>
 </body>
 </html>
