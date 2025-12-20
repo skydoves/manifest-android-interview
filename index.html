@@ -2045,25 +2045,31 @@
     <section class="section" id="comments">
         <div class="container">
             <div class="section-header">
-                <div class="section-label">Discussion</div>
+                <div class="section-label">Community</div>
                 <h2 class="section-title">Comments</h2>
-                <p class="section-subtitle">Share your thoughts, ask questions, or leave feedback</p>
+                <p class="section-subtitle">Share your thoughts on this book</p>
             </div>
 
-            <script src="https://giscus.app/client.js"
-                    data-repo="skydoves/manifest-android-interview"
-                    data-repo-id="R_kgDOOZY8cw"
-                    data-category="Comment"
-                    data-category-id="DIC_kwDOOZY8c84C0Bsf"
-                    data-mapping="pathname"
-                    data-strict="0"
-                    data-reactions-enabled="1"
-                    data-emit-metadata="0"
-                    data-input-position="bottom"
-                    data-theme="preferred_color_scheme"
-                    data-lang="en"
-                    crossorigin="anonymous"
-                    async>
+            <script>
+                // Set initial giscus theme based on current theme
+                const giscusTheme = localStorage.getItem('theme') === 'dark' ? 'dark' : 'light';
+                document.write(`
+                    <script src="https://giscus.app/client.js"
+                            data-repo="skydoves/manifest-android-interview"
+                            data-repo-id="R_kgDOOZY8cw"
+                            data-category="Comment"
+                            data-category-id="DIC_kwDOOZY8c84C0Bsf"
+                            data-mapping="pathname"
+                            data-strict="0"
+                            data-reactions-enabled="1"
+                            data-emit-metadata="0"
+                            data-input-position="bottom"
+                            data-theme="${giscusTheme}"
+                            data-lang="en"
+                            crossorigin="anonymous"
+                            async>
+                    <\/script>
+                `);
             </script>
         </div>
     </section>
@@ -2133,6 +2139,15 @@
 
             html.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
+
+            // Update giscus theme
+            const giscusFrame = document.querySelector('iframe.giscus-frame');
+            if (giscusFrame) {
+                giscusFrame.contentWindow.postMessage(
+                    { giscus: { setConfig: { theme: newTheme } } },
+                    'https://giscus.app'
+                );
+            }
         }
 
         // Load saved theme on page load (light mode is default)
