@@ -1,0 +1,11 @@
+# robots.txt for android.skydoves.me
+# Android Interview Book by Jaewoong Eum (skydoves)
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://android.skydoves.me/sitemap.xml
+
+# Crawl-delay (optional, be nice to server)
+Crawl-delay: 1
