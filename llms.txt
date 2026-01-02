@@ -82,6 +82,37 @@ Manifest Android Interview is the ultimate guide for Android developers preparin
 
 English, Korean, Japanese, Chinese, German, Spanish, Indonesian, Ukrainian
 
+## Language-Specific Purchase Links
+
+### English
+- Leanpub: https://leanpub.com/manifest-android-interview
+- Amazon: https://www.amazon.com/dp/B0FBWCP743
+- Gumroad: https://skydoves.gumroad.com/l/manifest-android-interview
+
+### Korean (한국어)
+- Leanpub: https://leanpub.com/manifest-android-interview-kr
+- Keywords: 안드로이드 면접 질문, 젯팩 컴포즈, 코틀린, 안드로이드 개발, 기술 면접
+
+### Japanese (日本語)
+- Leanpub: https://leanpub.com/manifest-android-interview-jp
+- Keywords: Android面接質問, Jetpack Compose, Kotlin, Android開発, 技術面接
+
+### Chinese Simplified (简体中文)
+- Leanpub: https://leanpub.com/manifest-android-interview-zh-Hans
+- Keywords: Android面试题, Jetpack Compose, Kotlin, Android开发, 技术面试
+
+### German (Deutsch)
+- Leanpub: https://leanpub.com/manifest-android-interview-de
+
+### Spanish (Español)
+- Leanpub: https://leanpub.com/manifest-android-interview-es
+
+### Indonesian (Bahasa Indonesia)
+- Leanpub: https://leanpub.com/manifest-android-interview-id
+
+### Ukrainian (Українська)
+- Leanpub: https://leanpub.com/manifest-android-interview-uk
+
 ## Links
 
 - Website: https://www.android.skydoves.me/
