@@ -337,6 +337,878 @@
                     "@type": "Answer",
                     "text": "Common Android interview questions include: Activity and Fragment lifecycle, Intent and PendingIntent, Context types, Service and BroadcastReceiver, memory management and ANR prevention, ViewModel and LiveData, Jetpack Compose recomposition and state management, RecyclerView internals, and dependency injection with Hilt. Manifest Android Interview covers all these topics and more with 108 detailed questions and answers."
                 }
+            },
+            {
+                "@type": "Question",
+                "name": "What is Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Android is a mobile operating system developed by Google based on the Linux kernel. It is designed primarily for touchscreen devices such as smartphones and tablets. Android provides a rich application framework that allows developers to build innovative apps using Java or Kotlin. The Manifest Android Interview book covers Android fundamentals in depth for interview preparation."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is Intent in Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Intent is a messaging object used to request an action from another app component. It facilitates communication between components such as starting Activities, Services, or delivering broadcasts. Intents can be explicit (targeting a specific component) or implicit (declaring a general action). This is a common Android interview question covered in Manifest Android Interview."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the purpose of Pending Intent in Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "PendingIntent is a wrapper around an Intent that allows external applications to execute it with the same permissions as the original app. It's commonly used for notifications, alarms, and app widgets where the action needs to be triggered later by another component or the system. Manifest Android Interview explains PendingIntent with practical examples."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What are the differences between Serializable and Parcelable in Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Serializable is a Java interface that uses reflection for serialization, making it slower but simpler to implement. Parcelable is Android-specific, requires manual implementation but is significantly faster as it avoids reflection. For passing data between Android components, Parcelable is preferred for performance. This comparison is detailed in Manifest Android Interview."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is Context in Android and what types of Context exist?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Context is an abstract class that provides access to application-specific resources and classes. Types include Application Context (singleton, application lifecycle), Activity Context (tied to Activity lifecycle), and Service Context. Using the wrong Context type can cause memory leaks. Manifest Android Interview covers Context types and best practices."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is Application class in Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Application class is the base class for maintaining global application state. It's instantiated before any other class when the process starts. Developers extend it to initialize libraries, set up dependency injection, or store application-wide data. Manifest Android Interview explains Application class usage and lifecycle."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the purpose of the AndroidManifest file?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "AndroidManifest.xml declares essential app information to the Android system including package name, components (Activities, Services, Receivers, Providers), permissions, minimum SDK version, and hardware/software features. The system reads this file before running the app. This fundamental topic is covered in Manifest Android Interview."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the Activity lifecycle in Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The Activity lifecycle consists of callback methods: onCreate (initialization), onStart (becoming visible), onResume (foreground), onPause (losing focus), onStop (not visible), onDestroy (cleanup). Understanding these callbacks is crucial for managing resources and user experience. Manifest Android Interview provides detailed lifecycle diagrams and explanations."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the Fragment lifecycle in Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Fragment lifecycle includes callbacks: onAttach, onCreate, onCreateView, onViewCreated, onStart, onResume, onPause, onStop, onDestroyView, onDestroy, onDetach. Fragments are tied to their host Activity's lifecycle but have additional callbacks for view creation. Manifest Android Interview covers Fragment lifecycle in depth."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is Service in Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Service is a component for performing long-running operations in the background without a UI. Types include Started Service (runs until stopped), Bound Service (client-server interface), and Foreground Service (visible notification required). Manifest Android Interview explains Service types, lifecycle, and best practices."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is BroadcastReceiver in Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "BroadcastReceiver is a component that responds to system-wide broadcast announcements like battery low, screen on/off, or custom app broadcasts. It can be registered statically in manifest or dynamically in code. Manifest Android Interview covers BroadcastReceiver implementation and common use cases."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is ContentProvider and how does it facilitate secure data sharing between applications?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "ContentProvider manages access to structured data and provides a standard interface for data sharing between apps. It uses URI-based addressing and supports CRUD operations. ContentProviders enable secure, permission-controlled data sharing. This Android interview topic is covered in Manifest Android Interview."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How to handle configuration changes in Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Configuration changes (rotation, language, screen size) normally recreate Activities. Handle them using: ViewModel to retain data, onSaveInstanceState for UI state, configChanges manifest attribute to prevent recreation, or rememberSaveable in Compose. Manifest Android Interview provides best practices for configuration handling."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How does Android handle memory management and how do you avoid memory leaks?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Android uses garbage collection but developers must avoid memory leaks by: not holding Context references in long-lived objects, using WeakReferences, unregistering listeners, canceling AsyncTasks/Coroutines, and using lifecycle-aware components. Manifest Android Interview covers memory management patterns in detail."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What are the main causes of ANR errors and how can you prevent them?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "ANR (Application Not Responding) occurs when the main thread is blocked for too long (5 seconds for input events, 10 seconds for BroadcastReceiver). Prevent ANRs by moving heavy operations to background threads using Coroutines, WorkManager, or ExecutorService. Manifest Android Interview explains ANR prevention strategies."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do you handle deep links in Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Deep links are handled using intent filters in AndroidManifest with specific URI schemes, hosts, and paths. App Links provide verified deep links. Navigation component supports deep link destinations. Manifest Android Interview covers deep link implementation and verification."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What are tasks and back stack in Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A task is a collection of Activities arranged in a back stack (LIFO). When users navigate, Activities are pushed/popped from the stack. Launch modes (standard, singleTop, singleTask, singleInstance) control this behavior. Manifest Android Interview explains task management and launch modes."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the purpose of Bundle in Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Bundle is a container for passing data between Android components. It stores key-value pairs of primitive types, Parcelables, and Serializables. Used in Intent extras, Fragment arguments, and onSaveInstanceState. Manifest Android Interview covers Bundle usage and limitations."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do you pass data between Activities or Fragments in Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Data can be passed via Intent extras, Fragment arguments (setArguments), ViewModel (shared between Fragments), Navigation Safe Args, or through a shared repository. Each approach has different use cases and lifecycle considerations. Manifest Android Interview explains these patterns with examples."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What happens to an Activity during configuration changes?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "During configuration changes like rotation, the Activity is destroyed and recreated. onSaveInstanceState saves UI state, ViewModel survives the recreation, and onCreate/onRestoreInstanceState restore the state. Manifest Android Interview provides strategies for handling this properly."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is ActivityManager in Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "ActivityManager is a system service that provides information about Activities, Services, and processes. It manages the Activity stack, running services, memory info, and process states. Developers use it for debugging and monitoring app behavior. This is covered in Manifest Android Interview."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What are the advantages of using SparseArray in Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "SparseArray is more memory-efficient than HashMap when keys are integers. It avoids autoboxing of primitive keys and uses binary search for lookups. Variants include SparseBooleanArray, SparseIntArray, and SparseLongArray. Manifest Android Interview covers SparseArray optimization."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do you handle runtime permissions in Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Since Android 6.0, dangerous permissions must be requested at runtime. Use ActivityResultContracts for modern permission handling, check permission status, request if needed, and handle denial gracefully. Manifest Android Interview explains the permission model and best practices."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What are the roles of Looper, Handler, and HandlerThread in Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Looper manages a message queue for a thread. Handler sends and processes Messages and Runnables to a Looper. HandlerThread is a Thread with its own Looper. Together they enable thread communication and scheduled execution. Manifest Android Interview covers threading internals."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do you trace exceptions in Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Use try-catch blocks, Thread.UncaughtExceptionHandler for global handling, Logcat for debugging, and crash reporting tools like Firebase Crashlytics. StrictMode detects policy violations during development. Manifest Android Interview covers exception handling strategies."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What are build variants and flavors in Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Build variants combine build types (debug, release) and product flavors (free, paid, different environments). They allow different configurations, resources, and code for different versions of the same app. Manifest Android Interview explains Gradle build configuration."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do you ensure accessibility in Android apps?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ensure accessibility by providing contentDescription for images, supporting screen readers (TalkBack), using sufficient color contrast, supporting text scaling, adding focus navigation, and testing with accessibility tools. Manifest Android Interview covers accessibility best practices."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the Android file system?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Android uses a Linux-based file system with internal storage (private to app), external storage (shared or app-specific), cache directories, and the MediaStore for media files. Scoped Storage in Android 10+ restricts broad file access. Manifest Android Interview covers storage options."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What are Android Runtime (ART), Dalvik, and Dex Compiler?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Dalvik was Android's original runtime using JIT compilation. ART replaced it with AOT compilation for better performance. DEX (Dalvik Executable) compiler converts bytecode to DEX format. D8/R8 are modern DEX compilers. Manifest Android Interview explains Android runtime internals."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What are the differences between APK and AAB files?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "APK (Android Package) is the final installable format. AAB (Android App Bundle) is a publishing format that lets Google Play generate optimized APKs for each device configuration, reducing download size. Manifest Android Interview covers app distribution formats."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is R8 optimization in Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "R8 is Android's code shrinker and optimizer that replaces ProGuard. It removes unused code (shrinking), renames classes/methods (obfuscation), and optimizes bytecode. R8 reduces APK size and improves runtime performance. Manifest Android Interview covers R8 configuration."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do you reduce Android application sizes?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Reduce app size using: R8/ProGuard shrinking, App Bundles for device-specific APKs, WebP images, vector drawables, removing unused resources, dynamic feature modules, and native library optimization. Manifest Android Interview provides size optimization strategies."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is a process in Android applications?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A process is an instance of the app running in its own Dalvik/ART VM. Android manages processes based on importance hierarchy: foreground, visible, service, cached. The system kills low-priority processes when memory is needed. Manifest Android Interview covers process management."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the View lifecycle in Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "View lifecycle includes: constructor, onAttachedToWindow, onMeasure, onLayout, onDraw, and onDetachedFromWindow. Understanding these callbacks is essential for custom views. onDraw should be optimized for performance. Manifest Android Interview covers View internals."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the difference between View and ViewGroup in Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "View is the base class for all UI components (Button, TextView). ViewGroup is a View that can contain other Views (LinearLayout, ConstraintLayout). ViewGroup handles child measurement and layout. Manifest Android Interview explains the View hierarchy."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is ViewStub and how do you optimize UI performance using it?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "ViewStub is a zero-sized, invisible View that lazily inflates a layout on demand. It optimizes initial layout performance by deferring inflation of views that aren't immediately needed. Manifest Android Interview covers ViewStub usage patterns."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How to implement custom views in Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Implement custom views by extending View or existing widgets, overriding onMeasure for sizing, onDraw for rendering with Canvas, handling touch events, supporting custom attributes, and ensuring accessibility. Manifest Android Interview provides custom view implementation guides."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is Canvas in Android and how to utilize it?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Canvas is the drawing surface used in onDraw for custom rendering. It provides methods for drawing shapes, text, bitmaps, and paths using Paint objects. Canvas operations should be optimized to avoid jank. Manifest Android Interview covers Canvas drawing techniques."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is invalidation in the Android View system?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Invalidation marks a View as needing redraw. invalidate() triggers onDraw, requestLayout() triggers measure and layout passes. Excessive invalidation causes performance issues. Manifest Android Interview explains View invalidation and optimization."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is ConstraintLayout in Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "ConstraintLayout is a flexible ViewGroup that positions children using constraints relative to each other or parent. It flattens view hierarchies, supports chains, guidelines, barriers, and ratio-based sizing. Manifest Android Interview covers ConstraintLayout features."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "When should you use SurfaceView instead of TextureView in Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "SurfaceView renders on a separate thread/surface, better for camera/video with lower latency. TextureView renders in the View hierarchy, supports transformations but has more overhead. Choose based on animation needs and performance requirements. Manifest Android Interview compares these views."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How does RecyclerView work internally in Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "RecyclerView efficiently displays large lists by recycling ViewHolders. LayoutManager positions items, Adapter binds data, ItemAnimator handles animations, and RecycledViewPool manages ViewHolder reuse. Manifest Android Interview covers RecyclerView internals and optimization."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the difference between Dp and Sp in Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Dp (density-independent pixels) scales with screen density for consistent physical sizes across devices. Sp (scale-independent pixels) additionally scales with user's font size preference, used for text. Manifest Android Interview covers Android dimension units."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is a nine-patch image in Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Nine-patch (.9.png) is a stretchable bitmap that defines scalable and fixed regions. The 1-pixel border marks stretchable areas and padding. Used for buttons and backgrounds that need to scale while preserving corners. Manifest Android Interview covers nine-patch usage."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is a Drawable in Android and how is it used in UI development?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Drawable is an abstract class for things that can be drawn. Types include BitmapDrawable, ShapeDrawable, VectorDrawable, LayerDrawable, and StateListDrawable. Drawables are used for backgrounds, icons, and custom graphics. Manifest Android Interview covers Drawable types."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is Bitmap in Android and how would you handle large Bitmaps efficiently?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Bitmap represents pixel data in memory. Handle large bitmaps by: calculating inSampleSize for downsampling, using inBitmap for memory reuse, loading appropriate resolution for display size, and using image loading libraries. Manifest Android Interview covers Bitmap optimization."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do you implement animations in Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Android offers View animations (alpha, scale, translate, rotate), Property animations (ObjectAnimator, ValueAnimator), Transition framework, MotionLayout, and Lottie for complex animations. In Compose, use animate*AsState and Transition APIs. Manifest Android Interview covers animation techniques."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is Window in Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Window is the top-level container for views, managed by WindowManager. Each Activity has a Window containing the DecorView. Window handles background, title, and system UI visibility. Manifest Android Interview explains Window and WindowManager."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do you render a web page in Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Use WebView to render web content in-app. Configure WebSettings for JavaScript, DOM storage, and zoom. Handle navigation with WebViewClient and JavaScript interaction with WebChromeClient. Consider security implications. Manifest Android Interview covers WebView implementation."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the AppCompat library in Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "AppCompat provides backward-compatible implementations of newer Android features. It includes AppCompatActivity, Material Design widgets, themes, and dark mode support. Essential for supporting older Android versions. Manifest Android Interview covers AppCompat usage."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is Material Design Components (MDC) in Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "MDC is a library implementing Material Design guidelines with ready-to-use components: buttons, cards, text fields, bottom sheets, and navigation. It provides consistent styling and theming. Manifest Android Interview covers MDC implementation."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What are the advantages of using ViewBinding in Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "ViewBinding generates binding classes for layouts, providing null-safe, type-safe view references without findViewById. It's compile-time checked, faster than DataBinding, and doesn't require layout annotations. Manifest Android Interview covers ViewBinding setup and usage."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How does DataBinding work in Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "DataBinding connects UI components to data sources declaratively in XML using binding expressions. It supports two-way binding, observable data, BindingAdapters, and expression language. Manifest Android Interview explains DataBinding internals and patterns."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is LiveData in Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "LiveData is a lifecycle-aware observable data holder. It only updates active observers, preventing memory leaks and crashes. MutableLiveData allows value updates. LiveData integrates with ViewModel for UI state management. Manifest Android Interview covers LiveData usage."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is Jetpack ViewModel in Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "ViewModel stores and manages UI-related data surviving configuration changes. It separates UI logic from UI controllers, enabling better testing and lifecycle management. ViewModel is scoped to Activity or Fragment. Manifest Android Interview covers ViewModel patterns."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the Jetpack Navigation Library?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Navigation component simplifies implementing navigation with a visual editor, Safe Args for type-safe arguments, deep link support, and automatic back stack management. It supports Fragments, Activities, and Compose. Manifest Android Interview covers Navigation implementation."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What are Dagger 2 and Hilt in Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Dagger 2 is a compile-time dependency injection framework using annotation processing. Hilt is built on Dagger, providing Android-specific integration with predefined components and scopes, reducing boilerplate. Manifest Android Interview covers DI patterns with Hilt."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the Jetpack Paging library?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Paging library loads data gradually and efficiently, supporting Room, network sources, and custom PagingSource. Paging 3 uses Kotlin Flow, handles loading states, and provides retry/refresh support. Manifest Android Interview covers Paging implementation."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is Baseline Profile in Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Baseline Profiles are AOT-compiled critical code paths that improve app startup and runtime performance. They're generated from user journeys using Macrobenchmark and bundled with the app. Manifest Android Interview covers Baseline Profile creation."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How would you manage long-running background tasks in Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Use WorkManager for deferrable, guaranteed background work. It handles constraints (network, battery), supports chaining, and survives process death. For immediate work, use Foreground Services with notifications. Manifest Android Interview covers background task strategies."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do you serialize JSON format to object in Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Use Gson, Moshi, or Kotlinx.serialization for JSON parsing. Moshi and Kotlinx.serialization are Kotlin-friendly with better null safety. They convert JSON strings to data classes and vice versa. Manifest Android Interview covers JSON serialization libraries."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do you handle network requests to fetch data in Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Use Retrofit with OkHttp for type-safe HTTP clients. Configure interceptors for logging, authentication, and caching. Use Kotlin Coroutines or Flow for async operations. Handle errors with sealed classes. Manifest Android Interview covers networking best practices."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Why is a paging system essential for loading large datasets in Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Paging prevents loading entire datasets into memory, reducing memory usage and improving performance. It provides smooth scrolling by prefetching data and handles loading/error states. Jetpack Paging library provides robust implementation. Manifest Android Interview covers paging strategies."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do you fetch and render images from the network in Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Use image loading libraries like Coil (Kotlin-first), Glide, or Picasso. They handle downloading, caching, memory management, transformations, and placeholders automatically. Coil integrates natively with Compose. Manifest Android Interview covers image loading optimization."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do you store and persist data locally in Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Use Room for structured SQLite data, DataStore for key-value preferences, EncryptedSharedPreferences for sensitive data, and file storage for large files. Choose based on data type and query requirements. Manifest Android Interview covers data persistence options."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do you handle offline-first features in Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Implement offline-first by caching data locally (Room), syncing with network when available, using NetworkCallback to detect connectivity, queuing operations with WorkManager, and resolving conflicts. Manifest Android Interview covers offline-first architecture."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Where do you launch tasks for loading initial data in Compose: LaunchedEffect vs ViewModel.init()?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Prefer ViewModel.init() for data loading as it survives recomposition and configuration changes. LaunchedEffect ties execution to composition lifecycle. Use LaunchedEffect for side effects dependent on composable parameters. Manifest Android Interview covers this Compose pattern."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the structure of Jetpack Compose?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Jetpack Compose consists of: Compose Compiler (Kotlin compiler plugin), Compose Runtime (state management, recomposition), Compose UI (layout, drawing), Compose Foundation (basic components), and Compose Material (Material Design). Manifest Android Interview covers Compose architecture."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What are the Compose phases?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Compose has three phases: Composition (what to show, builds UI tree), Layout (where to place, measures and positions), and Drawing (how to render, draws to canvas). Each phase can be skipped if inputs haven't changed. Manifest Android Interview explains Compose phases in detail."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Why is Jetpack Compose a declarative UI framework?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Compose is declarative because you describe what UI should look like for given state, not how to update it. When state changes, Compose automatically recomposes affected parts. This contrasts with imperative View system. Manifest Android Interview covers declarative UI concepts."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is recomposition in Jetpack Compose and when does it occur?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Recomposition is the process of calling composable functions again when state changes. Compose intelligently recomposes only affected composables. Excessive recomposition impacts performance. Understanding stability helps optimize. Manifest Android Interview covers recomposition deeply."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How does the composable function work internally?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The Compose compiler transforms @Composable functions, adding a Composer parameter for tracking composition. It inserts group markers, remembers values in the slot table, and enables smart recomposition. Manifest Android Interview explains Compose compiler internals."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is stability in Jetpack Compose and how does it relate to performance?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Stability determines if Compose can skip recomposition. Stable types have immutable public properties and notify Compose of changes. Unstable parameters prevent skipping. Use @Stable, @Immutable, or immutable data classes. Manifest Android Interview covers stability optimization."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Have you ever optimized Compose performance by improving stabilities?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Improve stability by: using immutable collections, annotating classes with @Stable/@Immutable, avoiding unstable lambda captures, using key() for list items, and checking stability reports. Manifest Android Interview provides stability optimization techniques."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is Composition in Jetpack Compose and how to create it?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Composition is the tree of composables representing UI. It's created by calling setContent in Activity or using Composition/subcomposition APIs directly. ReusableComposition enables efficient reuse. Manifest Android Interview explains Composition lifecycle."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What strategies are available for migrating XML-based projects to Jetpack Compose?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Migrate incrementally using: ComposeView in XML layouts, AndroidView for Views in Compose, starting with leaf components, sharing ViewModel between systems, and using interoperability APIs. Manifest Android Interview covers migration strategies."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Why should you always test Compose performance in release mode?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Debug builds disable R8 optimization, include debugging overhead, and run without Baseline Profiles. Release builds with R8 and Baseline Profiles show realistic performance. Always profile in release mode with debuggable=false. Manifest Android Interview covers Compose profiling."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What Kotlin idioms are frequently used in Jetpack Compose?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Common Kotlin idioms in Compose: trailing lambda syntax, extension functions, receivers, inline functions, reified types, delegation (by remember), destructuring, and scope functions (let, apply, with). Manifest Android Interview covers Kotlin patterns in Compose."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is State in Jetpack Compose and which APIs are used to manage it?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "State in Compose triggers recomposition when changed. APIs include: mutableStateOf, remember, rememberSaveable, ViewModel with StateFlow, derivedStateOf, and snapshotFlow. Each serves different lifecycle and scope needs. Manifest Android Interview covers state management."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What are the advantages of state hoisting in Jetpack Compose?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "State hoisting lifts state to callers, making composables stateless and reusable. Benefits include: better testability, single source of truth, unidirectional data flow, and decoupled state from UI. Manifest Android Interview explains state hoisting patterns."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What are the differences between remember and rememberSaveable in Compose?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "remember survives recomposition but not configuration changes. rememberSaveable survives both by saving to Bundle. Use rememberSaveable for user input that should persist across rotation. Manifest Android Interview covers remember vs rememberSaveable."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do you safely create a coroutine scope within composable functions?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Use rememberCoroutineScope() for event-triggered coroutines (click handlers). LaunchedEffect for composition-lifecycle coroutines. Both cancel automatically when leaving composition, preventing leaks. Manifest Android Interview covers coroutine scopes in Compose."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do you handle side effects inside composable functions?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Use effect handlers: LaunchedEffect (suspend effects), SideEffect (non-suspend effects each recomposition), DisposableEffect (cleanup needed), rememberUpdatedState (capture latest value). Each has specific use cases. Manifest Android Interview covers side effects in depth."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the purpose of rememberUpdatedState in Jetpack Compose?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "rememberUpdatedState captures the latest value of a parameter inside a long-running effect without restarting the effect. Essential for callbacks in LaunchedEffect that shouldn't restart on every recomposition. Manifest Android Interview explains rememberUpdatedState."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the purpose of produceState in Jetpack Compose?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "produceState converts non-Compose state (Flow, LiveData, callbacks) into Compose State. It launches a coroutine that updates state and cancels when leaving composition. Useful for async data loading. Manifest Android Interview covers produceState usage."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is snapshotFlow in Jetpack Compose and how does it work?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "snapshotFlow converts Compose State to Kotlin Flow, emitting values when state changes. Useful for reacting to state changes with Flow operators or integrating with non-Compose code. Manifest Android Interview covers snapshotFlow patterns."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the purpose of derivedStateOf in Jetpack Compose?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "derivedStateOf creates state that derives from other state objects, only updating when the derived value actually changes. Reduces unnecessary recompositions for computed values. Manifest Android Interview covers derivedStateOf optimization."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the lifecycle of composable functions or Composition?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Composables enter composition when first called, may recompose multiple times during their lifetime, and leave composition when no longer needed. onActive, onCommit, onDispose (DisposableEffect) handle lifecycle events. Manifest Android Interview covers Composition lifecycle."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is SaveableStateHolder in Jetpack Compose?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "SaveableStateHolder saves and restores rememberSaveable state for a given key, enabling state preservation when navigating between screens. Used internally by Navigation for Compose. Manifest Android Interview covers SaveableStateHolder."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the purpose of the snapshot system in Jetpack Compose?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The snapshot system provides isolated, consistent views of state for concurrent reads. It enables Compose to read state on multiple threads safely and detect which states were read during composition. Manifest Android Interview covers snapshot internals."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What are mutableStateListOf and mutableStateMapOf in Jetpack Compose?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "mutableStateListOf and mutableStateMapOf are observable collections that trigger recomposition when modified. They're alternatives to wrapping lists/maps in mutableStateOf. Use for collections that change frequently. Manifest Android Interview covers observable collections."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How can you safely collect Kotlin Flow in composable functions while preventing memory leaks?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Use collectAsState() or collectAsStateWithLifecycle() to safely collect Flow in Compose. collectAsStateWithLifecycle respects lifecycle, stopping collection when not visible, saving resources. Manifest Android Interview covers Flow collection in Compose."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the role of CompositionLocal in Jetpack Compose?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "CompositionLocal provides implicit data passing down the composition tree without explicit parameters. Used for themes, navigation, and context-like values. staticCompositionLocalOf for rarely changing values. Manifest Android Interview covers CompositionLocal usage."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is Modifier in Jetpack Compose?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Modifier decorates composables with behavior and appearance: size, padding, click handling, drawing, and layout. Modifiers chain together with order mattering. Custom modifiers extend functionality. Manifest Android Interview covers Modifier patterns and best practices."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is Layout in Jetpack Compose?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Layout is the fundamental building block for positioning children. Custom layouts implement MeasurePolicy to measure children and place them. Row, Column, Box are built on Layout. Manifest Android Interview covers custom layout implementation."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is Box in Jetpack Compose?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Box is a layout that stacks children on top of each other (z-order). Later children appear above earlier ones. contentAlignment positions children within Box. Useful for overlays and layered content. Manifest Android Interview covers Box usage."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What are the differences between Arrangement and Alignment in Jetpack Compose?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Arrangement controls spacing along main axis (how to distribute items in Row/Column). Alignment controls positioning on cross axis (how to align items perpendicular to main axis). Manifest Android Interview covers Arrangement and Alignment."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is Painter in Jetpack Compose?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Painter is an abstraction for drawing content into a canvas. Types include BitmapPainter, VectorPainter, and ColorPainter. painterResource() loads drawable resources as Painters. Manifest Android Interview covers Painter usage."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do you load images from the network in Jetpack Compose?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Use Coil's AsyncImage or rememberAsyncImagePainter for network images in Compose. They handle loading, caching, error states, and placeholders. Alternative libraries include Glide-Compose integration. Manifest Android Interview covers image loading."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How can you efficiently render hundreds of items as a list in Compose while avoiding UI jank?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Use LazyColumn/LazyRow which only compose visible items. Provide stable keys, use derivedStateOf for scroll-dependent state, avoid expensive operations in item composables, and use immutable data. Manifest Android Interview covers lazy list optimization."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do you implement pagination with lazy lists in Jetpack Compose?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Detect when approaching list end using LazyListState.layoutInfo, trigger loading more data, show loading indicators. Use Paging 3 library with collectAsLazyPagingItems() for robust pagination. Manifest Android Interview covers pagination in Compose."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is Canvas in Jetpack Compose?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Canvas is a composable for custom drawing using DrawScope. It provides methods for drawing shapes, paths, text, and images. More powerful than XML canvas with Kotlin DSL. Manifest Android Interview covers Canvas drawing in Compose."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Have you ever utilized graphicsLayer Modifier in Jetpack Compose?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "graphicsLayer applies transformations (scale, rotation, alpha, translation) without triggering recomposition. It renders to a separate layer for performance. Use for animations and visual effects. Manifest Android Interview covers graphicsLayer optimization."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do you implement visual animations in Jetpack Compose?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Use animate*AsState for simple value animations, Transition for multiple coordinated values, AnimatedVisibility/AnimatedContent for enter/exit animations, and rememberInfiniteTransition for repeating animations. Manifest Android Interview covers Compose animations."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do you navigate between screens in Jetpack Compose?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Use Navigation for Compose with NavHost defining destinations and NavController for navigation. Support type-safe arguments, deep links, and nested graphs. Alternative libraries include Voyager and Compose Destinations. Manifest Android Interview covers Compose navigation."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How does Preview work in Jetpack Compose and how do you handle them?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "@Preview annotation enables IDE previews of composables. Configure device, theme, font scale, and UI mode. Use PreviewParameterProvider for data variations. Create multiple previews for different states. Manifest Android Interview covers Preview usage."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do you write unit tests for Compose UI components or screens?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Use ComposeTestRule to set content and find nodes using onNode/onNodeWithText. Assert properties with assertIsDisplayed, performClick for interactions. Test semantics for accessibility. Manifest Android Interview covers Compose testing."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is screenshot testing and how does it help ensure UI consistency?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Screenshot testing captures UI images and compares against baselines to detect visual regressions. Tools include Paparazzi (JVM-based, no emulator), Compose Preview Screenshot Testing, and Shot. Manifest Android Interview covers screenshot testing setup."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do you ensure accessibility in Jetpack Compose?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Provide semantics via Modifier.semantics, contentDescription for images, heading for structure. Test with TalkBack, ensure sufficient contrast, support text scaling. Compose merges semantics by default. Manifest Android Interview covers Compose accessibility."
+                }
             }
         ]
     }
