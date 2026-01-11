@@ -759,9 +759,68 @@
         .hero-book {
             display: flex;
             justify-content: center;
+            position: relative;
         }
 
-        .hero-book img {
+        .hero-book-stack {
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero-book-background {
+            position: absolute;
+            top: 20px;
+            right: -100px;
+            z-index: 1;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            cursor: pointer;
+        }
+
+        .hero-book-background:hover {
+            transform: translate(20px, 8px) rotate(3deg) scale(1.03);
+            z-index: 3;
+        }
+
+        .hero-book-background img {
+            max-width: 300px;
+            border-radius: 8px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+            opacity: 0.92;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .hero-book-background:hover img {
+            opacity: 1;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+        }
+
+        .hero-book-background .new-book-badge {
+            position: absolute;
+            top: -8px;
+            right: 15px;
+            background: linear-gradient(135deg, #7F52FF 0%, #C811E2 100%);
+            color: white;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(127, 82, 255, 0.4);
+            opacity: 0;
+            transform: translateY(5px);
+            transition: all 0.3s ease;
+        }
+
+        .hero-book-background:hover .new-book-badge {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hero-book-main {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-book-main img {
             max-width: 320px;
             border-radius: 8px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
@@ -1416,6 +1475,16 @@
             .hero-stats { gap: 24px; }
             .stat-number { font-size: 32px; }
             .section-title { font-size: 28px; }
+            .hero-book-background {
+                right: -60px;
+                top: 15px;
+            }
+            .hero-book-background img {
+                max-width: 240px;
+            }
+            .hero-book-main img {
+                max-width: 260px;
+            }
             .book-preview-grid {
                 columns: 1;
             }
@@ -1483,7 +1552,15 @@
                     <p class="hero-subtitle">Whether you're preparing for an Android interview, mastering Jetpack Compose internals, or seeking a deep dive into Android development, this book is a complete roadmap to advancing your career.</p>
                 </div>
                 <div class="hero-book">
-                    <img src="resources/3f154ad5849843ca5e9e49f1d8357fa5.jpg" alt="Manifest Android Interview Book Cover" class="expandable-img">
+                    <div class="hero-book-stack">
+                        <a href="https://kotlin.skydoves.me/" target="_blank" class="hero-book-background" title="Practical Kotlin Deep Dive - Click to learn more">
+                            <span class="new-book-badge">New Book</span>
+                            <img src="resources/practical-kotlin-deep-dive.png" alt="Practical Kotlin Deep Dive Book Cover">
+                        </a>
+                        <div class="hero-book-main">
+                            <img src="resources/3f154ad5849843ca5e9e49f1d8357fa5.jpg" alt="Manifest Android Interview Book Cover" class="expandable-img">
+                        </div>
+                    </div>
                 </div>
             </div>
 
