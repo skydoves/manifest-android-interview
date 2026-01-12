@@ -1,0 +1,2463 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: https://ogp.me/ns#">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manifest Android Interview 日本語版 - Androidの技術面接を突破するための実践ガイド | 108問 & Jetpack Compose徹底解説</title>
+
+    <!-- Primary SEO Meta Tags -->
+    <meta name="description" content="Manifest Android Interviewで Android開発をマスターしよう。108の面接質問、162の実践問題、50以上のPro Tipsを収録した465ページの完全ガイド。Android Framework、Jetpack Compose内部構造、UIアーキテクチャなどを網羅。Google Developer Expert Jaewoong Eum著。">
+    <meta name="keywords" content="Android面接質問, Androidインタビュー, Jetpack Composeチュートリアル, Kotlin Android, Android開発書籍, Android技術面接, モバイル開発, Androidアーキテクチャ, ViewModel, LiveData, コルーチン, Android GDE, skydoves, Jaewoong Eum, Android面接準備, Compose UI, Android転職, シニアAndroid開発者, Androidエンジニア面接">
+    <meta name="author" content="Jaewoong Eum (skydoves)">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    <link rel="canonical" href="https://www.android.skydoves.me/jp/">
+
+    <!-- Hreflang Tags for Multilingual SEO -->
+    <link rel="alternate" hreflang="en" href="https://www.android.skydoves.me/">
+    <link rel="alternate" hreflang="ja" href="https://www.android.skydoves.me/jp/">
+    <link rel="alternate" hreflang="x-default" href="https://www.android.skydoves.me/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="book">
+    <meta property="og:site_name" content="Manifest Android Interview 日本語版">
+    <meta property="og:title" content="Manifest Android Interview 日本語版 - Androidの技術面接を突破するための実践ガイド">
+    <meta property="og:description" content="108の面接質問、162の実践問題、50以上のPro Tipsを収録。Android Framework、Jetpack Compose、UIアーキテクチャなどを徹底解説。Google Developer Expert Jaewoong Eum著。">
+    <meta property="og:url" content="https://www.android.skydoves.me/jp/">
+    <meta property="og:image" content="https://www.android.skydoves.me/resources/japanese-cover.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Manifest Android Interview 書籍カバー">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="book:author" content="Jaewoong Eum">
+    <meta property="book:release_date" content="2025-09-11">
+    <meta property="book:tag" content="Android">
+    <meta property="book:tag" content="Jetpack Compose">
+    <meta property="book:tag" content="面接">
+    <meta property="book:tag" content="Kotlin">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@github_skydoves">
+    <meta name="twitter:creator" content="@github_skydoves">
+    <meta name="twitter:title" content="Manifest Android Interview 日本語版 - Androidの技術面接を突破するための実践ガイド">
+    <meta name="twitter:description" content="108の面接質問、162の実践問題、50以上のPro Tips。Android Framework、Jetpack Composeを徹底解説。">
+    <meta name="twitter:image" content="https://www.android.skydoves.me/resources/japanese-cover.png">
+    <meta name="twitter:image:alt" content="Manifest Android Interview 書籍カバー">
+
+    <!-- Additional SEO -->
+    <meta name="theme-color" content="#4285f4">
+    <meta name="apple-mobile-web-app-title" content="Manifest Android Interview">
+    <meta name="application-name" content="Manifest Android Interview">
+    <meta name="rating" content="General">
+    <meta name="distribution" content="Global">
+    <meta name="revisit-after" content="7 days">
+    <meta http-equiv="content-language" content="ja">
+
+    <!-- Schema.org Book Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Book",
+        "@id": "https://www.android.skydoves.me/jp/#book",
+        "name": "Manifest Android Interview 日本語版",
+        "alternateName": "Androidの技術面接を突破するための実践ガイド",
+        "author": {
+            "@type": "Person",
+            "name": "Jaewoong Eum",
+            "alternateName": "skydoves",
+            "url": "https://github.com/skydoves",
+            "jobTitle": "Senior Developer Advocate & Engineer"
+        },
+        "description": "108の面接質問と詳細な解説、162の実践問題、50以上のPro Tipsを収録した465ページのAndroid開発ガイド。Android Framework、Jetpack Compose内部構造、UIアーキテクチャなどを網羅。",
+        "numberOfPages": 521,
+        "bookFormat": "EBook",
+        "inLanguage": "ja",
+        "url": "https://www.android.skydoves.me/jp/",
+        "image": "https://www.android.skydoves.me/resources/japanese-cover.png",
+        "datePublished": "2025-09-11",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Leanpub"
+        },
+        "offers": {
+            "@type": "Offer",
+            "url": "https://leanpub.com/manifest-android-interview-jp/c/iP30nXdTajy4",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "seller": {
+                "@type": "Organization",
+                "name": "Leanpub"
+            }
+        }
+    }
+    </script>
+
+    <!-- Schema.org FAQPage Markup (Japanese) - Book Info -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "inLanguage": "ja",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Manifest Android Interviewとは何ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Manifest Android Interviewは、108の面接質問と詳細な解答、162の実践的な演習問題、50以上のPro Tipsを含む包括的なAndroid開発書籍です。Android Framework、Jetpack Composeの内部構造、UIアーキテクチャ、Jetpackライブラリ、ビジネスロジックパターンをカバーしています。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "この本は誰が書きましたか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "この本はAndroidとFirebase分野のGoogle Developer Expert（GDE）であり、RevenueCatのSenior Developer Advocate & EngineerであるJaewoong Eum（skydoves）によって執筆されました。彼は年間1500万回以上ダウンロードされる80以上のオープンソースライブラリを作成しています。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "日本語版はどこで購入できますか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Manifest Android Interview日本語版はLeanpubでPDFおよびEPUB形式で購入できます。現在40%オフの特別価格で提供中です。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "この本は面接準備に役立ちますか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "はい、この本はAndroid面接準備のために特別に設計されています。ステップバイステップの説明付きの108の面接質問、実際の面接シナリオをシミュレートする162のフォローアップ実践問題、面接官がよく尋ねる高度なトピックをカバーする50以上のPro Tipsを提供しています。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Android面接でよく聞かれる質問は何ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Android面接でよく聞かれる質問には、ActivityとFragmentのライフサイクル、IntentとPendingIntent、Contextの種類、ServiceとBroadcastReceiver、メモリ管理とANR防止、ViewModelとLiveData、Jetpack Composeのリコンポジションと状態管理、RecyclerViewの内部構造、Hiltを使用した依存性注入などがあります。Manifest Android Interviewはこれらすべてのトピックを108の詳細な質問と回答でカバーしています。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Androidとは何ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "AndroidはGoogleが開発したLinuxベースのオープンソースモバイルオペレーティングシステムです。スマートフォン、タブレット、ウェアラブルデバイスなど幅広いデバイスで使用されています。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "AndroidのIntentとは何ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Intentは、Androidコンポーネント間でアクションを要求するために使用されるメッセージングオブジェクトです。明示的Intent（特定のコンポーネントを指定）と暗黙的Intent（実行可能なアクションを指定）の2種類があります。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "PendingIntentの目的は何ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "PendingIntentは、将来の時点で他のアプリケーションやシステムコンポーネントがあなたのアプリの代わりにIntentを実行できるようにするトークンです。通知、アラーム、ウィジェットなどで一般的に使用されます。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "SerializableとParcelableの違いは何ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "SerializableはJava標準のインターフェースでリフレクションを使用するため遅いですが、実装が簡単です。ParcelableはAndroid固有のインターフェースで、手動実装が必要ですがSerializableより高速です。Android開発ではParcelableが推奨されます。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "AndroidのContextとは何ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Contextはアプリケーションの現在の状態に関する情報を提供する抽象クラスです。Application Context（アプリ全体のライフサイクル）とActivity Context（Activityのライフサイクル）の2種類があります。リソースへのアクセス、システムサービスの取得、アプリコンポーネントの起動に使用されます。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Applicationクラスとは何ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "ApplicationクラスはAndroidアプリケーションのベースクラスで、アプリ全体のグローバル状態を維持します。アプリプロセスが作成されたときに最初にインスタンス化され、アプリ全体の初期化やグローバルな依存性注入の設定に使用されます。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "AndroidManifestファイルの目的は何ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "AndroidManifest.xmlは、アプリケーションの本質的な情報をAndroidビルドツール、OS、Google Playに宣言するファイルです。パッケージ名、コンポーネント（Activity、Service、BroadcastReceiver、ContentProvider）、パーミッション、ハードウェア/ソフトウェア要件を定義します。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Activityのライフサイクルを説明してください",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Activityのライフサイクルは、onCreate()→onStart()→onResume()→onPause()→onStop()→onDestroy()の順で進行します。各コールバックは特定の状態遷移を表し、適切なリソース管理と状態保存に重要です。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Fragmentのライフサイクルを説明してください",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Fragmentのライフサイクルは、onAttach()→onCreate()→onCreateView()→onViewCreated()→onStart()→onResume()→onPause()→onStop()→onDestroyView()→onDestroy()→onDetach()の順で進行します。ActivityのライフサイクルとFragmentViewのライフサイクルの両方に関連しています。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "AndroidのServiceとは何ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Serviceは、バックグラウンドで長時間実行される操作を実行するためのコンポーネントです。Started Service（startService()で開始）、Bound Service（bindService()でバインド）、Foreground Service（ユーザーに見える通知付き）の3種類があります。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "BroadcastReceiverとは何ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "BroadcastReceiverは、システムやアプリからブロードキャストされるインテントを受信するコンポーネントです。システムイベント（バッテリー低下、ネットワーク変更など）やアプリ間通信に使用されます。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "ContentProviderの目的は何ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "ContentProviderは、アプリケーション間で安全にデータを共有するためのコンポーネントです。構造化されたデータセット（連絡先、カレンダーなど）へのアクセスを提供し、URIベースのアクセス、パーミッション管理、CRUD操作をサポートします。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "設定変更をどのように処理しますか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "設定変更（画面回転など）は、onSaveInstanceState()でデータを保存、ViewModelで状態を保持、android:configChanges属性で再作成を防止、またはsetRetainInstance()を使用して処理できます。ViewModelが最も推奨されるアプローチです。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Androidのメモリ管理とメモリリークの回避方法は？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Androidはガベージコレクションでメモリを管理します。メモリリークを回避するには、静的参照でContextを保持しない、内部クラスを静的にする、ライフサイクルに応じてリソースを解放する、WeakReferenceを使用するなどの対策が必要です。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "ANRエラーの主な原因と防止方法は？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "ANR（Application Not Responding）は、メインスレッドが5秒以上ブロックされると発生します。防止するには、重い処理をバックグラウンドスレッドで実行、Coroutinesやワーカースレッドを使用、データベースやネットワーク操作を非同期で行うことが重要です。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "ディープリンクをどのように処理しますか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "ディープリンクは、AndroidManifestでintent-filterを設定し、特定のURIスキームやApp Linksを処理します。Navigation Componentと組み合わせることで、宣言的なディープリンク処理が可能です。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "タスクとバックスタックとは何ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "タスクはユーザーが特定の目標を達成するために操作するActivityのコレクションです。バックスタックはLIFO（後入れ先出し）構造でActivityを管理し、戻るボタンで前のActivityに戻ることができます。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Bundleの目的は何ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Bundleは、プリミティブ型やParcelableオブジェクトのキーと値のペアを格納するコンテナです。Activity間のデータ受け渡し、Fragmentへの引数渡し、状態の保存と復元に使用されます。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Activity間やFragment間でデータをどのように渡しますか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "データの受け渡しには、Intent extras、Bundle arguments、共有ViewModel、Navigation Componentのarguments、ActivityResultAPIなどの方法があります。大きなデータはViewModelやリポジトリパターンで共有することが推奨されます。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Looper、Handler、HandlerThreadの役割は何ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Looperはスレッドのメッセージキューを管理し、Handlerはメッセージの送信と処理を行います。HandlerThreadは独自のLooperを持つスレッドで、バックグラウンド処理に使用されます。これらはAndroidのスレッド間通信の基盤です。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "ビルドバリアントとフレーバーとは何ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "ビルドバリアントはビルドタイプ（debug、release）とプロダクトフレーバー（free、paid）の組み合わせです。これにより、同じコードベースから異なる設定やリソースを持つ複数のAPKを生成できます。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "ART、Dalvik、Dex Compilerとは何ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "DalvikはAndroid 4.4以前のランタイムで、JITコンパイルを使用していました。ARTはAndroid 5.0以降のランタイムで、AOTコンパイルによりパフォーマンスが向上しています。DexコンパイラはJavaバイトコードをDalvikバイトコードに変換します。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "APKファイルとAABファイルの違いは何ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "APKはAndroidアプリケーションパッケージで、直接インストール可能です。AAB（Android App Bundle）はGoogle Playへの公開形式で、デバイスに最適化されたAPKを動的に生成し、アプリサイズを削減します。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "R8最適化とは何ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "R8はAndroidの最適化およびコード縮小ツールです。未使用コードの削除（シュリンキング）、コードの最適化、難読化を行い、APKサイズを削減しパフォーマンスを向上させます。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Viewのライフサイクルを説明してください",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Viewのライフサイクルは、コンストラクタ→onAttachedToWindow()→onMeasure()→onLayout()→onDraw()→onDetachedFromWindow()の順で進行します。各フェーズでサイズ測定、位置決定、描画が行われます。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "ViewとViewGroupの違いは何ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Viewは画面上の矩形領域を占めるUI要素の基本クラスです。ViewGroupはViewを継承し、他のViewを子として含むことができるコンテナです。LinearLayout、RelativeLayout、ConstraintLayoutなどがViewGroupの例です。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "RecyclerViewは内部でどのように動作しますか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "RecyclerViewは、ViewHolderパターンとRecycledViewPoolを使用してビューを再利用します。LayoutManagerがアイテムの配置を決定し、Adapterがデータとビューをバインドします。DiffUtilで効率的な更新が可能です。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "ConstraintLayoutとは何ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "ConstraintLayoutは、フラットなビュー階層で複雑なレイアウトを作成できるViewGroupです。制約ベースのレイアウトシステムにより、ネストを減らしパフォーマンスを向上させます。チェーン、バリア、ガイドラインなどの機能があります。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "DpとSpの違いは何ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Dp（density-independent pixels）は画面密度に依存しないサイズ単位で、レイアウトに使用します。Sp（scale-independent pixels）はユーザーのフォントサイズ設定も考慮し、テキストサイズに使用します。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "LiveDataとは何ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "LiveDataはライフサイクルを認識するデータホルダークラスです。アクティブなライフサイクル状態のオブザーバーにのみ更新を通知し、メモリリークを防ぎます。ViewModelと組み合わせてUIとデータを安全に同期できます。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Jetpack ViewModelとは何ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "ViewModelは、UIに関連するデータをライフサイクルを意識した方法で保存・管理するクラスです。設定変更（画面回転など）を超えてデータを保持し、UIコントローラーからビジネスロジックを分離します。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Dagger 2とHiltとは何ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Dagger 2はコンパイル時依存性注入フレームワークです。HiltはDagger上に構築されたAndroid向けDIライブラリで、ボイラープレートコードを削減し、Androidコンポーネントとの統合を簡素化します。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Baseline Profileとは何ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Baseline Profileは、アプリの起動時間とランタイムパフォーマンスを向上させるための最適化ファイルです。重要なユーザージャーニーのコードをAOTコンパイルし、JITコンパイルのオーバーヘッドを削減します。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Jetpack Composeの構造は何ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Jetpack Composeは、Compose Compiler、Compose Runtime、Compose UI、Compose Foundation、Compose Materialの層で構成されています。各層が異なる責任を持ち、宣言型UIの構築を可能にします。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Composeのフェーズとは何ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Jetpack Composeは、Composition（UIツリーの構築）、Layout（サイズと位置の決定）、Drawing（画面への描画）の3つのフェーズで動作します。各フェーズを理解することでパフォーマンス最適化が可能です。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "リコンポジションとは何ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "リコンポジションは、状態が変化したときにComposeがUIを更新するプロセスです。Composeは変更されたコンポーザブルのみを再実行する賢い差分更新を行います。頻繁なリコンポジションはパフォーマンスに影響するため、安定性の最適化が重要です。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Jetpack Composeの安定性とは何ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "安定性は、Composeがリコンポジションをスキップできるかどうかを決定する概念です。安定した型（プリミティブ、String、不変クラス）を使用すると、不要なリコンポジションを防ぎパフォーマンスが向上します。@Stableや@Immutableアノテーションで明示的に指定できます。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "rememberとrememberSaveableの違いは何ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "rememberはリコンポジション間で値を保持しますが、設定変更やプロセス終了では失われます。rememberSaveableはBundle保存メカニズムを使用し、設定変更やプロセス終了後も値を復元できます。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "State hoistingの利点は何ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "State hoistingは状態を上位のコンポーザブルに移動するパターンです。コンポーザブルをステートレスにし、再利用性を高め、テストを容易にし、単一の信頼できる情報源を確立できます。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "コンポーザブル関数内でサイドエフェクトをどのように処理しますか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Composeは、LaunchedEffect（コルーチンの起動）、DisposableEffect（クリーンアップが必要な効果）、SideEffect（フレームごとの効果）などのEffect APIを提供します。これらは安全に副作用を実行するために設計されています。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "derivedStateOfの目的は何ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "derivedStateOfは、他の状態から派生した状態を効率的に計算するためのAPIです。入力状態が変化したときのみ再計算され、不要なリコンポジションを防ぎパフォーマンスを最適化します。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "CompositionLocalの役割は何ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "CompositionLocalは、明示的なパラメータ渡しなしにCompositionツリーを通じてデータを暗黙的に渡す仕組みです。テーマ、コンテキスト、その他のスコープされた値を提供するために使用されます。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Modifierとは何ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "ModifierはComposeでUIコンポーネントを装飾または拡張するためのチェーン可能なオブジェクトです。サイズ、パディング、背景、クリックハンドラーなどを追加できます。順序が重要で、左から右に適用されます。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Jetpack Composeでリストを効率的にレンダリングする方法は？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "LazyColumnとLazyRowを使用すると、画面に表示される項目のみをコンポーズし、大量のデータを効率的に表示できます。keyパラメータで項目を識別し、不要なリコンポジションを防ぎます。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Jetpack Composeでアニメーションをどのように実装しますか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Composeは、animateXxxAsState（単純な値のアニメーション）、updateTransition（複数の値の協調アニメーション）、AnimatedVisibility（表示/非表示のアニメーション）、Animatable（低レベル制御）などのAPIを提供します。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Jetpack Composeで画面間をどのようにナビゲートしますか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Navigation Composeを使用すると、宣言的にナビゲーションを定義できます。NavHostでナビゲーショングラフを設定し、NavControllerで画面遷移を制御します。引数の受け渡しやディープリンクもサポートされています。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Compose UIコンポーネントのユニットテストをどのように書きますか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "ComposeTestRuleを使用してUIテストを記述します。onNodeWithTextやonNodeWithTagでノードを検索し、performClickやassertIsDisplayedでインタラクションと検証を行います。セマンティクスを使用してアクセシビリティもテストできます。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Jetpack Composeでアクセシビリティをどのように確保しますか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Modifier.semanticsでセマンティクス情報を提供し、contentDescriptionで画像を説明します。TalkBackでテストし、十分なコントラストを確保し、テキストのスケーリングをサポートします。Composeはデフォルトでセマンティクスをマージします。"
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DWCF7CKRZ0"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-DWCF7CKRZ0');
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-blue: #3b82f6;
+            --primary-dark: #2563eb;
+            --accent-red: #dc2626;
+            --accent-gold: #f59e0b;
+            --success-green: #10b981;
+            --text-primary: #1f2937;
+            --text-secondary: #4b5563;
+            --text-light: #9ca3af;
+            --bg-light: #f9fafb;
+            --bg-dark: #111827;
+            --border-color: #e5e7eb;
+            --white: #ffffff;
+            --card-bg: #ffffff;
+            --hero-gradient: linear-gradient(180deg, #fef3c7 0%, #ffffff 50%, #ffffff 100%);
+            --jp-red: #c41e3a;
+            --jp-gold: #d4a017;
+        }
+
+        [data-theme="dark"] {
+            --primary-blue: #8ab4f8;
+            --primary-dark: #4285f4;
+            --text-primary: #e8eaed;
+            --text-secondary: #9aa0a6;
+            --text-light: #80868b;
+            --bg-light: #303134;
+            --bg-dark: #202124;
+            --border-color: #5f6368;
+            --white: #202124;
+            --card-bg: #303134;
+            --hero-gradient: linear-gradient(180deg, #171717 0%, #202124 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: var(--white);
+            transition: background 0.3s, color 0.3s;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            padding: 12px 0;
+            transition: background 0.3s;
+        }
+
+        [data-theme="dark"] .navbar {
+            background: rgba(32, 33, 36, 0.98);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .nav-logo {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-blue);
+        }
+
+        .nav-cta {
+            background: var(--primary-blue);
+            color: var(--white) !important;
+            padding: 10px 20px;
+            border-radius: 24px;
+            font-weight: 600 !important;
+        }
+
+        .nav-cta:hover {
+            background: var(--primary-dark);
+        }
+
+        /* Language Dropdown */
+        .nav-language {
+            position: relative;
+        }
+
+        .language-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            background: transparent;
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .language-btn:hover {
+            border-color: var(--primary-blue);
+            color: var(--primary-blue);
+        }
+
+        .language-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            margin-top: 8px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+            min-width: 180px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.2s;
+            z-index: 1001;
+        }
+
+        .nav-language:hover .language-dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .language-dropdown a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 16px;
+            font-size: 14px;
+            color: var(--text-primary);
+            transition: background 0.2s;
+        }
+
+        .language-dropdown a:first-child {
+            border-radius: 12px 12px 0 0;
+        }
+
+        .language-dropdown a:last-child {
+            border-radius: 0 0 12px 12px;
+        }
+
+        .language-dropdown a:hover {
+            background: var(--bg-light);
+            color: var(--primary-blue);
+        }
+
+        .language-dropdown a:not(:last-child) {
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        /* Dark Mode Toggle */
+        .theme-toggle {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+
+        .theme-toggle-switch {
+            position: relative;
+            width: 44px;
+            height: 24px;
+            background: var(--border-color);
+            border-radius: 12px;
+            transition: background 0.3s;
+        }
+
+        .theme-toggle-switch::after {
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 20px;
+            height: 20px;
+            background: var(--card-bg);
+            border-radius: 50%;
+            transition: transform 0.3s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+        }
+
+        [data-theme="dark"] .theme-toggle-switch {
+            background: var(--primary-blue);
+        }
+
+        [data-theme="dark"] .theme-toggle-switch::after {
+            transform: translateX(20px);
+            background: #202124;
+        }
+
+        .theme-toggle-icon {
+            font-size: 16px;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 120px 0 30px;
+            background: var(--hero-gradient);
+        }
+
+        .hero-top {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 50px;
+            align-items: start;
+            margin-bottom: 30px;
+        }
+
+        .hero-bottom {
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #e8f0fe;
+            color: var(--primary-blue);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .hero-title {
+            font-size: 42px;
+            font-weight: 800;
+            line-height: 1.2;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+        }
+
+        .hero-subtitle {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+            line-height: 1.9;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 50px;
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 40px;
+            font-weight: 800;
+            color: var(--primary-blue);
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.2s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--primary-blue);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: var(--card-bg);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            background: var(--bg-light);
+            border-color: var(--text-light);
+        }
+
+        .hero-book {
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .hero-book-stack {
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero-book-background {
+            position: absolute;
+            top: 20px;
+            right: -100px;
+            z-index: 1;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            cursor: pointer;
+        }
+
+        .hero-book-background:hover {
+            transform: translate(20px, 8px) rotate(3deg) scale(1.03);
+            z-index: 3;
+        }
+
+        .hero-book-background img {
+            max-width: 300px;
+            border-radius: 8px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+            opacity: 0.92;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .hero-book-background:hover img {
+            opacity: 1;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+        }
+
+        .hero-book-background .new-book-badge {
+            position: absolute;
+            top: -8px;
+            right: 15px;
+            background: linear-gradient(135deg, #7F52FF 0%, #C811E2 100%);
+            color: white;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(127, 82, 255, 0.4);
+            opacity: 0;
+            transform: translateY(5px);
+            transition: all 0.3s ease;
+        }
+
+        .hero-book-background:hover .new-book-badge {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hero-book-main {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-book-main img {
+            max-width: 320px;
+            border-radius: 8px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 35px 0;
+        }
+
+        .section-gray {
+            background: var(--bg-light);
+        }
+
+        .section-dark {
+            background: var(--bg-dark);
+            color: var(--white);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--primary-blue);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .section-dark .section-label {
+            color: #8ab4f8;
+        }
+
+        .section-title {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+        }
+
+        .section-dark .section-title {
+            color: var(--white);
+        }
+
+        .section-subtitle {
+            font-size: 16px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .section-dark .section-subtitle {
+            color: #9aa0a6;
+        }
+
+        /* Author Section */
+        .author-content {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 48px;
+            align-items: start;
+        }
+
+        .author-image-wrapper {
+            text-align: center;
+        }
+
+        .author-image {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 16px;
+            border: 4px solid var(--white);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+        }
+
+        .author-bio {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.9;
+            margin-bottom: 20px;
+        }
+
+        .author-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .author-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: var(--bg-dark);
+            color: var(--white);
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .author-link:hover {
+            background: #3c4043;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .feature-icon {
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+
+        .feature-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        .feature-card p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        /* Book Preview Grid */
+        .book-preview-grid {
+            columns: 3;
+            column-gap: 24px;
+        }
+
+        .book-preview-item {
+            break-inside: avoid;
+            margin-bottom: 24px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .book-preview-item img {
+            width: 100%;
+            display: block;
+        }
+
+        /* Testimonials */
+        .testimonials-grid {
+            columns: 2;
+            column-gap: 24px;
+        }
+
+        .testimonial-card {
+            break-inside: avoid;
+            margin-bottom: 24px;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .testimonial-text {
+            font-size: 14px;
+            color: var(--text-primary);
+            line-height: 1.9;
+            margin-bottom: 24px;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .testimonial-avatar {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .testimonial-info h4 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .testimonial-info p {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .testimonial-info a {
+            color: var(--primary-blue);
+            font-size: 13px;
+        }
+
+        /* Chapters */
+        .chapters-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .chapter-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .chapter-header {
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 24px;
+        }
+
+        .chapter-header h3 {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.9;
+            margin-bottom: 8px;
+        }
+
+        .chapter-header h4 {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .chapter-body {
+            padding: 24px;
+        }
+
+        .chapter-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .chapter-item:last-child {
+            border-bottom: none;
+        }
+
+        .chapter-badge {
+            background: #e8f0fe;
+            color: var(--primary-blue);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        /* Sale Tags */
+        .sale-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%);
+            color: white;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 4px;
+            margin-left: 6px;
+            animation: pulse 2s infinite;
+            vertical-align: middle;
+        }
+
+        .sale-tag-large {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%);
+            color: white;
+            font-size: 13px;
+            font-weight: 700;
+            padding: 6px 12px;
+            border-radius: 6px;
+            margin-bottom: 12px;
+            animation: pulse 2s infinite;
+            box-shadow: 0 4px 15px rgba(255, 65, 108, 0.4);
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .btn-sale {
+            position: relative;
+            background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%);
+            box-shadow: 0 4px 15px rgba(255, 65, 108, 0.4);
+        }
+
+        .btn-sale:hover {
+            background: linear-gradient(135deg, #ff4b2b 0%, #ff416c 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 65, 108, 0.5);
+        }
+
+        .price-original {
+            text-decoration: line-through;
+            opacity: 0.5;
+            font-size: 16px;
+        }
+
+        .price-sale {
+            font-size: 28px;
+            font-weight: 800;
+            color: #4ade80;
+        }
+
+        /* Sales Counter */
+        .sales-banner {
+            background: linear-gradient(135deg, var(--jp-red) 0%, #991b1b 100%);
+            color: white;
+            padding: 16px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .sales-banner-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .sales-count {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sales-count-number {
+            font-size: 28px;
+            font-weight: 800;
+            color: #fef08a;
+        }
+
+        /* Why Choose Section */
+        .why-choose-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .why-choose-card {
+            background: var(--card-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .why-choose-card:hover {
+            border-color: var(--primary-blue);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .why-choose-icon {
+            font-size: 40px;
+            margin-bottom: 12px;
+        }
+
+        .why-choose-card h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .why-choose-card p {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Star Rating */
+        .star-rating {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            margin: 8px 0;
+        }
+
+        .star {
+            color: #fbbf24;
+            font-size: 20px;
+        }
+
+        .rating-text {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-left: 8px;
+        }
+
+        /* Guarantee Badge */
+        .guarantee-section {
+            background: #ecfdf5;
+            border: 2px solid #10b981;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .guarantee-icon {
+            font-size: 36px;
+            margin-bottom: 8px;
+        }
+
+        .guarantee-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #065f46;
+            margin-bottom: 4px;
+        }
+
+        .guarantee-text {
+            font-size: 13px;
+            color: #047857;
+        }
+
+        /* Popular Badge */
+        .popular-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            color: #78350f;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 6px 12px;
+            border-radius: 20px;
+            margin-bottom: 16px;
+        }
+
+        /* Purchase Section */
+        .purchase-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            max-width: 450px;
+            margin: 0 auto;
+        }
+
+        .purchase-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 107, 107, 0.5);
+            border-radius: 16px;
+            padding: 32px 24px;
+            text-align: center;
+            transition: all 0.3s;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .purchase-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #ff416c, #ff4b2b, #ff416c);
+            background-size: 200% 100%;
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        .purchase-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-4px);
+            border-color: rgba(255, 107, 107, 0.8);
+            box-shadow: 0 8px 30px rgba(255, 65, 108, 0.3);
+        }
+
+        .purchase-icon {
+            font-size: 42px;
+            margin-bottom: 12px;
+        }
+
+        .purchase-card h4 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .purchase-card p {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        /* Table of Contents */
+        .toc-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .toc-section {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 24px;
+        }
+
+        .toc-heading {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--primary-blue);
+        }
+
+        .toc-category {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 20px 0 12px;
+        }
+
+        .toc-list {
+            list-style: none;
+        }
+
+        .toc-list li {
+            font-size: 13px;
+            color: var(--text-secondary);
+            padding: 6px 0;
+            line-height: 1.6;
+        }
+
+        .toc-list li.toc-sub {
+            padding-left: 16px;
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
+        .toc-questions li {
+            font-size: 12px;
+            padding: 4px 0;
+        }
+
+        /* Timeline */
+        .timeline {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 24px;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .timeline-date {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+
+        .timeline-content {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 40px;
+            color: white;
+            cursor: pointer;
+            transition: opacity 0.2s;
+            background: none;
+            border: none;
+            line-height: 1;
+        }
+
+        .lightbox-close:hover {
+            opacity: 0.7;
+        }
+
+        /* Expandable images */
+        .expandable-img {
+            cursor: zoom-in;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .expandable-img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--bg-dark);
+            color: #9aa0a6;
+            padding: 48px 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 32px;
+            justify-content: center;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #9aa0a6;
+            font-size: 14px;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        .footer p {
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-top {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .hero-book { order: -1; }
+            .author-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .author-links { justify-content: center; }
+            .features-grid, .chapters-grid {
+                grid-template-columns: 1fr;
+            }
+            .testimonials-grid {
+                columns: 1;
+            }
+            .book-preview-grid {
+                columns: 2;
+            }
+            .toc-container { grid-template-columns: 1fr; }
+            .why-choose-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .navbar { top: 36px; }
+            .hero-title { font-size: 28px; }
+            .hero-stats { gap: 24px; }
+            .stat-number { font-size: 32px; }
+            .section-title { font-size: 24px; }
+            .hero-book-background {
+                right: -60px;
+                top: 15px;
+            }
+            .hero-book-background img {
+                max-width: 240px;
+            }
+            .hero-book-main img {
+                max-width: 260px;
+            }
+            .book-preview-grid {
+                columns: 1;
+            }
+            .why-choose-grid {
+                grid-template-columns: 1fr;
+            }
+            .sales-banner-content {
+                flex-direction: column;
+                gap: 12px;
+            }
+            .urgency-text {
+                font-size: 13px;
+            }
+            .popular-badge {
+                font-size: 11px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="/jp/" class="nav-logo">Manifest Android Interview 日本語版</a>
+            <ul class="nav-links">
+                <li><a href="#about">著者について</a></li>
+                <li><a href="#features">特徴</a></li>
+                <li><a href="#testimonials">推薦の声</a></li>
+                <li><a href="#contents">目次</a></li>
+                <li><a href="#timeline">タイムライン</a></li>
+                <li class="nav-language">
+                    <button class="language-btn">
+                        <span>🌐</span> 言語 <span>▾</span>
+                    </button>
+                    <div class="language-dropdown">
+                        <a href="/">🇺🇸 English</a>
+                        <a href="/jp/">🇯🇵 日本語</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="theme-toggle" onclick="toggleTheme()">
+                        <span class="theme-toggle-icon">☀️</span>
+                        <div class="theme-toggle-switch"></div>
+                        <span class="theme-toggle-icon">🌙</span>
+                    </div>
+                </li>
+                <li><a href="#purchase" class="nav-cta">購入する<span class="sale-tag">40%オフ</span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="padding-top: 160px;">
+        <div class="container">
+            <div class="hero-top">
+                <div class="hero-text">
+                    <div class="popular-badge">🔥 今、日本で話題の一冊</div>
+                    <div class="hero-badge">
+                        <span>🏆</span> Leanpub ベストセラー1位
+                    </div>
+                    <h1 class="hero-title">Manifest Android Interview<br>日本語版</h1>
+                    <p class="hero-subtitle">本書はAndroidとJetpack Composeを深く掘り下げ、Androidの基礎を強化し、内部構造を探求し、技術面接で成功したいエンジニアのために設計された包括的な開発書籍です。</p>
+                    <p class="hero-subtitle">Android Framework、UIアーキテクチャ、Jetpackライブラリ、ビジネスロジックをエンドツーエンドでカバー。Jetpack Composeの基礎からランタイム動作、内部メカニズム、モダンUIパターンまで徹底解説します。</p>
+                    <p class="hero-subtitle">Android面接の準備、Jetpack Compose内部構造の習得、またはAndroid開発の深い理解を目指す方に、本書はキャリアアップへの完全なロードマップとなります。</p>
+                </div>
+                <div class="hero-book">
+                    <div class="hero-book-stack">
+                        <a href="https://www.android.skydoves.me/kotlin/" target="_blank" class="hero-book-background" title="Practical Kotlin Deep Dive - 詳細を見る">
+                            <span class="new-book-badge">新刊</span>
+                            <img src="../resources/practical-kotlin-deep-dive.png" alt="Practical Kotlin Deep Dive 書籍カバー">
+                        </a>
+                        <div class="hero-book-main">
+                            <img src="../resources/japanese-cover.png" alt="Manifest Android Interview 日本語版 書籍カバー" class="expandable-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-bottom">
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">521</div>
+                        <div class="stat-label">ページ</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">108</div>
+                        <div class="stat-label">面接質問</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">162</div>
+                        <div class="stat-label">実践問題</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Pro Tips</div>
+                    </div>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="https://leanpub.com/manifest-android-interview-jp/c/iP30nXdTajy4" class="btn btn-sale" target="_blank">
+                        Leanpubで購入する<span class="sale-tag" style="margin-left: 10px; background: white; color: #ff416c;">40%オフ</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sales Counter Banner -->
+    <div class="sales-banner">
+        <div class="sales-banner-content">
+            <div class="sales-count">
+                <span>📚 累計販売部数</span>
+                <span class="sales-count-number">2,200+</span>
+                <span>部突破！</span>
+            </div>
+            <div class="sales-count">
+                <span>⭐ 読者満足度</span>
+                <span class="sales-count-number">99.9%</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Why Choose This Book Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">選ばれる理由</div>
+                <h2 class="section-title">なぜこの本が選ばれるのか</h2>
+                <p class="section-subtitle">日本のAndroid開発者に支持される6つの理由</p>
+            </div>
+
+            <div class="why-choose-grid">
+                <div class="why-choose-card">
+                    <div class="why-choose-icon">🎯</div>
+                    <h4>実践的な面接対策</h4>
+                    <p>実際の技術面接で聞かれる質問を108問厳選。回答例と詳細な解説付き。</p>
+                </div>
+                <div class="why-choose-card">
+                    <div class="why-choose-icon">🔍</div>
+                    <h4>内部構造を徹底解説</h4>
+                    <p>Jetpack Composeの内部動作やAndroid Frameworkの仕組みを深く理解できます。</p>
+                </div>
+                <div class="why-choose-card">
+                    <div class="why-choose-icon">💡</div>
+                    <h4>50+ Pro Tips</h4>
+                    <p>現場で役立つ実践的なTipsを50以上収録。面接官を唸らせる知識が身につきます。</p>
+                </div>
+                <div class="why-choose-card">
+                    <div class="why-choose-icon">🇯🇵</div>
+                    <h4>完全日本語対応</h4>
+                    <p>ネイティブレベルの日本語翻訳で、技術的な内容もスムーズに理解できます。</p>
+                </div>
+                <div class="why-choose-card">
+                    <div class="why-choose-icon">🏆</div>
+                    <h4>GDE著者による執筆</h4>
+                    <p>Google Developer Expert (Android/Kotlin/Firebase) による信頼性の高いコンテンツ。</p>
+                </div>
+                <div class="why-choose-card">
+                    <div class="why-choose-icon">📱</div>
+                    <h4>最新技術をカバー</h4>
+                    <p>Jetpack Compose、Material 3、最新のベストプラクティスまで網羅しています。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About the Author -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">著者について</div>
+                <h2 class="section-title">Jaewoong Eum (skydoves)</h2>
+                <p class="section-subtitle" style="max-width: none;">RevenueCat シニアデベロッパーアドボケイト＆エンジニア</p>
+            </div>
+
+            <div class="author-content">
+                <div class="author-image-wrapper">
+                    <img src="../resources/6289a6fde71f156d0646dd316703f411.jpg" alt="Jaewoong Eum" class="author-image">
+                </div>
+                <div class="author-info">
+                    <p class="author-bio">Jaewoong Eum（skydoves）は、Android、Kotlin、FirebaseのGoogle Developer Expert（GDE）です。80以上のオープンソースライブラリやプロジェクトを作成し、世界中の開発者によって年間1,500万回以上ダウンロードされています。また、Android・Kotlin開発に関するトピックを共有・学習・議論するサブスクリプションベースのリポジトリ<a href="https://github.com/doveletter" target="_blank" style="color: var(--primary-blue); text-decoration: underline;">Dove Letter</a>の創設者でもあります。</p>
+
+                    <p class="author-bio">技術的なソリューション、オープンソースへの貢献、技術コンテンツを通じて世界をより良い場所にし、ポジティブな影響を与えるというミッションのもと、本書はこの旅の新しいエキサイティングな章となると信じています。これまで支えてくださった開発者コミュニティ、友人、家族に心から感謝を申し上げます。</p>
+
+                    <p class="author-bio">学習は継続的な道であり、乗り越えるすべての課題があなたを技術のマスターに近づけます。次の技術面接の準備をしている方も、開発者としてのレベルアップを目指している方も、実装を超えて「なぜ」を理解し、異なるパターンやトレードオフを探求し、好奇心と情熱を持って学び続けることをお勧めします。</p>
+
+                    <p class="author-bio">いつものように、ハッピーコーディング、そしてあなたのAndroidの旅に幸運を！</p>
+
+                    <div class="author-links">
+                        <a href="https://github.com/skydoves" class="author-link" target="_blank">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            GitHub
+                        </a>
+                        <a href="https://x.com/github_skydoves" class="author-link" target="_blank">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                            X
+                        </a>
+                        <a href="https://www.linkedin.com/in/skydoves/" class="author-link" target="_blank">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                            LinkedIn
+                        </a>
+                        <a href="https://doveletter.skydoves.me/" class="author-link" target="_blank">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                            Dove Letter
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section section-gray" id="features">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">本書の内容</div>
+                <h2 class="section-title">成功に必要なすべてを網羅</h2>
+                <p class="section-subtitle">包括的なカバレッジでAndroid開発をマスターし、技術面接を突破しましょう</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📖</div>
+                    <h3>詳細な解説付き面接質問</h3>
+                    <p>各質問には、概念の「何」と「なぜ」を明確にするステップバイステップの説明が含まれており、表面的な知識を超えた深い理解を構築できます。答えを暗記するだけでなく、その背後にある理由を理解できます。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💡</div>
+                    <h3>Pro Tips for Mastery</h3>
+                    <p>基本的な面接準備を超える50以上の高度な「Pro Tips」セクション。内部API実装を明らかにし、実際の経験からの洞察を共有し、表面下で物事が実際にどのように機能するかを説明し、技術的な議論で優位に立てます。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>実践的な質問</h3>
+                    <p>実際の面接シナリオをシミュレートするために設計された162のフォローアップ「実践問題」。これらの質問は独立した探求と批判的思考を促し、技術面接の予測不可能な性質に備えるのに役立ちます。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>追加リソースと参考文献</h3>
+                    <p>各トピックには、さらなる学習のための厳選されたリファレンス、複雑な内部構造を説明する平易な脚注、公式ドキュメントやコミュニティリソースへのリンクが含まれており、高度な概念をあらゆるレベルの開発者がアクセスできるようにしています。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Preview -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">書籍プレビュー</div>
+                <h2 class="section-title">中身をご覧ください</h2>
+                <p class="section-subtitle">明確な説明と実践的な例を含む高品質なコンテンツ</p>
+            </div>
+
+            <div class="book-preview-grid">
+                <div class="book-preview-item">
+                    <img src="../resources/499dc1770b955d36922dd5558570fb5c.jpg" alt="書籍コンテンツプレビュー - 面接質問" class="expandable-img">
+                </div>
+                <div class="book-preview-item">
+                    <img src="../resources/cd4840989174e289766554391f16d2f9.jpg" alt="書籍コンテンツプレビュー - Compose解説" class="expandable-img">
+                </div>
+                <div class="book-preview-item">
+                    <img src="../resources/181c8fc23386f7a1afb600d27af766d2.jpg" alt="書籍コンテンツプレビュー - Pro Tips" class="expandable-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interview Questions Structure -->
+    <section class="section section-gray">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">コンテンツ構成</div>
+                <h2 class="section-title">面接質問</h2>
+                <p class="section-subtitle" style="max-width: none;">Android FrameworkとJetpack Composeの包括的なカバレッジ</p>
+            </div>
+
+            <div class="chapters-grid">
+                <div class="chapter-card">
+                    <div class="chapter-header">
+                        <h3>第0章</h3>
+                        <h4>Android面接質問</h4>
+                    </div>
+                    <div class="chapter-body">
+                        <div class="chapter-item">
+                            <span class="chapter-badge">カテゴリ0</span>
+                            <span>Android Framework</span>
+                        </div>
+                        <div class="chapter-item">
+                            <span class="chapter-badge">カテゴリ1</span>
+                            <span>Android UI</span>
+                        </div>
+                        <div class="chapter-item">
+                            <span class="chapter-badge">カテゴリ2</span>
+                            <span>Jetpackライブラリ</span>
+                        </div>
+                        <div class="chapter-item">
+                            <span class="chapter-badge">カテゴリ3</span>
+                            <span>ビジネスロジック</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chapter-card">
+                    <div class="chapter-header">
+                        <h3>第1章</h3>
+                        <h4>Jetpack Compose面接質問</h4>
+                    </div>
+                    <div class="chapter-body">
+                        <div class="chapter-item">
+                            <span class="chapter-badge">カテゴリ0</span>
+                            <span>Compose基礎</span>
+                        </div>
+                        <div class="chapter-item">
+                            <span class="chapter-badge">カテゴリ1</span>
+                            <span>Compose Runtime</span>
+                        </div>
+                        <div class="chapter-item">
+                            <span class="chapter-badge">カテゴリ2</span>
+                            <span>Compose UI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">推薦の声</div>
+                <h2 class="section-title">開発者たちの声</h2>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Manifest Android Interviewは、理論を重視した技術面接に挑むAndroid開発者にとって不可欠なガイドです。深い技術的な洞察、実践的な例、そして思慮深い「Pro Tips for Mastery」セクションをシームレスに融合させています。この本の知識は、Android面接を自信を持って乗り越え、成功するための貴重なリソースとなります。"</p>
+                    <div class="testimonial-author">
+                        <img src="../resources/2d34b37a89f2116e5f0d42107c983a77.jpg" alt="Manuel Vivo" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4>Manuel Vivo</h4>
+                            <p>Staff Android Engineer @ Bumble</p>
+                            <p>Ex Android DevRel @ Google</p>
+                            <a href="https://bsky.app/profile/manuelvicnt.bsky.social" target="_blank">@manuelvicnt</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"この本は、面接準備をしている人や、Androidのスキルを磨きたい人にとって必携です。基礎からComposeランタイムとUIの詳細まで、広範で詳細かつ構造化されたリソースです。特にJetpack Composeの部分は面接準備に非常に役立ちます。"</p>
+                    <div class="testimonial-author">
+                        <img src="../resources/9aaf4e824a4d41904316773948dd7a95.jpg" alt="Simona Milanovic" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4>Simona Milanovic</h4>
+                            <p>Senior Android Developer Relations Engineer</p>
+                            <a href="https://bsky.app/profile/anomiss.bsky.social" target="_blank">@anomiss</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"思慮深く作成された質問、洞察に満ちたヒント、明確なコードサンプルに導かれ、Manifest Android InterviewはAndroidのコアコンセプトを強化するだけでなく、ViewModelからViewシステム、Jetpack Composeまで、Androidソフトウェア構築のあらゆる側面を探求する手助けをしてくれます。"</p>
+                    <div class="testimonial-author">
+                        <img src="../resources/247c116c64aee308552f7d3aa16a6e06.jpg" alt="Alejandra Stamato" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4>Alejandra Stamato</h4>
+                            <p>Lead Android Engineer @ HubSpot</p>
+                            <p>Ex Android DevRel @ Google</p>
+                            <a href="https://bsky.app/profile/AleStamato.bsky.social" target="_blank">@AleStamato</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Manifest Android Interviewは、基礎の復習、面接準備、ベストプラクティスの再確認に最適です。明確な構造、検索可能な形式、思慮深い質問が、学習とAndroidコアコンセプトの再確認の両方に頼れるリソースとなっています。"</p>
+                    <div class="testimonial-author">
+                        <img src="../resources/f4f524c1a6f0b9b4617abe471287bf0e.jpg" alt="Matt McKenna" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4>Matt McKenna</h4>
+                            <p>Senior Android Engineer @ Block</p>
+                            <p>Android GDE</p>
+                            <a href="https://bsky.app/profile/mattmckenna.me" target="_blank">@mattmckenna</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Purchase Section -->
+    <section class="section section-dark" id="purchase">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">🎌 特別セール実施中</div>
+                <h2 class="section-title">日本語版を今すぐ入手</h2>
+                <p class="section-subtitle">PDF & EPUB形式で即ダウンロード可能</p>
+            </div>
+
+            <div class="purchase-grid">
+                <a href="https://leanpub.com/manifest-android-interview-jp/c/iP30nXdTajy4" class="purchase-card" target="_blank">
+                    <div class="sale-tag-large">🎉 期間限定 40%オフ</div>
+                    <div class="purchase-icon">📘</div>
+                    <h4>Leanpub で購入</h4>
+                    <div class="star-rating" style="margin: 12px 0;">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="rating-text" style="color: #9ca3af;">(5.0 / 50件のレビュー)</span>
+                    </div>
+                    <p style="margin-bottom: 12px; opacity: 1; font-size: 15px;">PDF & EPUB 両方付属</p>
+                    <p style="margin-bottom: 8px;">
+                        <span class="price-original">$52.99</span>
+                    </p>
+                    <p>
+                        <span class="price-sale">$32.99</span>
+                    </p>
+                    <p style="margin-top: 8px; font-size: 13px; color: #4ade80; font-weight: 600;">💰 今なら$20お得！（約3,000円相当）</p>
+                    <div style="margin-top: 16px; padding: 12px; background: rgba(255,255,255,0.1); border-radius: 8px;">
+                        <p style="font-size: 13px; opacity: 0.9;">🚀 購入後すぐにダウンロード可能</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Guarantee Section -->
+            <div class="guarantee-section" style="max-width: 450px; margin: 24px auto 0; background: rgba(16, 185, 129, 0.1); border-color: rgba(16, 185, 129, 0.5);">
+                <div class="guarantee-icon">🛡️</div>
+                <div class="guarantee-title" style="color: #4ade80;">安心の返金保証</div>
+                <div class="guarantee-text" style="color: #9ca3af;">Leanpubでは45日間の返金保証付き。<br>内容にご満足いただけない場合は全額返金いたします。</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Table of Contents -->
+    <section class="section" id="contents">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">目次</div>
+                <h2 class="section-title">コンテンツ一覧</h2>
+            </div>
+
+            <div class="toc-container">
+                <div class="toc-section">
+                    <h3 class="toc-heading">序文</h3>
+                    <ul class="toc-list">
+                        <li>推薦の声</li>
+                        <li class="toc-sub">Manuel Vivo (Staff Android Engineer at Bumble)</li>
+                        <li class="toc-sub">Matt McKenna (Senior Android Engineer at Block)</li>
+                        <li class="toc-sub">Alejandra Stamato (Lead Android Engineer at HubSpot)</li>
+                        <li class="toc-sub">Simona Milanovic (Senior Android DevRel Engineer)</li>
+                        <li>本書について</li>
+                        <li class="toc-sub">面接を受ける方へ</li>
+                        <li class="toc-sub">面接官の方へ</li>
+                        <li>スポンサー</li>
+                        <li class="toc-sub">Stream</li>
+                        <li>問題報告・ディスカッション</li>
+                    </ul>
+                </div>
+
+                <div class="toc-section">
+                    <h3 class="toc-heading">0. Android面接質問</h3>
+
+                    <h4 class="toc-category">カテゴリ0: Android Framework</h4>
+                    <ul class="toc-list toc-questions">
+                        <li>Q) 0. Androidとは何ですか？</li>
+                        <li>Q) 1. Intentとは何ですか？</li>
+                        <li>Q) 2. Pending Intentの目的は何ですか？</li>
+                        <li>Q) 3. SerializableとParcelableの違いは何ですか？</li>
+                        <li>Q) 4. Contextとは何ですか？どのような種類がありますか？</li>
+                        <li>Q) 5. Applicationクラスとは何ですか？</li>
+                        <li>Q) 6. AndroidManifestファイルの目的は何ですか？</li>
+                        <li>Q) 7. Activityのライフサイクルを説明してください</li>
+                        <li>Q) 8. Fragmentのライフサイクルを説明してください</li>
+                        <li>Q) 9. Serviceとは何ですか？</li>
+                        <li>Q) 10. BroadcastReceiverとは何ですか？</li>
+                        <li>Q) 11. ContentProviderの目的と、アプリ間の安全なデータ共有の仕組みは？</li>
+                        <li>Q) 12. 設定変更をどのように処理しますか？</li>
+                        <li>Q) 13. Androidのメモリ管理とメモリリークの回避方法は？</li>
+                        <li>Q) 14. ANRエラーの主な原因と防止方法は？</li>
+                        <li>Q) 15. ディープリンクをどのように処理しますか？</li>
+                        <li>Q) 16. タスクとバックスタックとは何ですか？</li>
+                        <li>Q) 17. Bundleの目的は何ですか？</li>
+                        <li>Q) 18. Activity間やFragment間でデータをどのように渡しますか？</li>
+                        <li>Q) 19. 設定変更時にActivityに何が起こりますか？</li>
+                        <li>Q) 20. ActivityManagerとは何ですか？</li>
+                        <li>Q) 21. SparseArrayを使用する利点は何ですか？</li>
+                        <li>Q) 22. ランタイムパーミッションをどのように処理しますか？</li>
+                        <li>Q) 23. Looper、Handler、HandlerThreadの役割は何ですか？</li>
+                        <li>Q) 24. 例外をどのようにトレースしますか？</li>
+                        <li>Q) 25. ビルドバリアントとフレーバーとは何ですか？</li>
+                        <li>Q) 26. アクセシビリティをどのように確保しますか？</li>
+                        <li>Q) 27. Androidファイルシステムとは何ですか？</li>
+                        <li>Q) 28. ART、Dalvik、Dex Compilerとは何ですか？</li>
+                        <li>Q) 29. APKファイルとAABファイルの違いは何ですか？</li>
+                        <li>Q) 30. R8最適化とは何ですか？</li>
+                        <li>Q) 31. アプリケーションサイズをどのように削減しますか？</li>
+                        <li>Q) 32. Androidアプリケーションのプロセスとは？OSはどのように管理しますか？</li>
+                    </ul>
+
+                    <h4 class="toc-category">カテゴリ1: Android UI - Views</h4>
+                    <ul class="toc-list toc-questions">
+                        <li>Q) 33. Viewのライフサイクルを説明してください</li>
+                        <li>Q) 34. ViewとViewGroupの違いは何ですか？</li>
+                        <li>Q) 35. ViewStubを使用したことがありますか？UIパフォーマンスの最適化方法は？</li>
+                        <li>Q) 36. カスタムViewをどのように実装しますか？</li>
+                        <li>Q) 37. Canvasとは何ですか？どのように活用しますか？</li>
+                        <li>Q) 38. Viewシステムにおける無効化（invalidation）とは何ですか？</li>
+                        <li>Q) 39. ConstraintLayoutとは何ですか？</li>
+                        <li>Q) 40. TextureViewの代わりにSurfaceViewを使用すべき場合は？</li>
+                        <li>Q) 41. RecyclerViewは内部でどのように動作しますか？</li>
+                        <li>Q) 42. DpとSpの違いは何ですか？</li>
+                        <li>Q) 43. 9-patch画像の用途は何ですか？</li>
+                        <li>Q) 44. Drawableとは何ですか？UI開発でどのように使用されますか？</li>
+                        <li>Q) 45. AndroidのBitmapとは？大きなBitmapを効率的に処理する方法は？</li>
+                        <li>Q) 46. アニメーションをどのように実装しますか？</li>
+                        <li>Q) 47. Windowとは何ですか？</li>
+                        <li>Q) 48. Webページをどのようにレンダリングしますか？</li>
+                    </ul>
+
+                    <h4 class="toc-category">カテゴリ2: Jetpackライブラリ</h4>
+                    <ul class="toc-list toc-questions">
+                        <li>Q) 49. AppCompatライブラリとは何ですか？</li>
+                        <li>Q) 50. Material Design Components (MDC)とは何ですか？</li>
+                        <li>Q) 51. ViewBindingを使用する利点は何ですか？</li>
+                        <li>Q) 52. DataBindingはどのように動作しますか？</li>
+                        <li>Q) 53. LiveDataとは何ですか？</li>
+                        <li>Q) 54. Jetpack ViewModelとは何ですか？</li>
+                        <li>Q) 55. Jetpack Navigationライブラリとは何ですか？</li>
+                        <li>Q) 56. Dagger 2とHiltとは何ですか？</li>
+                        <li>Q) 57. Jetpack Pagingライブラリとは何ですか？</li>
+                        <li>Q) 58. Baseline Profileとは何ですか？</li>
+                    </ul>
+
+                    <h4 class="toc-category">カテゴリ3: ビジネスロジック</h4>
+                    <ul class="toc-list toc-questions">
+                        <li>Q) 59. 長時間実行されるバックグラウンドタスクをどのように管理しますか？</li>
+                        <li>Q) 60. JSON形式をオブジェクトにシリアライズする方法は？</li>
+                        <li>Q) 61. データを取得するためのネットワークリクエストをどのように処理しますか？</li>
+                        <li>Q) 62. 大規模なデータセットを読み込む際にページングシステムが不可欠な理由は？</li>
+                        <li>Q) 63. ネットワークから画像を取得してレンダリングする方法は？</li>
+                        <li>Q) 64. データをローカルに保存・永続化する方法は？</li>
+                        <li>Q) 65. オフラインファースト機能をどのように処理しますか？</li>
+                        <li>Q) 66. 初期データ読み込みタスクをどこで起動しますか？LaunchedEffect vs ViewModel.init()</li>
+                    </ul>
+                </div>
+
+                <div class="toc-section">
+                    <h3 class="toc-heading">1. Jetpack Compose面接質問</h3>
+
+                    <h4 class="toc-category">カテゴリ0: Compose基礎</h4>
+                    <ul class="toc-list toc-questions">
+                        <li>Q) 0. Jetpack Composeの構造は何ですか？</li>
+                        <li>Q) 1. Composeのフェーズとは何ですか？</li>
+                        <li>Q) 2. なぜJetpack Composeは宣言型UIフレームワークなのですか？</li>
+                        <li>Q) 3. リコンポジションとは何ですか？いつ発生しますか？パフォーマンスとの関係は？</li>
+                        <li>Q) 4. コンポーザブル関数は内部でどのように動作しますか？</li>
+                        <li>Q) 5. Jetpack Composeの安定性とは何ですか？パフォーマンスとの関係は？</li>
+                        <li>Q) 6. 安定性を改善してComposeパフォーマンスを最適化した経験はありますか？</li>
+                        <li>Q) 7. Compositionとは何ですか？どのように作成しますか？</li>
+                        <li>Q) 8. XMLベースのプロジェクトをJetpack Composeに移行する戦略は？</li>
+                        <li>Q) 9. なぜComposeのパフォーマンスは常にリリースモードでテストすべきですか？</li>
+                        <li>Q) 10. Jetpack Composeでよく使われるKotlinイディオムは何ですか？</li>
+                    </ul>
+
+                    <h4 class="toc-category">カテゴリ1: Compose Runtime</h4>
+                    <ul class="toc-list toc-questions">
+                        <li>Q) 11. Stateとは何ですか？管理に使用されるAPIは？</li>
+                        <li>Q) 12. State hoistingの利点は何ですか？</li>
+                        <li>Q) 13. rememberとrememberSaveableの違いは何ですか？</li>
+                        <li>Q) 14. コンポーザブル関数内でコルーチンスコープを安全に作成する方法は？</li>
+                        <li>Q) 15. コンポーザブル関数内でサイドエフェクトをどのように処理しますか？</li>
+                        <li>Q) 16. rememberUpdatedStateの目的と動作は？</li>
+                        <li>Q) 17. produceStateの目的と動作は？</li>
+                        <li>Q) 18. snapshotFlowとは何ですか？どのように動作しますか？</li>
+                        <li>Q) 19. derivedStateOfの目的は？リコンポジション最適化にどのように役立ちますか？</li>
+                        <li>Q) 20. コンポーザブル関数またはCompositionのライフサイクルは？</li>
+                        <li>Q) 21. SaveableStateHolderとは何ですか？</li>
+                        <li>Q) 22. スナップショットシステムの目的は何ですか？</li>
+                        <li>Q) 23. mutableStateListOfとmutableStateMapOfとは何ですか？</li>
+                        <li>Q) 24. コンポーザブル関数でKotlinのFlowを安全に収集する方法は？</li>
+                        <li>Q) 25. CompositionLocalの役割は何ですか？</li>
+                    </ul>
+
+                    <h4 class="toc-category">カテゴリ2: Compose UI</h4>
+                    <ul class="toc-list toc-questions">
+                        <li>Q) 26. Modifierとは何ですか？</li>
+                        <li>Q) 27. Layoutとは何ですか？</li>
+                        <li>Q) 28. Boxとは何ですか？</li>
+                        <li>Q) 29. ArrangementとAlignmentの違いは何ですか？</li>
+                        <li>Q) 30. Painterとは何ですか？</li>
+                        <li>Q) 31. ネットワークから画像をどのように読み込みますか？</li>
+                        <li>Q) 32. UIジャンクを避けながら数百のアイテムをリストとして効率的にレンダリングする方法は？</li>
+                        <li>Q) 33. レイジーリストでページネーションをどのように実装しますか？</li>
+                        <li>Q) 34. Canvasとは何ですか？</li>
+                        <li>Q) 35. graphicsLayer Modifierを使用したことがありますか？</li>
+                        <li>Q) 36. Jetpack Composeでビジュアルアニメーションをどのように実装しますか？</li>
+                        <li>Q) 37. 画面間をどのようにナビゲートしますか？</li>
+                        <li>Q) 38. プレビューはどのように機能しますか？どのように処理しますか？</li>
+                        <li>Q) 39. Compose UIコンポーネントや画面のユニットテストをどのように書きますか？</li>
+                        <li>Q) 40. スクリーンショットテストとは何ですか？開発中のUI一貫性をどのように確保しますか？</li>
+                        <li>Q) 41. Jetpack Composeでアクセシビリティをどのように確保しますか？</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="section section-gray" id="timeline">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">歩み</div>
+                <h2 class="section-title">タイムライン＆マイルストーン</h2>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2025.10.31</div>
+                    <div class="timeline-content">2,200部販売達成</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025.10.13</div>
+                    <div class="timeline-content">1,800部販売達成</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025.09.11</div>
+                    <div class="timeline-content">日本語版出版</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025.08.12</div>
+                    <div class="timeline-content">1,500部販売達成</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025.07.26</div>
+                    <div class="timeline-content">1,300部販売達成；ウクライナ語版出版</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025.07.22</div>
+                    <div class="timeline-content">インドネシア語版出版</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025.07.12</div>
+                    <div class="timeline-content">中国語版出版</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025.07.02</div>
+                    <div class="timeline-content">v1.6リリース</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025.06.28</div>
+                    <div class="timeline-content">1,000部販売達成</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025.06.24</div>
+                    <div class="timeline-content">インド版ペーパーバック（Shroff Publishers）出版</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025.06.18</div>
+                    <div class="timeline-content">韓国語版出版</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025.06.12</div>
+                    <div class="timeline-content">ドイツ語版出版</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025.06.10</div>
+                    <div class="timeline-content">スペイン語版出版</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025.06.05</div>
+                    <div class="timeline-content">Amazon版（Kindle、ハードカバー、ペーパーバック）出版</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025.06.01</div>
+                    <div class="timeline-content">Kotlin Weeklyがニュースレタースポンサーとして参加</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025.05.01</div>
+                    <div class="timeline-content">Streamがメジャースポンサーとして参加</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025.04.19</div>
+                    <div class="timeline-content">Leanpub1位獲得</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025.04.15</div>
+                    <div class="timeline-content">初版出版</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="https://github.com/skydoves" target="_blank">GitHub</a>
+                <a href="https://github.com/skydoves/manifest-android-interview" target="_blank">書籍リポジトリ</a>
+                <a href="https://leanpub.com/manifest-android-interview-jp/c/iP30nXdTajy4" target="_blank">Leanpub</a>
+            </div>
+            <p>© 2025 Jaewoong Eum (skydoves). All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <img src="" alt="拡大画像" id="lightbox-img">
+    </div>
+
+    <script>
+        // Lightbox functionality
+        function openLightbox(imgSrc) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = imgSrc;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close lightbox on background click
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeLightbox();
+            }
+        });
+
+        // Close lightbox on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+
+        // Add click handlers to all expandable images
+        document.querySelectorAll('.expandable-img').forEach(img => {
+            img.addEventListener('click', function() {
+                openLightbox(this.src);
+            });
+        });
+
+        // Dark mode toggle
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        }
+
+        // Load saved theme on page load
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+
+    </script>
+</body>
+</html>
