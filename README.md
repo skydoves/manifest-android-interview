@@ -31,6 +31,7 @@ If you'd like to learn more about the book before diving in, such as fun facts, 
 
 ## ⏳ Timeline & Milestone
 
+- 2026.01.31 - Reached 2,800 copies sold 🎉
 - 2025.10.31 - Reached 2,200 copies sold 🎉
 - 2025.10.13 - Reached 1,800 copies sold 🎉
 - 2025.09.11 - Published [Japanese edition](https://leanpub.com/manifest-android-interview-jp) 🇯🇵
