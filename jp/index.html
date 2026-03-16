@@ -612,7 +612,7 @@
         /* Navigation */
         .navbar {
             position: fixed;
-            top: 0;
+            top: 36px;
             left: 0;
             right: 0;
             background: rgba(255, 255, 255, 0.98);
@@ -792,7 +792,7 @@
 
         /* Hero Section */
         .hero {
-            padding: 120px 0 30px;
+            padding: 156px 0 30px;
             background: var(--hero-gradient);
         }
 
@@ -1708,9 +1708,102 @@
                 font-size: 11px;
             }
         }
+
+        /* Top Banner */
+        .top-banner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            background: #1a73e8;
+            color: white;
+            text-align: center;
+            padding: 8px 16px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        [data-theme="dark"] .top-banner {
+            background: #1558b0;
+        }
+        .top-banner a {
+            color: white;
+            text-decoration: none;
+        }
+        .top-banner a:hover {
+            text-decoration: underline;
+        }
+
+        /* Course Section */
+        .course-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            overflow: hidden;
+            max-width: 800px;
+            margin: 0 auto 32px;
+        }
+        .course-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .course-card-body {
+            padding: 24px 32px 32px;
+        }
+        .course-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            max-width: 600px;
+            margin: 0 auto 28px;
+        }
+        .course-feature {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 16px;
+            background: var(--bg-light);
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-primary);
+            border-left: 3px solid var(--primary-blue);
+        }
+        .course-feature span.feat-icon {
+            font-size: 18px;
+        }
+        .course-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 32px;
+            background: var(--primary-blue);
+            color: white;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        .course-cta:hover {
+            background: var(--primary-dark);
+        }
+        @media (max-width: 600px) {
+            .course-features {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
+    <!-- Top Banner -->
+    <div class="top-banner">
+        <a href="https://doveletter.dev/course/android" target="_blank" rel="noopener noreferrer">
+            🎓 新着！Manifest Android Interview コース — 254問のクイズ＆372の実践問題 →
+        </a>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-content">
@@ -1719,6 +1812,7 @@
                 <li><a href="#about">著者について</a></li>
                 <li><a href="#features">特徴</a></li>
                 <li><a href="#testimonials">推薦の声</a></li>
+                <li><a href="#course">コース</a></li>
                 <li><a href="#contents">目次</a></li>
                 <li><a href="#timeline">タイムライン</a></li>
                 <li class="nav-language">
@@ -1758,12 +1852,12 @@
                 </div>
                 <div class="hero-book">
                     <div class="hero-book-stack">
-                        <a href="https://www.android.skydoves.me/kotlin/" target="_blank" class="hero-book-background" title="Practical Kotlin Deep Dive - 詳細を見る">
+                        <a href="https://www.android.skydoves.me/kotlin/" target="_blank" rel="noopener noreferrer" class="hero-book-background" title="Practical Kotlin Deep Dive - 詳細を見る">
                             <span class="new-book-badge">新刊</span>
                             <img src="../resources/practical-kotlin-deep-dive.png" alt="Practical Kotlin Deep Dive 書籍カバー">
                         </a>
                         <div class="hero-book-main">
-                            <img src="../resources/japanese-cover.png" alt="Manifest Android Interview 日本語版 書籍カバー" class="expandable-img">
+                            <img src="../resources/japanese-cover.png" alt="Manifest Android Interview 日本語版 書籍カバー" class="expandable-img" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -1790,7 +1884,7 @@
                 </div>
 
                 <div class="hero-buttons">
-                    <a href="https://leanpub.com/manifest-android-interview-jp/c/iP30nXdTajy4" class="btn btn-sale" target="_blank">
+                    <a href="https://leanpub.com/manifest-android-interview-jp/c/iP30nXdTajy4" class="btn btn-sale" target="_blank" rel="noopener noreferrer">
                         Leanpubで購入する<span class="sale-tag" style="margin-left: 10px; background: white; color: #ff416c;">40%オフ</span>
                     </a>
                 </div>
@@ -1866,6 +1960,7 @@
             <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px;">
                 <span style="padding: 6px 16px; border-radius: 9999px; font-size: 14px; font-weight: 600; background: var(--bg-light); color: var(--text-secondary);">Google</span>
                 <span style="padding: 6px 16px; border-radius: 9999px; font-size: 14px; font-weight: 600; background: var(--bg-light); color: var(--text-secondary);">Meta</span>
+                <span style="padding: 6px 16px; border-radius: 9999px; font-size: 14px; font-weight: 600; background: var(--bg-light); color: var(--text-secondary);">JetBrains</span>
                 <span style="padding: 6px 16px; border-radius: 9999px; font-size: 14px; font-weight: 600; background: var(--bg-light); color: var(--text-secondary);">Square</span>
                 <span style="padding: 6px 16px; border-radius: 9999px; font-size: 14px; font-weight: 600; background: var(--bg-light); color: var(--text-secondary);">Grab</span>
                 <span style="padding: 6px 16px; border-radius: 9999px; font-size: 14px; font-weight: 600; background: var(--bg-light); color: var(--text-secondary);">Kakao</span>
@@ -1886,10 +1981,10 @@
 
             <div class="author-content">
                 <div class="author-image-wrapper">
-                    <img src="../resources/6289a6fde71f156d0646dd316703f411.jpg" alt="Jaewoong Eum" class="author-image">
+                    <img src="../resources/6289a6fde71f156d0646dd316703f411.jpg" alt="Jaewoong Eum" class="author-image" loading="lazy">
                 </div>
                 <div class="author-info">
-                    <p class="author-bio">Jaewoong Eum（skydoves）は、Android、Kotlin、FirebaseのGoogle Developer Expert（GDE）です。80以上のオープンソースライブラリやプロジェクトを作成し、世界中の開発者によって年間1,500万回以上ダウンロードされています。また、Android・Kotlin開発に関するトピックを共有・学習・議論するサブスクリプションベースのリポジトリ<a href="https://github.com/doveletter" target="_blank" style="color: var(--primary-blue); text-decoration: underline;">Dove Letter</a>の創設者でもあります。</p>
+                    <p class="author-bio">Jaewoong Eum（skydoves）は、Android、Kotlin、FirebaseのGoogle Developer Expert（GDE）です。80以上のオープンソースライブラリやプロジェクトを作成し、世界中の開発者によって年間1,500万回以上ダウンロードされています。また、Android・Kotlin開発に関するトピックを共有・学習・議論するサブスクリプションベースのリポジトリ<a href="https://github.com/doveletter" target="_blank" rel="noopener noreferrer" style="color: var(--primary-blue); text-decoration: underline;">Dove Letter</a>の創設者でもあります。</p>
 
                     <p class="author-bio">技術的なソリューション、オープンソースへの貢献、技術コンテンツを通じて世界をより良い場所にし、ポジティブな影響を与えるというミッションのもと、本書はこの旅の新しいエキサイティングな章となると信じています。これまで支えてくださった開発者コミュニティ、友人、家族に心から感謝を申し上げます。</p>
 
@@ -1898,19 +1993,19 @@
                     <p class="author-bio">いつものように、ハッピーコーディング、そしてあなたのAndroidの旅に幸運を！</p>
 
                     <div class="author-links">
-                        <a href="https://github.com/skydoves" class="author-link" target="_blank">
+                        <a href="https://github.com/skydoves" class="author-link" target="_blank" rel="noopener noreferrer">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                             GitHub
                         </a>
-                        <a href="https://x.com/github_skydoves" class="author-link" target="_blank">
+                        <a href="https://x.com/github_skydoves" class="author-link" target="_blank" rel="noopener noreferrer">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                             X
                         </a>
-                        <a href="https://www.linkedin.com/in/skydoves/" class="author-link" target="_blank">
+                        <a href="https://www.linkedin.com/in/skydoves/" class="author-link" target="_blank" rel="noopener noreferrer">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                             LinkedIn
                         </a>
-                        <a href="https://doveletter.skydoves.me/" class="author-link" target="_blank">
+                        <a href="https://doveletter.skydoves.me/" class="author-link" target="_blank" rel="noopener noreferrer">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
                             Dove Letter
                         </a>
@@ -1965,13 +2060,13 @@
 
             <div class="book-preview-grid">
                 <div class="book-preview-item">
-                    <img src="../resources/499dc1770b955d36922dd5558570fb5c.jpg" alt="書籍コンテンツプレビュー - 面接質問" class="expandable-img">
+                    <img src="../resources/499dc1770b955d36922dd5558570fb5c.jpg" alt="書籍コンテンツプレビュー - 面接質問" class="expandable-img" loading="lazy">
                 </div>
                 <div class="book-preview-item">
-                    <img src="../resources/cd4840989174e289766554391f16d2f9.jpg" alt="書籍コンテンツプレビュー - Compose解説" class="expandable-img">
+                    <img src="../resources/cd4840989174e289766554391f16d2f9.jpg" alt="書籍コンテンツプレビュー - Compose解説" class="expandable-img" loading="lazy">
                 </div>
                 <div class="book-preview-item">
-                    <img src="../resources/181c8fc23386f7a1afb600d27af766d2.jpg" alt="書籍コンテンツプレビュー - Pro Tips" class="expandable-img">
+                    <img src="../resources/181c8fc23386f7a1afb600d27af766d2.jpg" alt="書籍コンテンツプレビュー - Pro Tips" class="expandable-img" loading="lazy">
                 </div>
             </div>
         </div>
@@ -2048,12 +2143,12 @@
                 <div class="testimonial-card">
                     <p class="testimonial-text">"Manifest Android Interviewは、理論を重視した技術面接に挑むAndroid開発者にとって不可欠なガイドです。深い技術的な洞察、実践的な例、そして思慮深い「Pro Tips for Mastery」セクションをシームレスに融合させています。この本の知識は、Android面接を自信を持って乗り越え、成功するための貴重なリソースとなります。"</p>
                     <div class="testimonial-author">
-                        <img src="../resources/2d34b37a89f2116e5f0d42107c983a77.jpg" alt="Manuel Vivo" class="testimonial-avatar">
+                        <img src="../resources/2d34b37a89f2116e5f0d42107c983a77.jpg" alt="Manuel Vivo" class="testimonial-avatar" loading="lazy">
                         <div class="testimonial-info">
                             <h4>Manuel Vivo</h4>
                             <p>Staff Android Engineer @ Bumble</p>
                             <p>Ex Android DevRel @ Google</p>
-                            <a href="https://bsky.app/profile/manuelvicnt.bsky.social" target="_blank">@manuelvicnt</a>
+                            <a href="https://bsky.app/profile/manuelvicnt.bsky.social" target="_blank" rel="noopener noreferrer">@manuelvicnt</a>
                         </div>
                     </div>
                 </div>
@@ -2061,11 +2156,11 @@
                 <div class="testimonial-card">
                     <p class="testimonial-text">"この本は、面接準備をしている人や、Androidのスキルを磨きたい人にとって必携です。基礎からComposeランタイムとUIの詳細まで、広範で詳細かつ構造化されたリソースです。特にJetpack Composeの部分は面接準備に非常に役立ちます。"</p>
                     <div class="testimonial-author">
-                        <img src="../resources/9aaf4e824a4d41904316773948dd7a95.jpg" alt="Simona Milanovic" class="testimonial-avatar">
+                        <img src="../resources/9aaf4e824a4d41904316773948dd7a95.jpg" alt="Simona Milanovic" class="testimonial-avatar" loading="lazy">
                         <div class="testimonial-info">
                             <h4>Simona Milanovic</h4>
                             <p>Senior Android Developer Relations Engineer</p>
-                            <a href="https://bsky.app/profile/anomiss.bsky.social" target="_blank">@anomiss</a>
+                            <a href="https://bsky.app/profile/anomiss.bsky.social" target="_blank" rel="noopener noreferrer">@anomiss</a>
                         </div>
                     </div>
                 </div>
@@ -2073,12 +2168,12 @@
                 <div class="testimonial-card">
                     <p class="testimonial-text">"思慮深く作成された質問、洞察に満ちたヒント、明確なコードサンプルに導かれ、Manifest Android InterviewはAndroidのコアコンセプトを強化するだけでなく、ViewModelからViewシステム、Jetpack Composeまで、Androidソフトウェア構築のあらゆる側面を探求する手助けをしてくれます。"</p>
                     <div class="testimonial-author">
-                        <img src="../resources/247c116c64aee308552f7d3aa16a6e06.jpg" alt="Alejandra Stamato" class="testimonial-avatar">
+                        <img src="../resources/247c116c64aee308552f7d3aa16a6e06.jpg" alt="Alejandra Stamato" class="testimonial-avatar" loading="lazy">
                         <div class="testimonial-info">
                             <h4>Alejandra Stamato</h4>
                             <p>Lead Android Engineer @ HubSpot</p>
                             <p>Ex Android DevRel @ Google</p>
-                            <a href="https://bsky.app/profile/AleStamato.bsky.social" target="_blank">@AleStamato</a>
+                            <a href="https://bsky.app/profile/AleStamato.bsky.social" target="_blank" rel="noopener noreferrer">@AleStamato</a>
                         </div>
                     </div>
                 </div>
@@ -2086,12 +2181,12 @@
                 <div class="testimonial-card">
                     <p class="testimonial-text">"Manifest Android Interviewは、基礎の復習、面接準備、ベストプラクティスの再確認に最適です。明確な構造、検索可能な形式、思慮深い質問が、学習とAndroidコアコンセプトの再確認の両方に頼れるリソースとなっています。"</p>
                     <div class="testimonial-author">
-                        <img src="../resources/f4f524c1a6f0b9b4617abe471287bf0e.jpg" alt="Matt McKenna" class="testimonial-avatar">
+                        <img src="../resources/f4f524c1a6f0b9b4617abe471287bf0e.jpg" alt="Matt McKenna" class="testimonial-avatar" loading="lazy">
                         <div class="testimonial-info">
                             <h4>Matt McKenna</h4>
                             <p>Senior Android Engineer @ Block</p>
                             <p>Android GDE</p>
-                            <a href="https://bsky.app/profile/mattmckenna.me" target="_blank">@mattmckenna</a>
+                            <a href="https://bsky.app/profile/mattmckenna.me" target="_blank" rel="noopener noreferrer">@mattmckenna</a>
                         </div>
                     </div>
                 </div>
@@ -2109,7 +2204,7 @@
             </div>
 
             <div class="purchase-grid">
-                <a href="https://leanpub.com/manifest-android-interview-jp/c/iP30nXdTajy4" class="purchase-card" target="_blank">
+                <a href="https://leanpub.com/manifest-android-interview-jp/c/iP30nXdTajy4" class="purchase-card" target="_blank" rel="noopener noreferrer">
                     <div class="sale-tag-large">🎉 期間限定 40%オフ</div>
                     <div class="purchase-icon">📘</div>
                     <h4>Leanpub で購入</h4>
@@ -2140,6 +2235,48 @@
                 <div class="guarantee-icon">🛡️</div>
                 <div class="guarantee-title" style="color: #4ade80;">安心の返金保証</div>
                 <div class="guarantee-text" style="color: #9ca3af;">Leanpubでは45日間の返金保証付き。<br>内容にご満足いただけない場合は全額返金いたします。</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course -->
+    <section class="section" id="course">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">コース</div>
+                <h2 class="section-title">Manifest Android Interview コース</h2>
+                <p class="section-subtitle">クイズ、演習、実践的な質問を通じて、面接準備を次のレベルに引き上げましょう。</p>
+            </div>
+
+            <div class="course-card">
+                <a href="https://doveletter.dev/course/android" target="_blank" rel="noopener noreferrer">
+                    <img src="../resources/android-course-cover.png" alt="Manifest Android Interview コースカバー" loading="lazy">
+                </a>
+                <div class="course-card-body">
+                    <div class="course-features">
+                        <div class="course-feature">
+                            <span class="feat-icon">📝</span>
+                            <span>254問のクイズ＆演習</span>
+                        </div>
+                        <div class="course-feature">
+                            <span class="feat-icon">🏅</span>
+                            <span>認定証を取得</span>
+                        </div>
+                        <div class="course-feature">
+                            <span class="feat-icon">💬</span>
+                            <span>372の実践的な質問</span>
+                        </div>
+                        <div class="course-feature">
+                            <span class="feat-icon">🎯</span>
+                            <span>フォローアップ問題</span>
+                        </div>
+                    </div>
+                    <div style="text-align: center;">
+                        <a href="https://doveletter.dev/course/android" target="_blank" rel="noopener noreferrer" class="course-cta">
+                            コースを見る →
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -2411,9 +2548,9 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-links">
-                <a href="https://github.com/skydoves" target="_blank">GitHub</a>
-                <a href="https://github.com/skydoves/manifest-android-interview" target="_blank">書籍リポジトリ</a>
-                <a href="https://leanpub.com/manifest-android-interview-jp/c/iP30nXdTajy4" target="_blank">Leanpub</a>
+                <a href="https://github.com/skydoves" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://github.com/skydoves/manifest-android-interview" target="_blank" rel="noopener noreferrer">書籍リポジトリ</a>
+                <a href="https://leanpub.com/manifest-android-interview-jp/c/iP30nXdTajy4" target="_blank" rel="noopener noreferrer">Leanpub</a>
             </div>
             <p>© 2026 Jaewoong Eum (skydoves). All rights reserved.</p>
         </div>
