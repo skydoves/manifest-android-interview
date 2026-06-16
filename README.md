@@ -100,31 +100,27 @@ Support it by joining __[stargazers](https://github.com/skydoves/manifest-androi
 Also, __[follow me](https://github.com/skydoves)__ on GitHub for my next creations! 🤩
 
 # License
-```xml
-Copyright (c) skydoves (Jaewoong Eum) All rights reserved.
+```
+Copyright (c) 2025 skydoves (Jaewoong Eum). All rights reserved.
 
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are met:
+"Manifest Android Interview" (the "Book"), including its text, diagrams,
+illustrations, cover art, and all other content, is the proprietary work of
+the author and is protected by copyright law.
 
-* Redistributions of source code must retain the above copyright notice, this
-  list of conditions and the following disclaimer.
+You may not copy, reproduce, distribute, republish, resell, or otherwise share
+the Book or any portion of it, in any form or by any means, without the prior
+written permission of the author. Purchasing the Book grants you a personal,
+non-transferable license to read it for your own use; it does not transfer any
+ownership or redistribution rights.
 
-* Redistributions in binary form must reproduce the above copyright notice,
-  this list of conditions and the following disclaimer in the documentation
-  and/or other materials provided with the distribution.
+The source code samples printed in the Book are provided for educational
+purposes. You are free to use, modify, and incorporate these code samples into
+your own projects without restriction or attribution.
 
-* Neither the name of data-accessor nor the names of its
-  contributors may be used to endorse or promote products derived from
-  this software without specific prior written permission.
+This repository serves only as a companion issue tracker for the Book. The Book
+itself is distributed via its official website, Gumroad, Leanpub, and Amazon.
 
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
-FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
-SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
-OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+THE BOOK AND ITS CONTENTS ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY CLAIM,
+DAMAGES, OR OTHER LIABILITY ARISING FROM THE USE OF THE BOOK OR ITS CONTENTS.
 ```
