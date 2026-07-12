@@ -1,14 +1,14 @@
 <h1 align="center">Manifest Android Interview</h1></br>
 
 <p align="center">
-<a href="https://www.android.skydoves.me/" align="center" >
+<a href="https://android.skydoves.me/" align="center" >
 <img src="https://github.com/user-attachments/assets/e014ce01-3461-40af-bb2a-eb44f3f55f36" width = "42%" align="center" />
 </a>
 </p>
 
 **Your Personal Mentor for the Android Journey.**
 
-**[Manifest Android Interview](https://www.android.skydoves.me/)** embarks on a guided expedition through the world of Android development with a resource designed to mentor you at every stage of your career. This comprehensive collection features 108 core questions with rich, explanatory answers that build a solid foundation across the Android Framework and Jetpack Compose. Each discussion is followed by a set of practical, hands-on challenges to hone your skills for real-world scenarios.
+**[Manifest Android Interview](https://android.skydoves.me/)** embarks on a guided expedition through the world of Android development with a resource designed to mentor you at every stage of your career. This comprehensive collection features 108 core questions with rich, explanatory answers that build a solid foundation across the Android Framework and Jetpack Compose. Each discussion is followed by a set of practical, hands-on challenges to hone your skills for real-world scenarios.
 
 For developers seeking to transition from mid-level to senior, the "Pro Tips for Mastery" sections offer a significant advantage. These 50+ deep dives illuminate the internal workings of the Android ecosystem, fostering the analytical mindset that distinguishes experts. The material is structured to be accessible, with helpful footnotes clarifying complex terminology, ensuring no developer is left behind.
 
@@ -18,7 +18,7 @@ This book is crafted to be your trusted companion, whether you are preparing for
 
 ## 📚 Where to Read
 
-- [Manifest Android Interview](https://www.android.skydoves.me/)
+- [Manifest Android Interview](https://android.skydoves.me/)
 - [Read on Gumroad](https://skydoves.gumroad.com/l/manifest-android-interview)
 - [Read on Leanpub](https://leanpub.com/manifest-android-interview)
 - [Kindle on Amazon](https://www.amazon.com/dp/B0FBS6FT6P), [Hardcover on Amazon](https://www.amazon.com/dp/B0FBWCRNHZ), [Paperback on Amazon](https://www.amazon.com/dp/B0FBWCP743)
@@ -48,8 +48,8 @@ If you'd like to learn more about the book before diving in, such as fun facts, 
 - 2025.06.22 - Reached 900 copies sold 🎉
 - 2025.06.18 - Published [Korean edition](https://leanpub.com/manifest-android-interview-kr) 🇰🇷
 - 2025.06.17 - Reached 700 copies sold 🎉
-- 2025.06.12 - Published [German edition](https://www.android.skydoves.me/de) 🇩🇪
-- 2025.06.10 - Published [Spanish edition](https://www.android.skydoves.me/es) 🇪🇸
+- 2025.06.12 - Published [German edition](https://leanpub.com/manifest-android-interview-de) 🇩🇪
+- 2025.06.10 - Published [Spanish edition](https://leanpub.com/manifest-android-interview-es) 🇪🇸
 - 2025.06.05 - Published on Amazon ([Kindle](https://www.amazon.com/dp/B0FBS6FT6P), [Hardcover](https://www.amazon.com/dp/B0FBWCRNHZ), [Paperback](https://www.amazon.com/dp/B0FBWCP743))
 - 2025.06.02 - Published [v1.4](https://github.com/skydoves/manifest-android-interview/releases/tag/v1.4)
 - 2025.06.01 - [Kotlin Weekly](https://kotlinweekly.net/) has joined as a newsletter sponsor 💖
